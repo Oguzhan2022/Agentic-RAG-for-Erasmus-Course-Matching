@@ -1,0 +1,28 @@
+services:
+  db:
+    image: pgvector/pgvector:pg18
+    environment:
+      POSTGRES_DB: erasmus_match
+      POSTGRES_USER: erasmus
+      POSTGRES_PASSWORD: erasmus_dev
+      TZ: Europe/Istanbul
+    command: ["postgres", "-c", "log_timezone=Europe/Istanbul", "-c", "timezone=Europe/Istanbul"]
+    ports:
+      - "5600:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+      - ./db/migrations:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U erasmus -d erasmus_match"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    restart: always
+
+volumes:
+  pgdata:

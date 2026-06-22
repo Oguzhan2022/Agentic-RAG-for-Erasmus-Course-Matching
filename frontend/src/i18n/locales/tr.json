@@ -1,0 +1,2175 @@
+{
+  "universityInfo": {
+    "managementTitle": "Üniversite Bilgi Yönetimi",
+    "managementDesc": "Partner üniversiteler için sıralamaları, yaşam maliyetlerini ve profil verilerini yönetin",
+    "coordinatorPanel": "Koordinatör Paneli",
+    "partnerUniversities": "Partner Üniversiteler",
+    "total": "toplam",
+    "searchPlaceholder": "Ara...",
+    "columns": {
+      "university": "Üniversite",
+      "country": "Ülke",
+      "status": "Durum"
+    },
+    "actions": {
+      "manage": "Yönet",
+      "close": "Kapat"
+    },
+    "status": {
+      "active": "Aktif",
+      "inactive": "Pasif"
+    },
+    "generator": {
+      "title": "Oluşturucu",
+      "mainTitle": "Üniversite Profili Oluştur",
+      "for": "için",
+      "step1Title": "Prompt Oluştur",
+      "step1Desc": "Bu üniversite için yapılandırılmış bir araştırma promptu oluşturur",
+      "generate": "Oluştur",
+      "copy": "Kopyala",
+      "copied": "Panoya kopyalandı",
+      "nextPaste": "Sıradaki: Yanıtı Yapıştır",
+      "step2Title": "ChatGPT / Gemini / Perplexity'den JSON Yapıştır",
+      "step2Desc": "Web arama özellikli modu kullanın, ardından tam JSON yanıtını yapıştırın",
+      "importSave": "İçe Aktar ve Kaydet",
+      "lastImport": "Son içe aktarma",
+      "success": "Profil başarıyla içe aktarıldı",
+      "error": "İçe aktarma başarısız — JSON formatını kontrol edin",
+      "formatError": "JSON format hatası — LLM ile düzeltin",
+      "fixDesc": "Aşağıdaki promptu kopyalayıp ChatGPT / Perplexity'ye geri yapıştırın. Sizin için JSON'ı düzeltecektir.",
+      "copyFix": "Düzeltme Promptunu Kopyala",
+      "fixCopied": "Düzeltme promptu kopyalandı",
+      "dismiss": "Kapat",
+      "quickGuide": {
+        "title": "Hızlı rehber",
+        "step1": "Prompt oluşturmak için Oluştur'a tıklayın",
+        "step2": "Kopyalayıp Perplexity (en iyisi), Gemini veya ChatGPT'ye yapıştırın",
+        "step3": "LLM'in gerçek verilere bakabilmesi için web aramasının açık olduğundan emin olun",
+        "step4": "JSON yanıtını kopyalayıp yukarıya yapıştırın, ardından İçe Aktar ve Kaydet'e tıklayın"
+      }
+    },
+    "profile": {
+      "title": "Profil Verileri",
+      "noData": "Veri yok",
+      "noProfileDataYet": "Henüz profil verisi yok. Bir tane oluşturmak için LLM Oluşturucu'yu kullanın.",
+      "aiGeneratedBanner": "AI Tarafından Oluşturulan Profil Görünümü",
+      "aiGeneratedDesc": "Bu, AI tarafından sentezlenen bilgilerin öğrencilere nasıl göründüğüdür. Maliyetler ve akademik programlar gibi detayları resmi kaynaklardan doğrulamaları için bir önizleme görevi görür.",
+      "worldRankings": "Dünya Sıralamaları",
+      "noLLMData": "Henüz LLM profil verisi yok.",
+      "sections": {
+        "city": "Şehir Profili",
+        "transport": "Ulaşım",
+        "accommodation": "Konaklama",
+        "cost": "Yaşam Maliyeti",
+        "social": "Sosyal Yaşam",
+        "academic": "Akademik Bilgiler",
+        "summary": "Öğrenci Özeti",
+        "sources": "Kaynaklar"
+      },
+      "fields": {
+        "safety": "Güvenlik",
+        "english": "İngilizce Kullanım Kolaylığı",
+        "climate": "İklim",
+        "population": "Nüfus",
+        "airport": "En Yakın Havalimanı",
+        "cityCenter": "Şehir Merkezi",
+        "fromAirport": "Havalimanından Ulaşım",
+        "publicTransport": "Toplu Taşıma",
+        "nearbyCities": "Yakın Şehirler",
+        "dorm": "Üniversite Yurdu",
+        "dormCost": "Yurt Ücreti (dönemlik)",
+        "privateRoom": "Özel Oda (aylık)",
+        "housingDifficulty": "Konaklama Zorluğu",
+        "notes": "Notlar",
+        "grantSufficient": "Erasmus Hibesi Yeterli mi?",
+        "nightlife": "Gece Hayatı",
+        "community": "Erasmus Topluluğu",
+        "organizations": "Öğrenci Organizasyonları",
+        "keySpots": "Önemli Noktalar",
+        "language": "Eğitim Dili",
+        "englishCourses": "İngilizce Dersler",
+        "programs": "Öne Çıkan Programlar",
+        "specialNotes": "Özel Notlar",
+        "rating": "Genel Değerlendirme",
+        "bestFor": "En Uygun Olduğu Alanlar",
+        "watchOut": "Dikkat Edilmesi Gerekenler"
+      },
+      "values": {
+        "available": "Mevcut",
+        "notAvailable": "Mevcut Değil",
+        "limited": "Sınırlı",
+        "grantYes": "Evet — temel giderleri karşılar",
+        "grantNo": "Hayır — ek bütçe gerekir"
+      },
+      "levels": {
+        "high": "Yüksek",
+        "medium": "Orta",
+        "low": "Düşük",
+        "easy": "Kolay",
+        "moderate": "Orta",
+        "hard": "Zor",
+        "budget_heaven": "Bütçe Dostu",
+        "good_value": "İyi Değer",
+        "expensive": "Pahalı"
+      }
+    }
+  },
+  "gradeConversion": {
+    "title": "Not Dönüşüm Yönetimi",
+    "tabs": {
+      "schemes": "Not Sistemleri",
+      "rules": "Kurallar",
+      "ectsIku": "ECTS'den İKÜ'ye (Sabit)",
+      "test": "Dönüşüm Testi",
+      "auditLog": "Denetim Kaydı"
+    },
+    "actions": {
+      "newScheme": "Yeni Sistem",
+      "addRule": "Kural Ekle",
+      "addEctsIku": "ECTS-IKU Eşleşmesi Ekle",
+      "editScheme": "Sistemi Düzenle",
+      "editRule": "Kuralı Düzenle",
+      "convert": "Dönüştür",
+      "deleteSchemeConfirm": "Bu sistemi silmek istediğinize emin misiniz?",
+      "deleteRuleConfirm": "Bu kuralı silmek istediğinize emin misiniz?"
+    },
+    "columns": {
+      "university": "Üniversite",
+      "scheme": "Sistem",
+      "type": "Tür",
+      "rules": "Kurallar",
+      "actions": "İşlemler",
+      "localGrade": "Yerel Not",
+      "definition": "Tanım",
+      "ects": "ECTS",
+      "description": "Açıklama",
+      "ikuGrade": "İKÜ Notu"
+    },
+    "fields": {
+      "university": "Üniversite",
+      "schemeName": "Sistem Adı",
+      "type": "Tür",
+      "direction": "Yön",
+      "copyFrom": "Kuralları Kopyala",
+      "notes": "Notlar",
+      "minGrade": "Min Not",
+      "maxGrade": "Max Not",
+      "exactGrade": "Tam Not",
+      "ectsGrade": "ECTS Notu",
+      "localDefinition": "Yerel Tanım",
+      "description": "Açıklama",
+      "ikuGrade": "İKÜ Notu"
+    },
+    "placeholders": {
+      "selectUniversity": "Üniversite seçin",
+      "schemeName": "ör. Alman Not Sistemi",
+      "copyFrom": "Kuralları kopyalamak için mevcut sistemi seçin",
+      "grade": "Not (ör. 1.3, B, 85)",
+      "localDefinition": "ör. Sehr Gut (Excellent)",
+      "description": "ör. Excellent"
+    },
+    "values": {
+      "higherBetter": "Yüksek = Daha İyi",
+      "lowerBetter": "Düşük = Daha İyi",
+      "emptyRules": "Kuralları görüntülemek için Sistemler sekmesinden bir sistem seçin",
+      "inputGrade": "Giriş Notu",
+      "inputType": "Giriş Türü",
+      "schemeUsed": "Kullanılan Sistem",
+      "path": "Yol"
+    },
+    "types": {
+      "numeric_range": "Sayısal Aralık",
+      "numeric_discrete": "Sayısal Kesikli",
+      "letter": "Harf",
+      "custom": "Özel"
+    },
+    "versions": {
+      "title": "Versiyon Geçmişi",
+      "noVersions": "Henüz versiyon geçmişi yok — bu şema versiyonlama etkinleştirildiğinden beri değiştirilmedi.",
+      "versionNumber": "Versiyon {{num}}",
+      "viewRules": "Kuralları Gör",
+      "changedBy": "Değiştiren",
+      "date": "Tarih",
+      "close": "Kapat",
+      "rulesFor": "Bu versiyondaki kurallar",
+      "linkVersion": "Versiyona bağla:",
+      "selectVersion": "Versiyon seçin..."
+    },
+    "messages": {
+      "batchSaved": "Değişiklikler kaydedildi",
+      "saveFailed": "Kaydetme başarısız",
+      "decisionLinked": "Versiyon senato kararına bağlandı"
+    },
+    "decision": {
+      "linked": "Bağlı",
+      "linkToScheme": "Bu scheme'e bağla",
+      "unlink": "Bağlantıyı kaldır",
+      "unlinked": "Bağlantı kaldırıldı"
+    },
+    "selectSchemeFirst": "Önce bir scheme seçin"
+  },
+  "transcripts": {
+    "coordinatorPanel": "Transkript Paneli",
+    "coordinatorPanelDesc": "Yüklenen anlaşmalı üniversite transkriptlerini inceleyin ve not dönüşümlerini gerçekleştirin",
+    "importHistorical": "Geçmiş Transkripti İçe Aktar",
+    "importModalTitle": "Geçmiş Transkript İçe Aktarma (Manuel Giriş)",
+    "createRecord": "Kayıt Oluştur",
+    "filters": {
+      "byStatus": "Duruma göre filtrele",
+      "byUniversity": "Üniversiteye göre filtrele",
+      "searchStudent": "Öğrenci ara..."
+    },
+    "columns": {
+      "student": "ÖĞRENCİ",
+      "partnerUniversity": "ANLAŞMALI ÜNİVERSİTE",
+      "fileSource": "DOSYA / KAYNAK",
+      "department": "BÖLÜM",
+      "status": "DURUM",
+      "date": "TARİH"
+    },
+    "actions": {
+      "review": "İncele",
+      "edit": "Düzenle",
+      "editTranscript": "Transkripti Düzenle",
+      "deleteTranscript": "Transkript silinsin mi?",
+      "deleteTranscriptDesc": "Bu işlem transkripti ve PDF dosyasını kalıcı olarak silecektir.",
+      "delete": "Sil",
+      "cancel": "İptal",
+      "back": "Geri",
+      "save": "Kaydet",
+      "finalize": "Sonlandır",
+      "finalizeConfirm": "Bu transkript sonlandırılsın mı?",
+      "finalizeDesc": "Bu işlem tüm notları kilitleyecek ve geri alınamaz.",
+      "finalizeFixGrades": "Sonlandırmadan önce tüm notları düzeltin",
+      "revert": "Geri Al",
+      "revertConfirm": "Transkript geri alınsın mı?",
+      "revertDesc": "Bu işlem notları tekrar düzenlemenize izin verecektir.",
+      "addCourse": "Ders Ekle",
+      "close": "Kapat",
+      "yes": "Evet",
+      "no": "Hayır"
+    },
+    "detail": {
+      "transcript": "Transkript",
+      "unknownUniversity": "Bilinmeyen Üniversite",
+      "gradingScheme": "Not Sistemi",
+      "scheme": "Sistem",
+      "noGradingScheme": "Not sistemi yok",
+      "exportPdf": "PDF Dışa Aktar",
+      "exportExcel": "Excel Dışa Aktar",
+      "exportDocx": "DOCX Dışa Aktar",
+      "overview": "Genel Bakış",
+      "pdfPreview": "PDF Önizleme",
+      "gradeEntries": "Not Girişleri",
+      "auditReport": "Denetim Raporu",
+      "notes": "Notlar",
+      "student": "Öğrenci",
+      "university": "Üniversite",
+      "file": "Dosya",
+      "historicalRecord": "Geçmiş Kayıt",
+      "unknownStudent": "Bilinmeyen Öğrenci",
+      "transferFormTitle": "Ders Transfer Formu",
+      "dersKodu": "Ders Kodu",
+      "dersinAdi": "Dersin Adı",
+      "transkriptNotuYerel": "Transkript Notu (Yerel)",
+      "transkriptNotuAKTS": "Transkript Notu (AKTS)",
+      "aktsKredisi": "AKTS Kredisi",
+      "aktsNotu": "AKTS Notu",
+      "ikuNotu": "İKÜ Notu",
+      "total": "Toplam"
+    },
+    "gradeTable": {
+      "courseName": "DERS ADI",
+      "code": "KOD",
+      "ects": "AKTS",
+      "localGrade": "YEREL NOT",
+      "ectsGrade": "ECTS NOTU",
+      "iku": "İKÜ",
+      "switchTooltip": "Yerel (L) ve ECTS (E) giriş arasında geçiş yapın",
+      "preview": "Önizleme",
+      "mode": "Mod",
+      "modes": {
+        "localToIku": "Yerel → İKÜ",
+        "ectsToIku": "ECTS → İKÜ",
+        "manual": "Manuel"
+      },
+      "conversionMethod": "Yöntem",
+      "localToEcts": "Yerel → ECTS → İKÜ",
+      "scheme": "Şema",
+      "manualOverride": "Manuel geçersiz kılma — sistem dönüşümü atlandı"
+    },
+    "overview": {
+      "title": "Transkript Genel Bakışı",
+      "partnerCourse": "ANLAŞMALI ÜNİVERSİTE DERSİ",
+      "homeCourse": "ANA ÜNİVERSİTE DERSLERİ",
+      "directTransfer": "Doğrudan Transfer",
+      "ikuGrade": "İKÜ Notu",
+      "local": "Yerel",
+      "override": "GEÇERSİZ KILMA"
+    },
+    "matching": {
+      "title": "Ana Üniversite Ders Eşleştirme",
+      "description": "Seçili anlaşmalı üniversite dersi için İKÜ eşdeğer ders(ler)ini seçin.",
+      "searchPlaceholder": "İKÜ derslerini arayın ve seçin..."
+    },
+    "import": {
+      "partnerUniversity": "Anlaşmalı Üniversite",
+      "searchOrType": "Üniversite adı arayın veya yazın",
+      "selectOrType": "Mevcut bir anlaşmalı üniversite seçebilir veya yeni bir üniversite adı yazabilirsiniz.",
+      "studentName": "Öğrenci Adı",
+      "studentNumber": "Öğrenci Numarası",
+      "studentNamePlaceholder": "ör. Ahmet Yılmaz",
+      "studentNumberPlaceholder": "ör. 220...",
+      "historicalHint": "Geçmiş kayıtlar için bilgi girin. Anonim giriş için boş bırakın.",
+      "transcriptPdf": "Transkript PDF (İsteğe Bağlı)",
+      "selectPdf": "PDF Dosyası Seç",
+      "uploadHint": "Varsa resmi transkript belgesini yükleyin.",
+      "anonymousStudent": "Anonim Öğrenci",
+      "historicalPrefix": "Manuel olarak oluşturulmuş geçmiş kayıt: "
+    },
+    "scheme": {
+      "title": "Not Sistemi",
+      "description": "Bu sistem, {{university}} üniversitesinin yerel notlarını otomatik olarak İKÜ notlarına dönüştürmek için kullanılır.",
+      "localGrade": "Yerel Not",
+      "definition": "Tanım",
+      "ects": "ECTS",
+      "ikuGrade": "İKÜ Notu",
+      "mixed": "Karma Sistem",
+      "mixedDesc": "Bu üniversite dönüşüm için hem yerel hem de ECTS notlarını kullanır."
+    },
+    "messages": {
+      "nothingToSave": "Kaydedilecek bir şey yok",
+      "courseNameRequired": "Tüm girişler için ders adı gereklidir",
+      "enterGrades": "Kaydetmeden önce tüm dersler için not girin",
+      "invalidConversions": "Bazı notlar dönüştürülemedi. Tüm notların geçerli olduğundan ve sistem tarafından tanındığından emin olun.",
+      "saved": "Kaydedildi",
+      "saveFailed": "Kaydetme başarısız",
+      "conversionFailed": "Dönüştürme başarısız",
+      "entryDeleted": "Giriş silindi",
+      "deleteFailed": "Silme başarısız",
+      "transcriptDeleted": "Transkript silindi",
+      "transcriptFinalized": "Transkript sonlandırıldı",
+      "finalizeFailed": "Sonlandırma başarısız",
+      "transcriptReverted": "Transkript geri alındı",
+      "revertFailed": "Geri alma başarısız",
+      "cannotFinalize": "Sonlandırılamaz: Bazı notlar geçersiz veya eksik.",
+      "historicalCreated": "Geçmiş kayıt oluşturuldu",
+      "createFailed": "Kayıt oluşturulamadı",
+      "selectUniversity": "Lütfen bir üniversite adı seçin veya yazın"
+    },
+    "noTranscripts": "Transkript bulunamadı",
+    "historicalImport": "Geçmiş İçe Aktarma",
+    "status": {
+      "uploaded": "Yüklendi",
+      "studentGrading": "Öğrenci Notlandırma",
+      "pendingReview": "İnceleme Bekliyor",
+      "grading": "Notlandırılıyor",
+      "graded": "Notlandırıldı",
+      "finalized": "Sonlandırıldı"
+    },
+    "conversionMethods": {
+      "auto_local": "Otomatik (Yerel Not)",
+      "auto_ects": "Otomatik (ECTS Notu)",
+      "manual": "Manuel"
+    },
+    "export": {
+      "partnerCode": "Anlaşmalı Üniversite Kodu",
+      "partnerCourse": "Anlaşmalı Üniversite Dersi",
+      "partnerEcts": "Anlaşmalı AKTS",
+      "localGrade": "Yerel Not",
+      "ectsGrade": "ECTS Notu",
+      "homeCourses": "Ana Üniversite Ders(ler)i",
+      "homeEcts": "Ana AKTS",
+      "ikuGrade": "İKÜ Notu"
+    }
+  },
+  "landing": {
+    "nav": {
+      "brand": "Erasmus Match",
+      "signIn": "Giriş Yap"
+    },
+    "hero": {
+      "badge": "İstanbul Kültür Üniversitesi — Bilgisayar Mühendisliği Bölümü",
+      "title": "Erasmus Ders",
+      "titleHighlight": "Eşleştirme",
+      "titleEnd": "Sistemi",
+      "subtitle": "Erasmus öğrenci değişimi için yapay zeka destekli ders eşdeğerlik eşleştirmesi. Hibrit puanlama, doğrulama ve açıklanabilir sonuçlar.",
+      "cta": "Başlamak İçin Giriş Yapın"
+    },
+    "features": {
+      "sectionTitle": "Nasıl Çalışır?",
+      "sectionSubtitle": "Katalog alımından Öğrenim Anlaşmasına kadar — akademik titizlik ve şeffaflık için oluşturulmuş uçtan uca bir süreç.",
+      "items": {
+        "aiMatching": {
+          "title": "Yapay Zeka Destekli Eşleştirme",
+          "desc": "Kesin ders eşdeğerliği için LLM anlamsal analizi ile deterministik AKTS, meta veri ve vektör tabanlı erişimi birleştiren hibrit puanlama süreci."
+        },
+        "smartVerification": {
+          "title": "Akıllı Doğrulama",
+          "desc": "İkinci aşama LLM denetimi her eşleşmeyi özgünlük açısından değerlendirir — tam güven puanlaması ile onaylanır, riskli olarak işaretlenir veya reddedilir."
+        },
+        "workflow": {
+          "title": "Öğrenci ve Koordinatör İş Akışı",
+          "desc": "AKTS takibi, koordinatör inceleme panelleri, manuel müdahale kontrolleri ve otomatik Öğrenim Anlaşması hazırlığı ile etkileşimli ders seçimi."
+        },
+        "uniProfiles": {
+          "title": "Akıllı Üniversite Profilleri",
+          "desc": "Partner kurumların yapay zeka tarafından sentezlenmiş özetleri — şehir güvenliği, yaşam maliyetleri, ulaşım ve İngilizce yeterlilik kılavuzları dahil."
+        },
+        "partnerUnis": {
+          "title": "Partner Üniversiteler",
+          "desc": "Avrupa genelinde çok formatlı katalog alımı — birleştirilmiş PDF'ler, tekil belgeler ve OCR destekli kategori tabanlı aktarım."
+        },
+        "explainable": {
+          "title": "Açıklanabilir Sonuçlar",
+          "desc": "Her aday eşleşmesi için puan dökümleri, eşleşen ve eksik konu etiketleri, kanıta dayalı gerekçelendirme ve yapısal notlar."
+        }
+      }
+    },
+    "cta": {
+      "title": "Dersleri eşleştirmeye hazır mısınız?",
+      "subtitle": "Başlamak için CATS hesabınızla giriş yapın.",
+      "button": "Giriş Yap"
+    },
+    "footer": {
+      "dept": "İstanbul Kültür Üniversitesi — Bilgisayar Mühendisliği Bölümü",
+      "system": "Erasmus Ders Eşleştirme Sistemi"
+    }
+  },
+  "login": {
+    "title": "Erasmus Match",
+    "subtitle": "Ders Eşleştirme Sistemi",
+    "errors": {
+      "invalid": "Giriş başarısız. Geçersiz kullanıcı adı veya şifre.",
+      "tooMany": "Çok fazla başarısız deneme. Lütfen bekleyin.",
+      "catsUnreachable": "CATS portalına ulaşılamıyor. Yönetici girişi deneyin."
+    },
+    "form": {
+      "usernameRequired": "Lütfen kullanıcı adınızı girin",
+      "usernamePlaceholder": "Kullanıcı Adı (CATS)",
+      "passwordRequired": "Lütfen şifrenizi girin",
+      "passwordPlaceholder": "Şifre",
+      "submit": "Giriş Yap"
+    },
+    "footer": "CATS (cats.iku.edu.tr) hesabınızla giriş yapın"
+  },
+  "deactivated": {
+    "title": "Hesap Devre Dışı",
+    "message": "Hesabınız devre dışı bırakılmış. Lütfen bölüm koordinatörünüz veya sistem yöneticinizle iletişime geçin.",
+    "backToLogin": "Girişe Dön"
+  },
+  "common": {
+    "logout": "Çıkış Yap",
+    "dashboard": "Kontrol Paneli",
+    "unit": "Bölüm:",
+    "selectUnit": "Bölüm Seçin",
+    "optional": "İsteğe Bağlı",
+    "save": "Kaydet",
+    "edit": "Düzenle",
+    "upload": "Yükle",
+    "cancel": "İptal",
+    "close": "Kapat",
+    "confirm": "Onayla",
+    "selectDate": "Tarih Seçin"
+  },
+  "sidebar": {
+    "navLabel": "Navigasyon",
+    "menu": {
+      "universities": "Üniversiteler",
+      "courses": "Dersler",
+      "upload": "Yükle ve Aktar",
+      "matching": "Ders Eşleştirme",
+      "reviewPanel": "İnceleme Paneli",
+      "uniInfo": "Üniversite Bilgileri",
+      "gradeConversion": "Not Dönüşümü",
+      "transcripts": "Transkriptler",
+      "myApplications": "Başvurularım",
+      "partnerUnis": "Partner Üniversiteler",
+      "myTranscripts": "Transkriptlerim",
+      "adminPanel": "Admin Paneli",
+      "senateDecisions": "Senato Kararları",
+      "uploadTransferForm": "Transfer Formu Yükle"
+    },
+    "footer": {
+      "ikuOffice": "İKÜ Erasmus Ofisi"
+    }
+  },
+  "universities": {
+    "stats": {
+      "totalUnis": "Toplam Üniversite",
+      "totalCourses": "Toplam Ders",
+      "processed": "İşlenen"
+    },
+    "table": {
+      "university": "Üniversite",
+      "type": "Tip",
+      "structure": "Yapı",
+      "status": "Durum",
+      "active": "Aktif",
+      "courses": "Dersler",
+      "actions": {
+        "view": "Görüntüle",
+        "remove": "Sil"
+      }
+    },
+    "types": {
+      "home": "Ev",
+      "partner": "Partner"
+    },
+    "statuses": {
+      "pending": "Bekliyor",
+      "parsing": "Aktarılıyor",
+      "parsed": "Aktarıldı",
+      "embedding": "Vektörleşiyor",
+      "ready": "Hazır",
+      "failed": "Başarısız"
+    },
+    "activeStatus": {
+      "active": "AKTİF",
+      "inactive": "PASİF"
+    },
+    "messages": {
+      "added": "Üniversite eklendi",
+      "createFailed": "Üniversite oluşturulamadı",
+      "removed": "Üniversite silindi",
+      "scrapingComplete": "ECTS içe aktarma tamamlandı! {{count}} ders çekildi, {{jobs}} yükleme işi oluşturuldu."
+    },
+    "modals": {
+      "addTitle": "Üniversite Ekle",
+      "removeTitle": "Üniversiteyi sil?",
+      "removeContent": "\"{{name}}\" ve tüm dersleri kalıcı olarak silinecektir.",
+      "addBtn": "Ekle",
+      "close": "Kapat",
+      "runInBackground": "Arka Planda Çalıştır",
+      "viewUploadJobs": "Yükleme İşlerini Görüntüle"
+    },
+    "form": {
+      "uniName": "Üniversite Adı",
+      "namePlaceholder": "örn. Münih Teknik Üniversitesi",
+      "required": "Zorunlu",
+      "deptLabel": "Bölüm (Global Adminler için zorunlu)",
+      "deptPlaceholder": "örn. COM",
+      "deptRequired": "Lütfen bir bölüm seçin",
+      "country": "Ülke",
+      "countryPlaceholder": "örn. Almanya",
+      "city": "Şehir",
+      "cityPlaceholder": "örn. Münih",
+      "pdfStructure": "PDF Yapısı",
+      "structures": {
+        "individual": "Bireysel",
+        "consolidated": "Birleştirilmiş",
+        "categoryBased": "Kategori Bazlı",
+        "category_based": "Kategori Bazlı"
+      },
+      "categories": {
+        "core": "Çekirdek Dersler",
+        "deptElective": "Bölüm Seçmeli Dersleri",
+        "elective": "Seçmeli Dersler"
+      },
+      "isHome": "Ev Sahibi Üniversite mi? (Sizin Kurumunuz)",
+      "homeExists": "Bu bölüm için zaten bir ev sahibi üniversite mevcut.",
+      "ectsUrl": "İKÜ ECTS URL",
+      "ectsHelp": "akademikpaket.iku.edu.tr adresinden \"Program Müfredatı\" URL'sini dersleri otomatik içe aktarmak için yapıştırın. Dersler Temel / Bölüm Seçmeli / Seçmeli olarak kategorize edilecektir.",
+      "ectsInvalid": "Geçerli bir İKÜ ECTS Program Müfredatı URL'si olmalıdır"
+    },
+    "import": {
+      "running": "ECTS İçe Aktarma Çalışıyor",
+      "downloaded": "{{scraped}}/{{total}} ders indirildi",
+      "modalTitle": "İKÜ ECTS Ders İçe Aktarma",
+      "failed": "İçe Aktarma Başarısız",
+      "completed": "İçe Aktarma Tamamlandı!",
+      "initializing": "Kazıyıcı başlatılıyor...",
+      "downloading": "Ders sayfaları indiriliyor... ({{scraped}}/{{total}})",
+      "categoriesFound": "Bulunan Kategoriler",
+      "categories": {
+        "core": "ÇEKİRDEK",
+        "deptElective": "BÖLÜM SEÇMELİ",
+        "elective": "SEÇMELİ",
+        "coursesCount": "{{count}} ders"
+      },
+      "jobsEnqueued": "✓ {{count}} yükleme işi aktarım için sıraya alındı"
+    }
+  },
+  "universityDetail": {
+    "messages": {
+      "updated": "Üniversite güncellendi",
+      "updateFailed": "Üniversite güncellenemedi",
+      "notFound": "Üniversite bulunamadı"
+    },
+    "backToAll": "Tüm Üniversiteler",
+    "homeUni": "EV",
+    "edit": "Düzenle",
+    "stats": {
+      "courses": "Dersler",
+      "pdfStructure": "PDF Yapısı",
+      "batches": "Kayıtlar"
+    },
+    "ingestionBatches": "Aktarım Kayıtları",
+    "editTitle": "Üniversiteyi Düzenle",
+    "form": {
+      "name": "Ad",
+      "country": "Ülke",
+      "city": "Şehir",
+      "pdfStructure": "PDF Yapısı",
+      "activeStatus": "Aktiflik Durumu"
+    },
+    "batchTable": {
+      "batch": "No",
+      "semester": "Dönem",
+      "status": "Durum",
+      "progress": "İlerleme",
+      "failed": "Başarısız",
+      "started": "Başlama"
+    }
+  },
+  "courseTable": {
+    "columns": {
+      "status": "Durum",
+      "course": "Ders",
+      "university": "Üniversite",
+      "ects": "AKTS",
+      "semester": "Dönem",
+      "level": "Seviye",
+      "language": "Dil",
+      "department": "Bölüm",
+      "quality": "Kalite",
+      "category": "Kategori",
+      "courseCode": "Ders Kodu",
+      "courseName": "Ders Adı"
+    },
+    "status": {
+      "active": "AKTİF",
+      "inactive": "PASİF"
+    },
+    "messages": {
+      "updated": "Ders güncellendi",
+      "updateFailed": "Ders güncellenemedi",
+      "deleted": "Ders silindi",
+      "deleteFailed": "Ders silinemedi"
+    },
+    "expanded": {
+      "qualityScore": "Kalite Puanı Hesaplaması"
+    },
+    "actions": {
+      "edit": "Dersi Düzenle",
+      "delete": "Sil",
+      "deleteConfirm": "Bu dersi silmek istediğinize emin misiniz?",
+      "deleteDesc": "Bu işlem geri alınamaz."
+    },
+    "details": {
+      "basicInfo": "Temel Bilgiler",
+      "courseCode": "Ders Kodu",
+      "courseName": "Ders Adı",
+      "department": "Bölüm",
+      "ects": "AKTS",
+      "level": "Seviye",
+      "semester": "Dönem",
+      "language": "Dil",
+      "universityId": "Üniversite ID",
+      "batchId": "Parti ID",
+      "content": "İçerik / Ders Tanımı",
+      "outcomes": "Öğrenme Çıktıları",
+      "academicContext": "Akademik Bağlam",
+      "primaryFormat": "Birincil Format",
+      "assessmentMode": "Değerlendirme Yöntemi",
+      "specialTags": "Özel Etiketler",
+      "lab": "Laboratuvar",
+      "project": "Proje",
+      "seminar": "Seminer",
+      "none": "Yok",
+      "noAcademicData": "Akademik bağlam verisi mevcut değil",
+      "metadataQuality": "Meta Veri Kalitesi",
+      "contentAvailable": "İçerik Mevcut",
+      "outcomesAvailable": "Çıktılar Mevcut",
+      "formatConfidence": "Format Güveni",
+      "noQualityData": "Kalite verisi mevcut değil",
+      "sourceMetadata": "Kaynak Meta Verileri",
+      "warnings": "Uyarılar",
+      "parsedAt": "Aktarılma: {{date}}"
+    },
+    "editModal": {
+      "title": "Düzenle: {{name}}",
+      "tabs": {
+        "basic": "Temel Bilgiler",
+        "content": "İçerik",
+        "academic": "Akademik Bağlam"
+      },
+      "form": {
+        "courseName": "Ders Adı",
+        "courseCode": "Ders Kodu",
+        "ects": "AKTS",
+        "department": "Bölüm",
+        "level": "Seviye",
+        "semester": "Dönem",
+        "language": "Dil",
+        "activeStatus": "Aktiflik Durumu",
+        "description": "Ders Tanımı",
+        "outcomes": "Öğrenme Çıktıları",
+        "primaryFormat": "Birincil Format",
+        "assessmentMode": "Değerlendirme Yöntemi",
+        "lab": "Laboratuvar",
+        "project": "Proje",
+        "seminar": "Seminer",
+        "specialTags": "Özel Etiketler"
+      }
+    },
+    "options": {
+      "yes": "Evet",
+      "no": "Hayır",
+      "unknown": "Bilinmiyor",
+      "bachelor": "Lisans",
+      "master": "Yüksek Lisans",
+      "fall": "Güz",
+      "spring": "Bahar",
+      "both": "Her İkisi",
+      "high": "Yüksek",
+      "medium": "Orta",
+      "low": "Düşük"
+    },
+    "pagination": {
+      "total": "{{total}} ders",
+      "total_plural": "{{total}} ders"
+    },
+    "categories": {
+      "core": "Temel",
+      "departmental_elective": "Bölüm Seçmeli",
+      "elective": "Seçmeli",
+      "social": "Sosyal",
+      "studio": "Stüdyo",
+      "technical": "Teknik"
+    }
+  },
+  "courseList": {
+    "stats": {
+      "totalCourses": "Toplam Ders",
+      "universities": "Üniversite",
+      "highQuality": "Yüksek Kalite",
+      "withWarnings": "Uyarı Alanlar"
+    },
+    "filters": {
+      "searchPlaceholder": "Derslerde ara...",
+      "university": "Üniversite",
+      "semester": "Dönem",
+      "quality": "Kalite",
+      "infoTooltip": "Sistem nasıl çalışır?"
+    },
+    "infoModal": {
+      "title": "Ders Aktarım Süreci Nasıl Çalışır?",
+      "tabs": {
+        "pipeline": "Süreç",
+        "modes": "PDF Modları",
+        "prompt": "Veri Çıkarımı",
+        "quality": "Kalite ve Uyarılar"
+      },
+      "alerts": {
+        "pipeline": "Ders PDF'leri 'Yükle ve Aktar' sayfası üzerinden yüklenir. Sistem, LLM kullanarak yapılandırılmış verileri otomatik olarak çıkarır — manuel veri girişine gerek yoktur.",
+        "modes": "Her üniversitenin yapılandırılmış bir PDF modülü vardır. Bu modül, ayrıştırıcının dosyaları nasıl böleceğini ve işleyeceğini belirler.",
+        "prompt": "Model: Gemini API üzerinden Gemma 4 31B-IT. Ham ders metnini gönderir ve 13 alanlı yapılandırılmış JSON döndürür.",
+        "warnings": "Uyarılar süreci asla engellemez. Her ders ne olursa olsun kaydedilir. Uyarılar ders tablosunda etiket olarak gösterilir ve eşleştirme kalite puanlarını etkiler."
+      },
+      "steps": {
+        "step1": {
+          "title": "PDF Yükleme ve Kuyruk",
+          "desc": "PDF'ler sunucuya yüklenir ve bir iş kuyruğuna (FIFO) eklenir."
+        },
+        "step2": {
+          "title": "Metin Çıkarımı",
+          "desc": "Ham metin PyMuPDF kullanılarak çıkarılır. Taranmış PDF'ler için OCR uygulanır."
+        },
+        "step3": {
+          "title": "LLM Veri Çıkarımı",
+          "desc": "Ham metin 13 farklı alanı çıkarması için Gemma 4 modeline gönderilir."
+        },
+        "step4": {
+          "title": "Doğrulama",
+          "desc": "Ayrıştırılan JSON verisi kural tabanlı bir doğrulayıcı tarafından kontrol edilir."
+        },
+        "step5": {
+          "title": "Vektör Kaydı",
+          "desc": "Her ders için benzerlik araması için kullanılacak bir metin vektörü (embedding) oluşturulur."
+        }
+      },
+      "modes": {
+        "desc": {
+          "individual": "Ders başına bir PDF. Tüm metin LLM'e gönderilir.",
+          "consolidated": "PDF başına birden fazla ders. Ayrıştırıcı sınırları belirler ve bloklar halinde işler.",
+          "category": "Kategori bazlı yükleme (Çekirdek, Bölüm Seçmeli vb.). Kategori bilgisi dersle birlikte saklanır."
+        },
+        "unis": "Üniversiteler"
+      },
+      "promptTable": {
+        "field": "Alan",
+        "type": "Tip",
+        "desc": "Açıklama"
+      },
+      "qualityTable": {
+        "level": "Seviye",
+        "condition": "Koşul",
+        "effect": "Eşleştirmeye Etkisi",
+        "conditions": {
+          "high": "İçerik + öğrenme çıktıları çıkarıldı",
+          "medium": "Yalnızca içerik veya çıktılardan biri çıkarıldı",
+          "low": "Hiçbir temel alan çıkarılamadı"
+        },
+        "effects": {
+          "high": "Tam eşleştirme kalitesi — LLM her iki alanı da kullanır",
+          "medium": "Düşük eşleştirme — eksik alan 50 puan olarak değerlendirilir",
+          "low": "Zayıf eşleştirme — her iki alan da 50 puan olarak değerlendirilir"
+        }
+      },
+      "warningTable": {
+        "title": "Uyarı Tetikleyicileri",
+        "trigger": "Tetikleyici",
+        "field": "Alan",
+        "triggers": {
+          "contentMissing": "İçerik eksik veya bilinmiyor",
+          "contentShort": "İçerik < 50 karakter",
+          "outcomesMissing": "Öğrenme çıktıları eksik",
+          "ectsIssue": "ECTS geçersiz veya > 30",
+          "codeMissing": "Ders kodu bulunamadı",
+          "languageMissing": "Dil bilgisi eksik",
+          "deptMissing": "Bölüm bilgisi eksik",
+          "academicMissing": "Akademik bağlam alanları bilinmiyor"
+        }
+      }
+    }
+  },
+  "departments": {
+    "Computer Engineering": "Bilgisayar Mühendisliği"
+  },
+  "upload": {
+    "title": "Yükle ve Aktar",
+    "newUpload": "Yeni Yükleme",
+    "selectUni": "Üniversite Seçin",
+    "selectStructure": "PDF Yapısı",
+    "selectCategory": "Kategori seçin veya yazın",
+    "uploadButton": "Yükle ve Kuyruğa Al",
+    "activeJobs": "Aktif İşlemler",
+    "recentJobs": "Son İşlemler",
+    "noJobs": "Henüz aktarım işlemi yok. Başlamak için yukarıdan PDF yükleyin.",
+    "semesters": {
+      "placeholder": "Dönem Seçin",
+      "fall": "Güz Dönemi",
+      "spring": "Bahar Dönemi",
+      "both": "Her İki Dönem",
+      "unknown": "Bilinmiyor (otomatik tespit)",
+      "none": "Dönem Yok"
+    },
+    "status": {
+      "queued": "Kuyrukta",
+      "uploading": "Yükleniyor",
+      "parsing": "Aktarılıyor",
+      "embedding": "Vektör Kaydı",
+      "paused": "Duraklatıldı",
+      "completed": "Tamamlandı",
+      "cancelled": "İptal Edildi",
+      "failed": "Hata",
+      "files": "dosya",
+      "failedCount": "hata"
+    },
+    "actions": {
+      "resume": "Devam Et",
+      "recover": "Kurtar",
+      "pause": "Duraklat",
+      "stop": "Durdur",
+      "pauseAll": "Tümünü Durdur"
+    },
+    "menu": {
+      "stopLeave": "Durdur ve olduğu gibi bırak",
+      "cancelKeep": "İptal Et (üniversiteyi tut)",
+      "cancelDelete": "İptal Et ve üniversiteyi sil"
+    },
+    "modals": {
+      "cancelJob": {
+        "title": "Yükleme iptal edilsin mi?",
+        "content": "Yükleme işlemi iptal edilecek. Halihazırda aktarılan dersler korunacaktır."
+      },
+      "cancelDelete": {
+        "title": "İptal edilsin ve üniversite silinsin mi?",
+        "content": {
+          "thisWill": "Bu işlem şunları yapacaktır:",
+          "item1": "Yükleme işlemini iptal eder",
+          "item2": "Üniversiteyi siler",
+          "item3": "Tüm aktarılan dersleri kaldırır",
+          "warning": "Bu işlem geri alınamaz."
+        }
+      }
+    },
+    "messages": {
+      "paused": "İşlem duraklatıldı",
+      "failedPause": "Duraklatma başarısız",
+      "pausedAll": "Tüm işlemler duraklatıldı",
+      "failedPauseAll": "Tümünü duraklatma başarısız",
+      "resumed": "İşlem devam ettiriliyor",
+      "failedResume": "Devam ettirme başarısız",
+      "cancelled": "Yükleme iptal edildi",
+      "cancelledDeleted": "Yükleme iptal edildi ve üniversite silindi",
+      "failedCancel": "İptal etme başarısız",
+      "queuedSuccess": "Yükleme başarıyla kuyruğa alındı",
+      "failedQueue": "Kuyruğa alma başarısız",
+      "selectWarning": "Lütfen bir üniversite seçin ve PDF/TXT dosyası ekleyin"
+    }
+  },
+  "fileUploader": {
+    "title": "Dosyaları buraya bırakın veya göz atmak için tıklayın",
+    "subtitle": ".pdf ve .txt dosyaları kabul edilir. Birden fazla dosya desteklenir.",
+    "errorType": "{{name}} bir PDF veya TXT dosyası değil",
+    "errorSize": "Dosya 50MB'dan küçük olmalıdır!"
+  },
+  "status": {
+    "queued": "Kuyrukta",
+    "uploading": "Yükleniyor",
+    "parsing": "Aktarılıyor",
+    "embedding": "Vektör Kaydı",
+    "matching": "Eşleştiriliyor",
+    "verifying": "Doğrulanıyor",
+    "paused": "Duraklatıldı",
+    "completed": "Tamamlandı",
+    "cancelled": "İptal Edildi",
+    "failed": "Hata",
+    "draft": "Taslak",
+    "submitted": "Gönderildi",
+    "rejected": "Reddedildi",
+    "laReady": "LA Hazır",
+    "revisionRequested": "Revizyon İstendi",
+    "pending": "Bekliyor",
+    "approved": "Onaylandı",
+    "manualReview": "Manuel İnceleme",
+    "notSelected": "Seçilmedi",
+    "uploaded": "Yüklendi",
+    "studentGrading": "Öğrenci Not Girişi",
+    "pendingReview": "İnceleme Bekliyor",
+    "grading": "Notlandırılıyor",
+    "graded": "Notlandırıldı",
+    "finalized": "Kesinleşti"
+  },
+  "matching": {
+    "title": "Toplu Ders Eşleştirme",
+    "subtitle": "Her ders için adaylar tek bir toplu istemde puanlanır",
+    "infoTooltip": "Eşleştirme nasıl çalışır?",
+    "partnerUni": "Partner Üniversite",
+    "homeUni": "Ev Sahibi Üniversite",
+    "selectPartner": "Partner üniversite seçin",
+    "selectHome": "Ev sahibi üniversite seçin",
+    "startMatching": "Eşleştirmeyi Başlat",
+    "onlyUnmatched": "Yalnızca henüz eşleşmemiş dersler işlenecektir.",
+    "noJobs": "Henüz Eşleştirme İşlemi Yok",
+    "noJobsDesc": "Bir partner ve ev sahibi üniversite seçin, ardından başlamak için \"Eşleştirmeyi Başlat\" butonuna tıklayın.",
+    "resumeAll": "Tümünü Devam Ettir",
+    "pauseAll": "Tümünü Duraklat",
+    "matchingWith": "Eşleştiriliyor:",
+    "llmVerification": "LLM Doğrulaması Çalışıyor...",
+    "failedCount": "{{count}} hata",
+    "created": "Oluşturulma:",
+    "actions": {
+      "pause": "Duraklat",
+      "resume": "Devam Et",
+      "cancel": "İptal Et",
+      "viewResults": "Sonuçları Görüntüle",
+      "delete": "İşlemi ve Sonuçları Sil"
+    },
+    "modals": {
+      "cancel": {
+        "title": "Toplu Eşleştirme İptal Edilsin mi?",
+        "content": "{{name}} için eşleştirme iptal edilsin mi? Halihazırda eşleşen dersler korunacaktır."
+      },
+      "delete": {
+        "title": "Eşleştirme İşlemi ve Sonuçları Silinsin mi?",
+        "content": "{{name}} için hesaplanan eşleşmeler kalıcı olarak kaldırılacaktır. Bu eşleşmelere dayalı öğrenci kayıtları bağlantılarını yitirecektir."
+      },
+      "info": {
+        "title": "Ders Eşleştirme Nasıl Çalışır?",
+        "tabs": {
+          "pipeline": "İşlem Hattı",
+          "engine": "Eşleştirme Motoru",
+          "verification": "Doğrulama"
+        },
+        "pipeline": {
+          "step1": {
+            "title": "Vektör Erişimi",
+            "desc": "Partner dersinin vektör kaydı, pgvector kosinüs benzerliği aracılığıyla tüm ev sahibi üniversite dersleriyle karşılaştırılır. En benzer 10 ders getirilir."
+          },
+          "step2": {
+            "title": "Deterministik Puanlama",
+            "desc": "10 adaydan her biri 5 sinyal üzerinden puanlanır: AKTS kredileri, ders adı benzerliği, akademik meta veri uyumu, seviye ve dönem."
+          },
+          "step3": {
+            "title": "En İyi 3'e Filtreleme",
+            "desc": "Adaylar (vektör benzerliği × 0.6 + deterministik ortalama × 0.4) formülüyle sıralanır. Yalnızca ilk 3 aday LLM puanlamasına geçer."
+          },
+          "step4": {
+            "title": "Toplu LLM Puanlaması",
+            "desc": "Tüm 3 aday tek bir çağrıda Gemma modeline gönderilir. LLM; içerik çakışmasını, öğrenme çıktılarını ve alan uyumunu puanlar, akademik kategoriyi belirler."
+          },
+          "step5": {
+            "title": "Hibrit Füzyon",
+            "desc": "6 puan bileşeni kategoriye özel ağırlıklarla birleştirilir. Nihai puan [0, 1] aralığında ağırlıklı bir toplamdır."
+          },
+          "step6": {
+            "title": "LLM Doğrulaması",
+            "desc": "Eşleştirmeden sonra, ikinci bir LLM her eşleşmeyi onay/risk/ret kararları ve güven puanlarıyla denetler."
+          }
+        },
+        "engine": {
+          "intro": "Ders eşleştirme motoru; vektör benzerliği, deterministik sinyaller ve LLM anlamsal analizini birleştiren bir hibrit puanlama yaklaşımı kullanır.",
+          "howItWorks": "Nasıl Çalışır?",
+          "item1": "Akademik Kategori Tespiti — LLM, dersi teknik, sosyal veya stüdyo tabanlı olarak sınıflandırır.",
+          "item2": "İçerik Puanı (LLM) — Ders izlenceleri arasındaki konu ve içerik çakışması (0-100).",
+          "item3": "Öğrenme Çıktıları Puanı (LLM) — Hedeflerin ve çıktıların uyumu (0-100).",
+          "item4": "Alan Puanı (LLM) — Daha geniş akademik alan uyumluluğu (0-100).",
+          "item5": "Kategoriye Duyarlı Değerlendirme — Yapısal beklentiler kategoriye göre uyarlanır (teknik derslerde laboratuvar, sosyal derslerde makale odaklılık vb.).",
+          "weights": "Kategori Ağırlıkları",
+          "weightsDesc": "Farklı akademik kategoriler, nihai füzyon puanı için farklı ağırlık profilleri kullanır:",
+          "table": {
+            "component": "Puan Bileşeni",
+            "technical": "Teknik",
+            "social": "Sosyal",
+            "studio": "Stüdyo",
+            "total": "Toplam",
+            "outcomes": "Öğrenme Çıktıları (LLM)",
+            "domain": "Alan Bilgisi (LLM)",
+            "ects": "AKTS (Deterministik)",
+            "metadata": "Meta Veri (Deterministik)",
+            "title": "Başlık (Deterministik)"
+          },
+          "note": "Not: Akademik kategori her ders için bir kez belirlenir ve bir gruptaki tüm adaylara tutarlı bir şekilde uygulanır."
+        },
+        "verification": {
+          "intro": "Eşleştirmeden sonra, ikinci bir LLM (Gemma 4 31B-IT) son kalite kontrolü olarak en iyi 3 aday üzerinde bir denetim gerçekleştirir.",
+          "checks": "Doğrulama Neleri Kontrol Eder?",
+          "item1": "Karşılıklı Özel Onay — En fazla bir aday onaylanabilir; eşleşme yeterince güçlü değilse hiçbiri onaylanmayabilir.",
+          "item2": "Çekirdek Konu Kapsamı — Partner dersinin, ev sahibi dersin temel konularını kapsayıp kapsamadığını doğrular.",
+          "item3": "İçerik Çakışması Değerlendirmesi — Çakışmayı gerçek, kısmi veya yüzeysel olarak sınıflandırır.",
+          "item4": "Risk Bayrakları — Eksik temel konuları, AKTS farklarını veya yapısal uyumsuzlukları tanımlar.",
+          "item5": "Güven Puanlaması — Akademik kesinliği yansıtan bir güven puanı (0.0-1.0) sağlar.",
+          "outcomes": "Karar Sonuçları",
+          "outcome1": "onaylandı — Tavsiye edilecek kadar güçlü",
+          "outcome2": "riskli — Kısmen kabul edilebilir, önemli eksikler var",
+          "outcome3": "reddedildi — Akademik olarak güvenilir değil (yanlış alan veya yüzeysel eşleşme)",
+          "principles": "Temel İlkeler",
+          "p1": "Partner dersteki fazla konular zenginliktir, ret nedeni değildir.",
+          "p2": "En az 2 ana eksik konu ret tetikler.",
+          "p3": "Kategoriye duyarlı yapı politikası uygulanır.",
+          "p4": "AKTS farkları tek başına ret kriteri değildir.",
+          "p5": "Ders adı benzerliğinden ziyade içerik ve çıktılara öncelik verilir."
+        }
+      }
+    },
+    "messages": {
+      "jobCreated": "Toplu eşleştirme işlemi oluşturuldu: {{count}} ders eşleştirilecek",
+      "failedCreate": "Eşleştirme işlemi oluşturulamadı",
+      "failedPause": "İşlem duraklatılamadı",
+      "failedResume": "İşlem devam ettirilemedi",
+      "failedCancel": "İşlem iptal edilemedi",
+      "jobDeleted": "İşlem ve sonuçlar silindi",
+      "failedDelete": "İşlem silinemedi",
+      "allPaused": "Tüm aktif eşleştirme işlemleri duraklatıldı",
+      "failedPauseAll": "Tüm işlemler duraklatılamadı",
+      "resumedCount": "{{count}} işlem devam ettirildi",
+      "failedResumeAll": "İşlemler devam ettirilemedi"
+    },
+    "results": {
+      "pageTitle": "Ders Eşleştirme — Sonuçlar",
+      "back": "Geri",
+      "loading": "Sonuçlar yükleniyor...",
+      "failedLoad": "Sonuçlar yüklenemedi. Lütfen tekrar deneyin.",
+      "noResults": "Henüz eşleşme sonucu yok — işlem devam ediyor olabilir.",
+      "matchesFound": "{{count}} eşleşme bulundu",
+      "partnerDetails": "Partner Ders Detayları",
+      "homeDetails": "Ev Sahibi Ders Detayları",
+      "scoreBreakdown": "Puan Kırılımı",
+      "officialRecommendation": "⭐ RESMİ TAVSİYE",
+      "coreHomeTopics": "ÇEKİRDEK EV SAHİBİ KONULARI",
+      "syllabusMatches": "MÜFREDAT EŞLEŞMELERİ",
+      "missingFromPartner": "PARTNERDE EKSİK KONULAR",
+      "extraPartnerTopics": "EKSTRA PARTNER KONULARI (ZENGİNLEŞTİRME)",
+      "stats": {
+        "courses": "{{count}} ders",
+        "processed": "{{processed}}/{{total}} işlendi"
+      },
+      "categories": {
+        "technical": "Teknik",
+        "social": "Sosyal",
+        "studio": "Stüdyo"
+      },
+      "breakdown": {
+        "content": "İçerik",
+        "outcomes": "Çıktılar",
+        "domain": "Alan",
+        "ects": "AKTS",
+        "metadata": "Meta Veri",
+        "title": "Başlık"
+      },
+      "coverage": "KAPSAM",
+      "assessments": {
+        "genuine": "Birebir",
+        "partial": "Kısmi",
+        "superficial": "Yüzeysel",
+        "weak": "Zayıf",
+        "moderate": "Orta",
+        "strong": "Güçlü"
+      }
+    }
+  },
+  "courseDetails": {
+    "modalTitle": "DERS MÜFREDATI",
+    "code": "KOD",
+    "ects": "AKTS",
+    "department": "BÖLÜM",
+    "level": "SEVİYE",
+    "semester": "DÖNEM",
+    "language": "DİL",
+    "academicContext": "Akademik Bağlam",
+    "format": "FORMAT",
+    "assessment": "DEĞERLENDİRME",
+    "lab": "LAB",
+    "project": "PROJE",
+    "seminar": "SEMİNER",
+    "tags": "Etiketler",
+    "content": "Ders İçeriği",
+    "outcomes": "Öğrenme Çıktıları",
+    "options": {
+      "yes": "Yes",
+      "no": "No",
+      "unknown": "Bilinmiyor"
+    },
+    "close": "Kapat",
+    "fetching": "Müfredat getiriliyor...",
+    "notFound": "Ders verisi bulunamadı",
+    "unknownWarning": "Bazı akademik bağlam alanları bilinmiyor: {{fields}}",
+    "values": {
+      "unknown": "Bilinmiyor"
+    }
+  },
+  "coordinatorDashboard": {
+    "title": "Koordinatör İnceleme Paneli",
+    "subtitle": "Öğrenci ders seçimlerini inceleyin ve eşleşmeleri onaylayın veya reddedin",
+    "filters": {
+      "status": "Duruma göre filtrele",
+      "university": "Üniversiteye göre filtrele",
+      "department": "Bölüme göre filtrele",
+      "clear": "Filtreleri Temizle"
+    },
+    "columns": {
+      "student": "Öğrenci",
+      "partnerUniversity": "Partner Üniversite",
+      "courses": "Dersler",
+      "ects": "AKTS",
+      "status": "Durum",
+      "submitted": "Gönderilme"
+    },
+    "table": {
+      "total": "toplam",
+      "approved": "ONAYLANDI",
+      "review": "İncele"
+    },
+    "statusOptions": {
+      "draft": "Taslak",
+      "submitted": "Gönderildi",
+      "revision": "Revizyon Gerekli",
+      "rejected": "Reddedildi",
+      "laReady": "LA Hazır",
+      "approved": "Onaylandı"
+    }
+  },
+  "applicationStatus": {
+    "draft": {
+      "label": "TASLAK",
+      "desc": "Seçimler düzenleniyor"
+    },
+    "submitted": {
+      "label": "GÖNDERİLDİ",
+      "desc": "Koordinatör onayı bekleniyor"
+    },
+    "submitted_for_review": {
+      "label": "GÖNDERİLDİ",
+      "desc": "İnceleme Bekliyor"
+    },
+    "approved": {
+      "label": "ONAYLANDI",
+      "desc": "Ders onaylandı"
+    },
+    "rejected": {
+      "label": "REDDEDİLDİ",
+      "desc": "Başvuru reddedildi"
+    },
+    "laReady": {
+      "label": "LA HAZIR",
+      "desc": "Tüm dersler onaylandı, Learning Agreement hazır"
+    },
+    "learning_agreement_ready": {
+      "label": "LA HAZIR",
+      "desc": "Learning Agreement hazır"
+    },
+    "revision_requested": {
+      "label": "REVİZYON",
+      "desc": "Revizyon istendi"
+    },
+    "manual_review_required": {
+      "label": "MANUEL",
+      "desc": "Manuel inceleme gerekiyor"
+    },
+    "revision": {
+      "label": "REVİZYON GEREKLİ",
+      "desc": "Koordinatör değişiklik talep etti"
+    }
+  },
+  "coordinatorReview": {
+    "backToDashboard": "Panele Dön",
+    "history": "Geçmiş",
+    "revert": "Geri Al",
+    "ectsProgress": "AKTS İLERLEMESİ",
+    "ectsReady": "{{count}} AKTS hazır",
+    "enoughEcts": "GÖNDERİM İÇİN YETERLİ AKTS",
+    "selected": "Seçildi",
+    "approved": "Onaylandı",
+    "learningAgreementReady": "Öğrenim Anlaşması Hazır",
+    "ready": "hazır",
+    "planned": "planlandı",
+    "ectsApprovedDesc": "({{approved}} / {{total}} AKTS onaylandı)",
+    "ectsRemaining": "{{count}} AKTS EKSİK",
+    "needMore": "{{count}} AKTS daha gerekiyor",
+    "suggestedMeetsOverride": "Öğrenci müdahaleyi onayladıktan sonra ({{count}} AKTS): {{total}} AKTS onaylanmış olacak — eşik aşıldı",
+    "suggestedMeetsGeneric": "Önerilen derslerle ({{count}} AKTS): Toplam {{total}} AKTS — gönderim için yeterli",
+    "approvedSummary": "{{name}} için {{ects}} AKTS onaylandı.",
+    "pendingDecisions": "Ancak {{count}} ders için henüz karar verilmedi. Lütfen tüm bekleyen dersleri karara bağlayın.",
+    "allRequirementsMet": "Tüm gereksinimler karşılandı.",
+    "revertReadyTitle": "Kesinleştirmeyi Geri Al?",
+    "revertReadyContent": "Bu işlem başvuruyu \"Gönderildi\" durumuna geri getirecektir. Daha sonra üzerinde tekrar değişiklik yapabilirsiniz.",
+    "revertFinalization": "Kesinleştirmeyi Geri Al",
+    "sendBackTitle": "Revizyon için Geri Gönder",
+    "sendBackContent": "Bu işlem başvuruyu revizyon için öğrenciye geri gönderecektir. Öğrenci seçimlerini düzenleyebilecek ve yeni dersler ekleyebilecektir.",
+    "sendBackNoteLabel": "Öğrenciye not:",
+    "sendBackPlaceholder": "Nelerin değişmesi gerektiğini açıklayın...",
+    "sendBackDefaultNote": "Revizyon için geri gönderildi",
+    "viewLearningAgreement": "Learning Agreement'ı Görüntüle",
+    "revisionBanner": "Revizyon için öğrenciye geri gönderildi — yeniden gönderilene kadar salt okunur",
+    "studentNotes": "Öğrenci Notu",
+    "partnerCourseDetails": "Partner Ders Detayları",
+    "studentsSelection": "Öğrencinin Seçimi",
+    "matchCandidates": "{{count}} aday bulundu",
+    "matchCandidatesHeader": "Eşleşme Adayları",
+    "noMatchFound": "EŞLEŞME BULUNAMADI",
+    "studentReviewRequest": "ÖĞRENCİ İNCELEME TALEBİ",
+    "reviewReq": "İNC. TALEBİ",
+    "bulkApprove": "{{count}} Gönderileni Onayla",
+    "bulkApproveTitle": "Toplu Onay",
+    "bulkApproveContent": "{{count}} gönderilmiş seçimi onaylamak istiyor musunuz? Sadece düz gönderilmiş dersler (alternatif veya inceleme talebi olmayan) onaylanacaktır.",
+    "bulkApproveSuccess": "{{count}} seçim onaylandı",
+    "markReadyTitle": "Kesinleştirip LA Hazır Olarak İşaretle?",
+    "markReadyContent": "Bu işlem öğrencinin {{ects}} AKTS'lik seçimlerini kesinleştirecek ve Learning Agreement'ı oluşturacaktır. Devam etmek istiyor musunuz?",
+    "deleteAppContent": "Bu işlem öğrencinin başvurusunu ve tüm seçimlerini kalıcı olarak silecektir. Bu işlem geri alınamaz.",
+    "noSelection": "Seçim Yapılmadı",
+    "noSelectionDesc": "Öğrenci bu partner dersi için bir home dersi seçmedi.",
+    "partnerNotApproved": "PARTNER DERSİ ONAYLANMADI",
+    "partnerNotApprovedDesc": "Koordinatör, bu partner dersinin akademik müfredatınız için uygun olmadığına veya önerilen eşleşmenin geçersiz olduğuna karar verdi.",
+    "noReasonProvided": "Belirli bir neden belirtilmedi.",
+    "rejectedAttempt": "Reddedilen deneme",
+    "studentAlternativeSuggestion": "ÖĞRENCİNİN ALTERNATİF ÖNERİSİ",
+    "studentReason": "Öğrencinin Nedeni",
+    "additionalReviewNote": "EK İNCELEME NOTU",
+    "coordinatorsApprove": "Koordinatör Onayı",
+    "coordinatorsOverride": "Koordinatörün Müdahalesi",
+    "aiRecommendation": "YAPAY ZEKA TAVSİYESİ",
+    "genuine": "BİREBİR",
+    "strongCoverage": "GÜÇLÜ KAPSAM",
+    "matchDetails": "Eşleşme Detayları",
+    "homeCourseDetails": "EV Ders Detayları",
+    "coreTopics": "TEMEL KONULAR",
+    "syllabusMatches": "MÜFREDAT EŞLEŞMELERİ",
+    "missingFromPartner": "PARTNERDE EKSİK KONULAR",
+    "enrichment": "ZENGİNLEŞTİRME",
+    "decideAllMessage": "LA hazır olması için tüm dersleri karara bağlayın",
+    "categories": {
+      "technical": "Teknik",
+      "social": "Sosyal",
+      "studio": "Stüdyo"
+    },
+    "actions": {
+      "approve": "Onayla",
+      "reject": "Reddet",
+      "override": "Müdahale Et",
+      "reOverride": "Yeniden Müdahale Et",
+      "manualReview": "Manuel İnceleme",
+      "sendBack": "REVİZYON İÇİN GERİ GÖNDER",
+      "addNote": "Öğrenciye Not Ekle",
+      "addNoteToStudent": "Öğrenciye iletilecek notu buraya yazın...",
+      "deleteApp": "Başvuruyu Sil",
+      "cancel": "İptal",
+      "confirm": "Onayla",
+      "remove": "Kaldır",
+      "note": "Not"
+    },
+    "historyModal": {
+      "title": "Başvuru Geçmişi",
+      "byStudent": "öğrenci tarafından"
+    },
+    "laModal": {
+      "title": "Learning Agreement Özeti",
+      "partnerCol": "PARTNER ÜNİVERSİTE DERSİ",
+      "homeCol": "EV ÜNİVERSİTE DERSLERİ",
+      "exportPdf": "PDF Olarak Dışa Aktar",
+      "exportExcel": "Excel Olarak Dışa Aktar",
+      "exportDocx": "DOCX Olarak Dışa Aktar",
+      "close": "Kapat"
+    },
+    "selectHomeCourse": "Ev sahibi üniversite dersi seçin",
+    "suggestion": "Öneri"
+  },
+  "manualReview": {
+    "title": "Manuel İnceleme Çalışma Alanı",
+    "student": "Öğrenci",
+    "status": "Durum",
+    "loadingFailed": "Manuel inceleme verileri yüklenemedi",
+    "studentSuggestionNote": "Öğrenci Öneri Notu",
+    "partnerCourseAbroad": "PARTNER DERSİ (YURT DIŞI)",
+    "selectedHomeCourse": "SEÇİLEN EV DERSİ",
+    "studentSuggestion": "ÖĞRENCİ ÖNERİSİ",
+    "noPartnerData": "Partner ders verisi bulunamadı",
+    "noStudentSuggestion": "Öğrenci önerisi bulunamadı",
+    "selectHomeToAnalyze": "Analiz Edilecek Ev Dersini Seçin",
+    "searchPlaceholder": "Ev üniversitesi dersleri arasında arayın...",
+    "runAnalysis": "Yapay Zeka Analizini Çalıştır",
+    "aiAnalysisResult": "Yapay Zeka Analiz Sonucu",
+    "allAnalyzedCourses": "TÜM ANALİZ EDİLEN DERSLER — puana göre sıralı",
+    "decision": "Karar",
+    "previousDecision": "ÖNCEKİ KARAR",
+    "notesOptional": "Notlar (isteğe bağlı)",
+    "notesPlaceholder": "Kararınız hakkında bir not ekleyin...",
+    "overrideWithSuggestion": "Öğrenci Önerisiyle Müdahale Et",
+    "override": "Müdahale Et",
+    "overrideConfirmTitle": "Bu dersle müdahale edilsin mi?",
+    "overrideSuggestionConfirmTitle": "Öğrenci önerisiyle müdahale edilsin mi?",
+    "selectedCourseLabel": "Seçilen",
+    "overrideDesc": "Bu işlem, seçilen İKÜ dersini koordinatör müdahalesi olarak atayacak ve seçimi onaylanmış olarak işaretleyecektir.",
+    "selectToEnable": "Onaylamayı etkinleştirmek için yukarıdan bir ev dersi seçin",
+    "rank": "SIRA",
+    "coverage": "KAPSAM",
+    "aiRecommendation": "YAPAY ZEKA TAVSİYESİ",
+    "coreHomeTopics": "TEMEL EV DERSİ KONULARI",
+    "syllabusMatches": "MÜFREDAT EŞLEŞMELERİ",
+    "missingFromPartner": "PARTNERDE EKSİK KONULAR",
+    "enrichment": "ZENGİNLEŞTİRME",
+    "scoreBreakdown": "PUAN KIRILIMI",
+    "matchDetails": "Eşleşme Detayları",
+    "analysisComplete": "Yapay zeka analizi tamamlandı",
+    "analysisFailed": "Analiz başarısız oldu — lütfen tekrar deneyin",
+    "approvedSuccess": "Ders başarıyla onaylandı",
+    "rejectedSuccess": "Öneri reddedildi",
+    "approvalFailed": "Onaylama başarısız oldu",
+    "rejectionFailed": "Reddetme başarısız oldu",
+    "close": "Kapat",
+    "loading": "Yükleniyor...",
+    "noResults": "Sonuç bulunamadı",
+    "verification": {
+      "approved": "ONAYLANDI",
+      "rejected": "REDDEDİLDİ",
+      "risk_flagged": "RİSKLİ",
+      "riskFlagged": "RİSKLİ"
+    },
+    "categories": {
+      "technical": "Teknik",
+      "social": "Sosyal",
+      "studio": "Stüdyo"
+    },
+    "assessments": {
+      "superficial": "YÜZEYSEL",
+      "moderate": "ORTA",
+      "substantial": "KAPSAMLI",
+      "weak": "ZAYIF",
+      "strong": "GÜÇLÜ"
+    },
+    "sources": {
+      "batch": "Toplu İşlem",
+      "manual": "Manuel"
+    }
+  },
+  "adminPanel": {
+    "title": "Sistem Yönetimi",
+    "subtitle": "Yönetim Paneli",
+    "addStaff": "Personel Ekle",
+    "faculty": "Fakülte",
+    "newDept": "Yeni Bölüm/Birim",
+    "newFaculty": "Yeni Fakülte",
+    "searchPlaceholder": "Kimlik veya isim ile ara...",
+    "filterRole": "Role göre filtrele",
+    "filterDept": "Bölüme göre filtrele",
+    "tabs": {
+      "personnel": "Personel Rehberi",
+      "units": "Akademik Birimler",
+      "logs": "Denetim Kayıtları"
+    },
+    "stats": {
+      "personnel": "Personel",
+      "units": "Akademik Birimler",
+      "superAdmins": "Süper Adminler",
+      "deptAdmins": "Bölüm Adminleri",
+      "coordinators": "Koordinatörler",
+      "students": "Öğrenciler"
+    },
+    "userTable": {
+      "identity": "Kullanıcı Kimliği",
+      "email": "E-posta",
+      "privileges": "Yetkiler ve Kapsam",
+      "status": "Durum",
+      "actions": "İşlemler",
+      "pendingCats": "CATS bağlantısı bekleniyor",
+      "active": "AKTİF",
+      "inactive": "PASİF"
+    },
+    "facultyTable": {
+      "code": "Kod",
+      "name": "Fakülte Adı"
+    },
+    "deptTable": {
+      "code": "Kod",
+      "name": "Bölüm/Birim Adı",
+      "faculty": "Fakülte",
+      "health": "Durum",
+      "actions": "İşlem",
+      "operational": "AKTİF",
+      "offline": "DEVRE DIŞI"
+    },
+    "auditTable": {
+      "time": "Zaman",
+      "actor": "Yapan",
+      "action": "İşlem",
+      "target": "Hedef",
+      "details": "Detaylar"
+    },
+    "modals": {
+      "addStaff": {
+        "title": "Personel Ekle",
+        "desc": "Kullanıcı ilk girişte CATS hesabını bağlamalıdır",
+        "displayName": "Görünen Ad (İsteğe bağlı)",
+        "roles": "Roller",
+        "dept": "Bölüm",
+        "create": "Hesap Oluştur"
+      },
+      "credentials": {
+        "title": "Giriş Bilgileri Oluşturuldu",
+        "desc": "Bu bilgileri kullanıcıyla paylaşın. Sadece bir kez gösterilecektir.",
+        "username": "Kullanıcı Adı",
+        "password": "Şifre",
+        "warning": "Bu bilgiler sadece bir kez gösterilir. Kullanıcı ilk girişte CATS hesabı ile doğrulama yapmalıdır.",
+        "done": "Tamam"
+      },
+      "manageRoles": {
+        "title": "Rolleri Yönet — {{name}}",
+        "current": "Mevcut rol atamaları:",
+        "noRoles": "Atanmış rol bulunamadı",
+        "addNew": "Yeni Rol Ekle",
+        "role": "Rol",
+        "dept": "Bölüm",
+        "assign": "Ata",
+        "remove": "Kaldır",
+        "deactivate": "Devre Dışı Bı",
+        "activate": "Aktif Et"
+      },
+      "newDept": {
+        "title": "Yeni Akademik Birim Kaydet",
+        "unitName": "Birim Adı",
+        "unitCode": "Birim Kodu",
+        "faculty": "Fakülte",
+        "selectFaculty": "Fakülte seçin"
+      },
+      "newFaculty": {
+        "title": "Yeni Fakülte Kaydet",
+        "name": "Fakülte Adı",
+        "code": "Fakülte Kodu"
+      }
+    },
+    "confirm": {
+      "removeUser": "Personeli Kaldır",
+      "removeUserDesc": "{{name}} isimli personeli kaldırmak istediğinize emin misiniz? Bu işlem geri alınamaz.",
+      "removeDept": "Akademik Birimi Kaldır?",
+      "removeDeptDesc": "\"{{name}}\" birimini kaldırmak istediğinize emin misiniz?",
+      "removeFaculty": "Fakülteyi Kaldır?",
+      "removeFacultyDesc": "\"{{name}}\" fakültesini kaldırmak istediğinize emin misiniz?",
+      "yesRemove": "Evet, Kaldır"
+    },
+    "messages": {
+      "deptCreated": "Bölüm başarıyla oluşturuldu",
+      "yesRemove": "Evet, Kaldır"
+    },
+    "messages": {
+      "deptCreated": "Bölüm başarıyla oluşturuldu",
+      "deptCreateFailed": "Bölüm oluşturulamadı",
+      "personnelRemoved": "Personel kaldırıldı",
+      "userDeleteFailed": "Kullanıcı silinemedi",
+      "unitRemoved": "Akademik birim kaldırıldı",
+      "unitDeleteFailed": "Birim silinemedi",
+      "deptStatusUpdated": "Bölüm durumu güncellendi",
+      "deptUpdateFailed": "Bölüm güncellenemedi",
+      "facultyCreated": "Fakülte başarıyla oluşturuldu",
+      "facultyCreateFailed": "Fakülte oluşturulamadı",
+      "facultyRemoved": "Fakülte kaldırıldı",
+      "facultyDeleteFailed": "Fakülte silinemedi",
+      "credsGenerated": "Giriş bilgileri oluşturuldu",
+      "credsFailed": "Giriş bilgileri oluşturulamadı",
+      "roleAssigned": "Rol atandı",
+      "roleAssignFailed": "Rol atanamadı",
+      "roleRemoved": "Rol kaldırıldı",
+      "roleRemoveFailed": "Rol kaldırılamadı",
+      "roleStatusUpdated": "Rol durumu güncellendi",
+      "roleToggleFailed": "Rol durumu güncellenemedi",
+      "copied": "Kopyalandı!"
+    }
+  },
+  "studentDashboard": {
+    "welcome": "Tekrar hoş geldin",
+    "subtitle": "Erasmus ders başvurularınızı aşağıdan yönetebilirsiniz",
+    "newApplication": "Yeni Başvuru",
+    "activeAppWarning": "Zaten aktif bir başvurunuz var. Yeni bir tane oluşturmak için önce mevcut olanı silmelisiniz.",
+    "myApplications": "Başvurularım",
+    "myApplicationsDesc": "Partner üniversite derslerini seçin ve koordinatör onayına gönderin",
+    "noApplications": "Henüz bir başvurunuz yok. Ders seçimine başlamak için ilk başvurunuzu oluşturun.",
+    "createApplication": "Başvuru Oluştur",
+    "reviseSubmit": "Revize Et ve Gönder",
+    "viewDetails": "Detayları Görüntüle",
+    "delete": "Sil",
+    "deleteTitle": "Başvuruyu Sil?",
+    "deleteContent": "Bu işlem, bu başvuru için yaptığınız tüm ders seçimlerini silecektir.",
+    "fallSemester": "Güz Dönemi",
+    "springSemester": "Bahar Dönemi",
+    "noCourses": "Ders seçilmedi",
+    "coursesCount": "{{count}} ders",
+    "coursesCount_plural": "{{count}} ders",
+    "counts": {
+      "draft": "{{count}} taslak",
+      "draft_plural": "{{count}} taslak",
+      "review": "{{count}} inceleme bekliyor",
+      "review_plural": "{{count}} inceleme bekliyor"
+    },
+    "createModal": {
+      "title": "Yeni Başvuru Oluştur",
+      "desc": "Bir başvuru oluşturmak için partner üniversiteyi ve hareketlilik dönemini seçin. Mevcut tüm dersler ve eşleşmeleri otomatik olarak yüklenecektir.",
+      "semester": "Dönem *",
+      "semesterPlaceholder": "Dönem seçin...",
+      "partnerUni": "Partner Üniversite *",
+      "uniPlaceholder": "Partner üniversite seçin...",
+      "create": "Oluştur"
+    },
+    "messages": {
+      "createFailed": "Başvuru oluşturulamadı",
+      "deleteFailed": "Başvuru silinemedi",
+      "loading": "Başvurular yükleniyor..."
+    }
+  },
+  "applicationDetail": {
+    "revisionTitle": "Revizyon Gerekli!",
+    "revisionDesc": "Koordinatörünüz değişiklik talep etti. Ders seçimlerinizi düzenleyebilir ve başvurunuzu yeniden gönderebilirsiniz.",
+    "back": "Panele Dön",
+    "reset": "Tüm Seçimleri Sıfırla",
+    "resetConfirm": "Her şeyi temizle?",
+    "resetDesc": "Bu işlem tüm ders seçimlerinizi silecek ve başvuruyu taslak durumuna geri döndürecektir.",
+    "withdraw": "Geri Çek ve Düzenle",
+    "finalize": "Başvuruyu Kesinleştir",
+    "finalizeDesc": "Kesinleştirildikten sonra seçimlerinizi değiştiremezsiniz ancak resmi Learning Agreement belgenizi oluşturabilirsiniz.",
+    "submit": "Onaya Gönder",
+    "notReady": "Seçim yapılıyor",
+    "readyToFinalize": "Kesinleştirmeye Hazır",
+    "readyToSubmit": "Gönderilmeye Hazır",
+    "ectsSummary": "AKTS İlerlemesi",
+    "partnerCredits": "Partner Kredileri",
+    "homeCredits": "İKÜ Eşdeğerlik",
+    "matchedCourses": "Eşleşen Dersler",
+    "searchPlaceholder": "Ders adı veya kodu ile ara...",
+    "noCoursesFound": "Aramanızla eşleşen ders bulunamadı",
+    "emptyState": "Bu üniversite için uygun ders bulunmamaktadır.",
+    "coordinatorNotes": "Koordinatör Notları",
+    "yourNotes": "Notlarınız / Açıklamalar",
+    "notesPlaceholder": "Koordinatör için notlarınızı buraya ekleyin (örneğin neden belirli dersleri seçtiğiniz)...",
+    "learningAgreement": "Learning Agreement",
+    "downloadPdf": "PDF İndir",
+    "downloadExcel": "Excel İndir",
+    "viewDetails": "Learning Agreement Görüntüle",
+    "sections": {
+      "selection": "Seç",
+      "homeCourse": "İKÜ Dersi",
+      "match": "Eşleşme",
+      "hostCourse": "Partner Ders",
+      "status": "Durum ve Kapsam"
+    },
+    "actions": {
+      "select": "SEÇ",
+      "remove": "KALDIR",
+      "hideAnalysis": "ANALİZİ GİZLE",
+      "matchAnalysis": "EŞLEŞME ANALİZİ",
+      "homeDetails": "İKÜ DETAY",
+      "askReview": "İnceleme İste",
+      "suggestAlt": "Alternatif Öner",
+      "clearReview": "İsteği Sil",
+      "clearAlt": "Öneriyi Sil",
+      "suggestAltAction": "Alternatif Öner",
+      "partnerDetails": "Partner Ders Detayları"
+    },
+    "labels": {
+      "aiRejected": "AI REDDETTİ",
+      "aiRisk": "AI RİSKLİ",
+      "aiApproved": "AI ONAYLI",
+      "aiAnalysisNote": "AI ANALİZ NOTU",
+      "topicsAnalysis": "KONU ANALİZİ",
+      "rank": "SIRA",
+      "coreHomeTopics": "TEMEL İKÜ KONULARI",
+      "syllabusMatches": "MÜFREDAT EŞLEŞMELERİ",
+      "missingFromHost": "HOST DERSTE EKSİK",
+      "enrichment": "ZENGİNLEŞTİRME (HOST DERSTE VAR)",
+      "scoreBreakdown": "Puan Dağılımı",
+      "structuralChecks": "Yapısal Kontroller",
+      "noMatchCandidates": "Eşleşme adayı bulunamadı",
+      "noSelection": "Seçim yapılmadı",
+      "pendingReview": "İnceleme İstendi",
+      "saving": "Kaydediliyor...",
+      "saved": "Kaydedildi",
+      "allApproved": "Tüm seçimler onaylandı! Başvurunuzu kesinleştirebilirsiniz.",
+      "adjustSelections": "Seçimlerinizi aşağıdan düzenleyebilir veya reddedilenleri yönetebilirsiniz.",
+      "yourSelections": "Seçimleriniz ({{count}}):",
+      "creditUnit": "AKTS",
+      "notApproved": "Partner Ders Onaylanmadı",
+      "notApprovedDesc": "Koordinatör, bu partner dersin akademik müfredatınız için uygun olmadığına veya önerilen eşleşmenin geçersiz olduğuna karar verdi.",
+      "notApprovedShort": "Bu ders değerlendirilmiş ve seçilen eşleşme için uygun olmadığı belirlenmiştir.",
+      "decisionFinal": "Koordinatör Kararı (Kesin Karar)",
+      "decisionApproved": "Bu eşleşme değerlendirilmiş ve akademik uyumluluğa göre onaylanmıştır.",
+      "coordinatorNote": "Koordinatör Notu",
+      "reasonNote": "Neden / Not",
+      "underReview": "Başvuru İncelemede",
+      "underReviewDesc": "Başvurunuz gönderildi ve şu anda düzenleme için kilitli. Koordinatör incelemeyi tamamladığında bilgilendirileceksiniz.",
+      "cancel": "İptal",
+      "add": "EKLE",
+      "reviewRequested": "Koordinatör İncelemesi İstendi",
+      "coverage": {
+        "genuine": "BİREBİR",
+        "partial": "KISMİ",
+        "superficial": "YÜZEYSEL",
+        "strong": "YÜKSEK",
+        "moderate": "ORTA",
+        "weak": "DÜŞÜK"
+      },
+      "status": {
+        "removed": "KALDIRILDI",
+        "overridden": "MÜDAHALE EDİLDİ",
+        "approved": "ONAYLANDI",
+        "rejected": "REDDEDİLDİ",
+        "submitted": "GÖNDERİLDİ",
+        "draft": "TASLAK",
+        "reviewReq": "İNCELEME BEKLİYOR",
+        "suggested": "ÖNERİLDİ",
+        "aiRec": "AI ÖNERİSİ",
+        "notSelected": "SEÇİLMEDİ",
+        "notRec": "ÖNERİLMEZ",
+        "notRecSuffix": "ÖNERİLMEZ",
+        "risk_flagged": "RİSKLİ"
+      },
+      "analysis": {
+        "content": "İçerik",
+        "outcomes": "Çıktılar",
+        "domain": "Alan",
+        "ects": "AKTS",
+        "metadata": "Metadata",
+        "title": "Başlık",
+        "coverage": "KAPSAM"
+      },
+      "courseCategories": {
+        "core": "Temel Zorunlu",
+        "departmental_elective": "Bölüm Seçmeli",
+        "elective": "Serbest Seçmeli",
+        "technical": "Teknik",
+        "social": "Sosyal",
+        "studio_based": "Stüdyo Odaklı"
+      },
+      "analysisNote": "AI Analiz Notu"
+    },
+    "modals": {
+      "askReview": {
+        "title": "Koordinatörden İnceleme İste",
+        "desc": "Uygun bir eşleşme bulamadığınızı koordinatörünüze bildirin. Durumu açıklayan bir not ekleyin.",
+        "noteLabel": "Not",
+        "notePlaceholder": "Örn: Önerilen derslerin hiçbiri bu partner dersle aynı konuları kapsamıyor...",
+        "send": "İsteği Gönder"
+      },
+      "suggestAlt": {
+        "title": "Alternatif Eşleşme Öner",
+        "desc": "Bu partner dersle eşleşebileceğini düşündüğünüz tek bir İKÜ dersi seçin. Sistem tarafından zaten önerilen adaylar hariç tutulmuştur.",
+        "search": "Ders adı veya kodu ile ara...",
+        "noCourses": "Ders bulunamadı",
+        "selected": "{{count}} ders seçildi",
+        "reasonLabel": "Neden / Açıklama",
+        "reasonPlaceholder": "Bu dersin neden uygun bir eşleşme olabileceğini açıklayın...",
+        "save": "Öneriyi Kaydet"
+      },
+      "submit": {
+        "title": "Başvuru Onaya Gönderilsin mi?",
+        "content": "{{partnerEcts}} AKTS partner / {{homeEcts}} AKTS İKÜ seçildi. Başvurunuz koordinatöre gönderilecek.",
+        "warning": "ÖNEMLİ: Koordinatör başvurunuzu incelerken seçimlerinizi DEĞİŞTİREMEYECEKSİNİZ.",
+        "ok": "Şimdi Gönder"
+      }
+    },
+    "messages": {
+      "loading": "Başvuru detayları yükleniyor...",
+      "submitted": "Başvuru koordinatör onayına gönderildi!",
+      "submitFailed": "Gönderilemedi",
+      "finalized": "Başvuru kesinleştirildi! Artık Learning Agreement belgenizi oluşturabilirsiniz.",
+      "finalizeFailed": "Kesinleştirilemedi",
+      "withdrawn": "Başvuru geri çekildi — artık seçimlerinizi düzenleyebilirsiniz",
+      "withdrawFailed": "Geri çekilemedi",
+      "resetSuccess": "Tüm seçimler temizlendi",
+      "resetFailed": "Seçimler sıfırlanamadı",
+      "matchSelected": "Eşleşme seçildi!",
+      "matchDeselected": "Eşleşme kaldırıldı",
+      "updateFailed": "Seçim güncellenemedi",
+      "requestSent": "İstek koordinatöre gönderildi",
+      "requestFailed": "İstek gönderilemedi",
+      "altSaved": "Alternatif öneri kaydedildi",
+      "altFailed": "Öneri kaydedilemedi",
+      "minHomeEcts": "Başvuru için en az 30 İKÜ AKTS gerekiyor. Şu an: {{current}} İKÜ AKTS eşleşti.",
+      "minPartnerEcts": "Başvuru için en az 28 AKTS gerekiyor. Şu an: {{current}} AKTS seçildi (reddedilenler hariç)."
+    },
+    "tooltips": {
+      "approved": "Bu eşleşme akademik olarak doğrulanmış ve seçim için önerilmiştir.",
+      "deselectFirst": "Önce mevcut ders seçimini kaldırın",
+      "rejected": "Bu eşleşme reddedilmiş veya eşleştirme için uygun görülmemiştir.",
+      "removeAltFirst": "Standart manuel inceleme talep etmek için önerinizi kaldırın",
+      "removeReviewFirst": "Alternatif önermek için inceleme talebinizi kaldırın",
+      "risk": "Bu eşleşmenin potansiyel riskleri var (örn. AKTS uyuşmazlığı) ve dikkatle incelenmelidir."
+    }
+  },
+  "partnerUniversities": {
+    "title": "Partner Üniversiteler",
+    "totalCourses": "Mevcut Toplam Ders",
+    "noUniversities": "Henüz partner üniversite bulunmuyor.",
+    "university": "Üniversite",
+    "country": "Ülke",
+    "courses": "Dersler",
+    "actions": {
+      "info": "Bilgi",
+      "browse": "Gözat",
+      "back": "Geri"
+    },
+    "browser": {
+      "searchPlaceholder": "Ders adı veya kodu ile ara...",
+      "coursesCount": "{{count}} ders",
+      "coursesCount_plural": "{{count}} ders",
+      "loading": "Yükleniyor...",
+      "noMatches": "\"{{search}}\" aramasına uygun ders bulunamadı",
+      "noFilters": "Seçilen filtrelere uygun ders bulunamadı",
+      "semester": "Dönem",
+      "fall": "Güz",
+      "spring": "Bahar",
+      "both": "Her İkisi"
+    },
+    "details": {
+      "title": "Ders Detayları",
+      "code": "Kod",
+      "ects": "AKTS",
+      "level": "Seviye",
+      "semester": "Dönem",
+      "language": "Dil",
+      "department": "Bölüm",
+      "academicContext": "Akademik İçerik",
+      "format": "Format",
+      "assessment": "Değerlendirme",
+      "components": {
+        "title": "Bileşenler",
+        "lab": "Laboratuvar",
+        "project": "Proje",
+        "seminar": "Seminer",
+        "yes": "Evet",
+        "no": "Hayır",
+        "unknown": "Bilinmiyor"
+      },
+      "tags": "Etiketler",
+      "dataQuality": {
+        "title": "Veri Kalitesi",
+        "content": "İçerik",
+        "outcomes": "Çıktılar",
+        "confidence": "Güvenilirlik",
+        "available": "Mevcut",
+        "missing": "Eksik"
+      },
+      "description": "Ders Açıklaması",
+      "learningOutcomes": "Öğrenme Çıktıları",
+      "warnings": "Uyarılar",
+      "warningMessages": {
+        "Language information is missing": "Dil bilgisi eksik",
+        "All academic context status fields are unknown": "Tüm akademik bağlam durum alanları bilinmiyor",
+        "Department information is missing": "Bölüm bilgisi eksik",
+        "Course code could not be extracted": "Ders kodu çıkarılamadı",
+        "ECTS value is non-positive: 0": "AKTS değeri pozitif değil: 0",
+        "Primary format is unknown": "Birincil format bilinmiyor",
+        "Assessment mode is unknown": "Değerlendirme yöntemi bilinmiyor",
+        "Content field is missing or unknown": "İçerik alanı eksik veya bilinmiyor",
+        "Learning outcomes are missing or unknown": "Öğrenim çıktıları eksik veya bilinmiyor",
+        "ECTS value could not be parsed": "AKTS değeri çözümlenemedi"
+      },
+      "aiMatches": "AI İKÜ Eşleşme Adayları",
+      "aiDisclaimer": "AI eşleşme durumu (Onaylı / Riskli / Reddedildi) sadece bir öneridir. Bir dersin kabul edilip edilmeyeceğine koordinatörünüz karar verir.",
+      "noAiMatches": "Bu ders için henüz eşleşme hesaplanmamış."
+    },
+    "status": {
+      "approved": "Onaylandı",
+      "risk_flagged": "Riskli",
+      "rejected": "Reddedildi"
+    }
+  },
+  "universityProfile": {
+    "notFound": "Üniversite bulunamadı.",
+    "rankings": "Dünya Sıralamaları",
+    "aiProfileTitle": "AI Tarafından Oluşturulan Profil",
+    "aiProfileDesc": "Bu bilgiler, hızlı bir genel bakış sağlamak amacıyla AI tarafından sentezlenmiştir. Doğruluk için çaba göstersek de, maliyetler, konaklama imkanları ve akademik programlar gibi detaylar değişebilir. Kritik bilgileri her zaman resmi üniversite web sitelerinden veya öğrenci rehberlerinden doğrulayın.",
+    "noData": "Bu üniversite için henüz profil verisi bulunmuyor.",
+    "cityProfile": {
+      "title": "Şehir Profili",
+      "safety": "Güvenlik",
+      "english": "İngilizce Kullanım Kolaylığı",
+      "climate": "İklim",
+      "population": "Nüfus"
+    },
+    "transportation": {
+      "title": "Ulaşım",
+      "airport": "En Yakın Havalimanı",
+      "center": "Şehir Merkezi",
+      "fromAirport": "Havalimanından Ulaşım",
+      "publicTransport": "Toplu Taşıma",
+      "nearbyCities": "Yakın Şehirler"
+    },
+    "accommodation": {
+      "title": "Konaklama",
+      "dorm": "Üniversite Yurdu",
+      "available": "Mevcut",
+      "notAvailable": "Mevcut Değil",
+      "dormCost": "Yurt Ücreti (dönemlik)",
+      "privateRoom": "Özel Oda (aylık)",
+      "difficulty": "Konaklama Zorluğu",
+      "notes": "Notlar"
+    },
+    "costOfLiving": {
+      "title": "Yaşam Maliyeti",
+      "grantSufficient": "Erasmus Hibesi Yeterli mi?",
+      "yesBasics": "Evet — temel giderleri karşılar",
+      "noExtra": "Hayır — ek bütçe gerekir"
+    },
+    "socialLife": {
+      "title": "Sosyal Yaşam",
+      "nightlife": "Gece Hayatı",
+      "community": "Erasmus Topluluğu",
+      "organizations": "Öğrenci Organizasyonları",
+      "keySpots": "Önemli Noktalar"
+    },
+    "academicInfo": {
+      "title": "Akademik Bilgiler",
+      "language": "Eğitim Dili",
+      "englishCourses": "İngilizce Dersler",
+      "limited": "Sınırlı",
+      "notablePrograms": "Öne Çıkan Programlar",
+      "specialNotes": "Özel Notlar"
+    },
+    "studentSummary": {
+      "title": "Öğrenci Özeti",
+      "rating": "Genel Değerlendirme",
+      "bestFor": "En Uygun Olduğu Alanlar",
+      "watchOutFor": "Dikkat Edilmesi Gerekenler"
+    },
+    "sources": "Kaynaklar"
+  },
+  "studentTranscripts": {
+    "headerLabel": "Transkriptler ve Notlar",
+    "title": "Transkriptlerim",
+    "subtitle": "Uluslararası ders sonuçlarınızı yükleyin ve takip edin",
+    "uploadBtn": "Transkript Yükle",
+    "emptyState": "Henüz transkript yok. Bir tane yükleyerek başlayın!",
+    "uploadPdf": "PDF Yükle",
+    "enterGrades": "Not Gir",
+    "viewGrades": "Notları Gör",
+    "originalPdf": "Orijinal PDF",
+    "view": "Görüntüle",
+    "delete": "Sil",
+    "deleteTitle": "Transkript Silinsin mi?",
+    "deleteContent": "Bu transkripti silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+    "deleteConfirm": "Sil",
+    "deleteSuccess": "Transkript silindi",
+    "deleteFailed": "Silme başarısız",
+    "uploadSuccess": "Transkript başarıyla yüklendi",
+    "uploadFailed": "Yükleme başarısız",
+    "overviewTitle": "Not Dönüşüm Özeti",
+    "overviewDesc": "Aşağıda koordinatörünüz tarafından girilen notlar ve İKÜ karşılıkları yer almaktadır.",
+    "exportPdf": "PDF Dışa Aktar",
+    "exportExcel": "Excel Dışa Aktar",
+    "exportDocx": "DOCX Dışa Aktar",
+    "close": "Kapat",
+    "uploadModal": {
+      "title": "Transkript PDF Yükle",
+      "upload": "Yükle",
+      "partnerUni": "Partner Üniversite",
+      "selectPartnerUni": "Partner üniversite seçin",
+      "transcriptPdf": "Transkript PDF",
+      "dragText": "PDF dosyasını sürükleyin veya tıklayın",
+      "notes": "Notlar (isteğe bağlı)",
+      "notesPlaceholder": "Koordinatör için notlarınız...",
+      "fileTooLarge": "Dosya 50MB'dan küçük olmalıdır!"
+    },
+    "columns": {
+      "partnerUni": "Partner Üniversite",
+      "file": "Dosya",
+      "status": "Durum",
+      "uploaded": "Yükleme Tarihi",
+      "code": "Kod",
+      "partnerCourse": "Partner Ders",
+      "ects": "AKTS",
+      "localGrade": "Yerel Not",
+      "ectsGrade": "AKTS Notu",
+      "ikuGrade": "İKÜ Notu",
+      "matchedHome": "Eşleşen İKÜ Dersleri"
+    },
+    "status": {
+      "uploaded": "Yüklendi",
+      "grading_in_progress": "Devam Ediyor",
+      "graded": "Notlandırıldı",
+      "finalized": "Sonlandırıldı"
+    },
+    "detail": {
+      "back": "Geri",
+      "transcriptTitle": "Transkript — {{university}}",
+      "student": "Öğrenci",
+      "university": "Üniversite",
+      "file": "Dosya",
+      "officialDoc": "Resmi Transkript Belgesi",
+      "scheme": "Not Sistemi",
+      "pdfPreview": "PDF Önizleme",
+      "gradeEntries": "Not Girişleri",
+      "addCourse": "Ders Ekle",
+      "save": "Kaydet",
+      "courseName": "DERS ADI",
+      "code": "KOD",
+      "localGrade": "YEREL NOT",
+      "ectsGrade": "AKTS NOTU",
+      "submitForReview": "İncelemeye Gönder",
+      "submitConfirm": "Bu transkripti incelemeye gönderilsin mi?",
+      "submitDesc": "Bu işlem tüm notları kilitler ve geri alınamaz.",
+      "submitSuccess": "Transkript incelemeye gönderildi",
+      "submitFailed": "Gönderim başarısız",
+      "fixGradesFirst": "Notları düzeltin — hatalı dönüşümler var",
+      "exportPdf": "PDF Dışa Aktar",
+      "exportExcel": "Excel Dışa Aktar",
+      "exportDocx": "DOCX Dışa Aktar",
+      "overview": "Genel Bakış",
+      "overviewTitle": "Transkript Özeti",
+      "notes": "Notlar",
+      "homeMatching": "İKÜ Ders Eşleştirmesi",
+      "homeMatchingDesc": "Seçilen partner dersi için İKÜ eşdeğer ders(ler)ini seçin.",
+      "searchHomeCourses": "İKÜ derslerini arayın ve seçin...",
+      "partnerUniCourse": "PARTNER ÜNİVERSİTE DERSİ",
+      "homeUniCourse": "İKÜ DERSLERİ",
+      "directTransfer": "Doğrudan Transfer",
+      "override": "MÜDAHALELİ",
+      "schemeTitle": "Not Sistemi",
+      "schemeDesc": "Bu not sistemi, {{university}} üniversitesindeki yerel notlarınızı otomatik olarak İKÜ notlarına dönüştürmek için kullanılır.",
+      "schemeLocalGrade": "Yerel Not",
+      "schemeDefinition": "Tanım",
+      "mixedScheme": "Karma Not Sistemi",
+      "mixedSchemeDesc": "Bu üniversite, not dönüşümü için hem yerel hem de AKTS notlarını kullanmaktadır.",
+      "nothingToSave": "Kaydedilecek bir şey yok",
+      "courseNameRequired": "Tüm girişler için ders adı gereklidir",
+      "invalidConversions": "Bazı notlar dönüştürülemedi. Lütfen tüm notların geçerli olduğundan emin olun.",
+      "saved": "Kaydedildi",
+      "saveFailed": "Kayıt başarısız",
+      "conversionFailed": "Dönüştürme başarısız",
+      "entryDeleted": "Giriş silindi",
+      "entryDeleteFailed": "Silme başarısız",
+      "emptySubmitError": "Gönderilemez: En az bir not girişi eklemelisiniz.",
+      "invalidSubmitError": "Gönderilemez: Bazı notlar geçersiz veya eksik.",
+      "addGradeFirst": "Göndermeden önce en az bir not ekleyin",
+      "fixGradesFirst": "Göndermeden önce tüm notları düzeltin",
+      "switchTooltip": "Yerel (L) ve AKTS (E) girişi arasında geçiş yapın"
+    }
+  },
+  "deptSelection": {
+    "welcome": "Hoş Geldiniz!",
+    "prompt": "Devam etmek için lütfen bölümünüzü seçin.",
+    "placeholder": "Bölümünüzü seçin",
+    "confirm": "Onayla ve Devam Et",
+    "success": "Bölüm başarıyla seçildi",
+    "error": "Bölüm kaydedilemedi"
+  },
+  "senateDecisions": {
+    "title": "Senato Kararları",
+    "noDecisions": "Bu birime ait senato kararı bulunamadı. Yeni bir senato kararı veya eşdeğerlik kuralı yüklemek için sol menüden 'Senato Kararları' sayfasını kullanabilirsiniz.",
+    "upload": "Karar Yükle",
+    "uploadTitle": "Senato Kararı Yükle",
+    "filterType": "Türe göre filtrele",
+    "filterDept": "Bölüme göre filtrele",
+    "table": {
+      "reference": "Referans",
+      "title": "Başlık",
+      "date": "Tarih",
+      "type": "Tür",
+      "department": "Bölüm",
+      "file": "Dosya",
+      "actions": "İşlem",
+      "allDepts": "Tüm Bölümler",
+      "allUnis": "Tüm Üniversiteler",
+      "university": "Üniversite"
+    },
+    "form": {
+      "title": "Karar Başlığı",
+      "referenceNo": "Referans No",
+      "date": "Karar Tarihi",
+      "type": "Karar Türü",
+      "department": "Bölüm",
+      "summary": "Özet",
+      "file": "Belge",
+      "selectFile": "Dosya Seç",
+      "addDepartment": "Bölüm Ekle",
+      "decisionType": "Partner Not Dönüşümü"
+    },
+    "selectDeptFirst": "Önce bölüm seçin",
+    "confirm": {
+      "delete": "Karar Silinsin mi?",
+      "deleteDesc": "\"{{title}}\" silinecek. Emin misiniz?"
+    },
+    "messages": {
+      "uploaded": "Karar yüklendi",
+      "uploadFailed": "Karar yüklenemedi",
+      "deleted": "Karar silindi",
+      "deleteFailed": "Karar silinemedi"
+    }
+  },
+  "uploadTransferForm": {
+    "title": "Transfer Formu Yükle",
+    "back": "Transkriptlere Dön",
+    "parseButton": "Yükle ve Parse Et",
+    "dragText": "PDF veya DOCX dosyasını buraya sürükleyin",
+    "dragHint": "Sistem tarafından üretilen transfer formu",
+    "parseSuccess": "Belge başarıyla yüklendi",
+    "warnings": "Uyarılar",
+    "studentName": "Öğrenci İsmi",
+    "studentNumber": "Öğrenci Numarası",
+    "partnerUni": "Partner Üniversite",
+    "homeUni": "Hedef Üniversite",
+    "total": "Toplam",
+    "demoStudent": "Örnek Öğrenci",
+    "demoPartnerUni": "Partner Üniversite",
+    "demoHomeUni": "İstanbul Kültür Üniversitesi",
+    "demoWarning": "Demo: Backend parse endpoint henüz hazır değil — örnek veri gösteriliyor",
+    "demoInfo": "Demo modda — örnek veri eklendi",
+    "backToList": "Listeye Dön",
+    "downloadFile": "Belgeyi İndir",
+    "detail": "Detay",
+    "parsedData": "Ders Transfer Verileri",
+    "courses": "ders",
+    "totalPartnerEcts": "Toplam Partner AKTS",
+    "totalHomeEcts": "Toplam İKÜ AKTS",
+    "uploadedDocs": "Yüklenen Belgeler",
+    "totalDocs": "belge",
+    "noDocs": "Henüz yüklenmiş belge yok",
+    "status": {
+      "ready": "Hazır",
+      "imported": "Aktarıldı",
+      "error": "Hata"
+    },
+    "table": {
+      "partnerCode": "Partner Kodu",
+      "partnerName": "Partner Ders",
+      "localGrade": "Not (Yerel)",
+      "ectsGrade": "AKTS Notu",
+      "partnerEcts": "AKTS",
+      "homeCode": "İKÜ Kodu",
+      "homeName": "İKÜ Ders",
+      "ikuGrade": "İKÜ Notu",
+      "homeEcts": "AKTS",
+      "expectedIku": "Beklenen İKÜ",
+      "verification": "Doğrulama",
+      "verificationLabel": "Doğrulama",
+      "filename": "Dosya",
+      "uploadDate": "Yüklenme",
+      "student": "Öğrenci",
+      "partnerUni": "Partner Üni.",
+      "courseCount": "Ders",
+      "totalEcts": "Toplam AKTS",
+      "status": "Durum",
+      "actions": "İşlem"
+    },
+    "departmentLabel": "Bölüm",
+    "partnerUniLabel": "Partner Üniversite",
+    "selectFirst": "Önce seçim yapın",
+    "uploadError": "Yükleme başarısız",
+    "verifying": "Doğrulanıyor",
+    "verificationResult": "Doğrulama Sonucu",
+    "valid": "Geçerli",
+    "partial": "Kısmi",
+    "invalid": "Hatalı",
+    "manualCheck": "Manuel Kontrol",
+    "manualCheckRequired": "Manuel Kontrol Gerekli",
+    "verified": "Doğrulandı",
+    "hasIssues": "Sorun Var",
+    "processing": "İşleniyor",
+    "noRuleFound": "Kural Yok",
+    "expectedGrade": "Beklenen Not",
+    "explanation": "Açıklama",
+    "copy": "Kopyala",
+    "copyExplanation": "Açıklamayı Kopyala",
+    "copied": "Kopyalandı",
+    "parsingMethod": "Parse Yöntemi",
+    "approveBtn": "Uygundur",
+    "flagBtn": "Sorunlu",
+    "reviewNotes": "İnceleme Notu",
+    "reviewNotesPlaceholder": "İnceleme notu (opsiyonel)",
+    "reviewTitle": "İnceleme",
+    "reviewApproved": "Belge onaylandı",
+    "reviewFlagged": "Belge sorunlu işaretlendi",
+    "reviewFailed": "İşlem başarısız",
+    "reverifyTitle": "Yeniden Değerlendirme",
+    "reverifyHint": "Yeni bir PDF/DOCX yükleyerek belgeyi yeniden değerlendirin",
+    "reverifyBtn": "Yeniden Değerlendir",
+    "reverifySuccess": "Yeni versiyon yüklendi, işleniyor...",
+    "reverifyFailed": "Yükleme başarısız",
+    "selectNewFile": "Yeni Dosya Seç",
+    "regenerateExplanations": "Açıklamaları Yeniden Üret",
+    "explanationsRegenerated": "Açıklamalar yeniden üretildi",
+    "regenerateFailed": "Açıklama üretme başarısız",
+    "downloadBtn": "Orijinal Belgeyi İndir",
+    "pending": "Beklemede",
+    "approved": "Onaylandı",
+    "flagged": "Sorunlu",
+    "reviewStatus": "İnceleme",
+    "reviewSectionTitle": "Belge İnceleme ve Yönetim Paneli",
+    "statusLabel": "İnceleme Durumu",
+    "approvedStatus": "Transfer Formu Onaylandı",
+    "reviewedAt": "Değerlendirme Tarihi:",
+    "approvedSubtext": "Bu belgenin ders transfer uygunluğu kontrol edildi ve onaylandı.",
+    "flaggedStatus": "Transfer Formu Sorunlu İşaretlendi",
+    "flaggedSubtext": "Belgede uyumsuzluk veya eksiklik tespit edildiği için sorunlu olarak işaretlendi.",
+    "pendingStatus": "İnceleme Bekliyor",
+    "pendingSubtext": "Lütfen ders denklik kontrollerini yapıp aşağıdaki butonlardan kararınızı belirtin.",
+    "actionsLabel": "Değerlendirme Kararı",
+    "notesLabel": "İnceleme Notu / Gerekçe",
+    "optional": "Opsiyonel",
+    "selectStatusFirst": "Lütfen önce Uygundur veya Sorunlu kararı verin",
+    "noteSaved": "İnceleme notu kaydedildi",
+    "saveFailed": "Kaydetme başarısız",
+    "saveNoteBtn": "Notu Kaydet",
+    "docManagementTitle": "Belge İşlemleri ve Güncelleme",
+    "originalDoc": "Orijinal Belge",
+    "aiExplanations": "Yapay Zeka Açıklamaları",
+    "aiExplanationsDesc": "Denklik açıklamalarını LLM ile yeniden üretin",
+    "reviewSectionDesc": "Ders transfer formunun uygunluğunu kontrol edin, not ekleyin veya güncel dosya ile yeniden değerlendirin.",
+    "versionHistoryTitle": "Geçmiş Versiyonlar",
+    "versionHistoryHint": "Önceki doğrulama sonuçlarını görüntüleyin ve eski versiyonlara dönün",
+    "versionHistoryBtn": "Versiyon Geçmişi",
+    "versionHistoryDrawerTitle": "Doğrulama Versiyon Geçmişi",
+    "versionHistoryDrawerSub": "Bu belge üzerinde yapılan geçmiş değerlendirmeler ve denklik analizleri",
+    "activeVersion": "Aktif Sürüm",
+    "activateThisVersion": "Bu Sürümü Aktifleştir",
+    "activateSuccess": "sürümü başarıyla aktifleştirildi",
+    "activateFailed": "Aktifleştirme başarısız",
+    "summaryAnalysis": "Özet Analiz:",
+    "summaryValid": "Uyumlu:",
+    "summaryPartial": "Kısmi:",
+    "summaryInvalid": "Uyumsuz:",
+    "colCourseName": "Ders Adı",
+    "colValidationStatus": "Doğrulama Durumu",
+    "colExpectedGrade": "Beklenen Not",
+    "colProvidedGrade": "Sağlanan Not",
+    "noVersionHistory": "Henüz kayıtlı bir geçmiş sürüm bulunmuyor."
+  }
+}

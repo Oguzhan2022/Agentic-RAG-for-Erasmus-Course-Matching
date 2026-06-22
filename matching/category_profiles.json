@@ -1,0 +1,29 @@
+{
+  "technical": {
+    "description": "Technical/quantitative courses (CS, Engineering, Math, Physics)",
+    "content_weight": 0.42,
+    "outcomes_weight": 0.25,
+    "domain_weight": 0.15,
+    "ects_weight": 0.07,
+    "metadata_weight": 0.06,
+    "title_weight": 0.05
+  },
+  "social": {
+    "description": "Social/verbal courses (Business, Law, Social Sciences, Languages)",
+    "content_weight": 0.37,
+    "outcomes_weight": 0.28,
+    "domain_weight": 0.20,
+    "ects_weight": 0.07,
+    "metadata_weight": 0.03,
+    "title_weight": 0.05
+  },
+  "studio_based": {
+    "description": "Applied/design courses (Architecture, Art, Design, Music)",
+    "content_weight": 0.40,
+    "outcomes_weight": 0.22,
+    "domain_weight": 0.15,
+    "ects_weight": 0.05,
+    "metadata_weight": 0.13,
+    "title_weight": 0.05
+  }
+}

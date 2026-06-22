@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Environment & secrets
+.env
+.env.local
+.env.production
+*.pem
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Uploads (user data — too large for git)
+uploads/
+
+# Database files
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# Models cache (sentence-transformers downloads)
+.cache/
+
+# Docker volumes
+postgres_data/
+
+# Course content PDFs (large, user data)
+Course_Contents/
+
+# Database backups (large)
+db/backups/
+db_backup*.sql
+local_backup_*.sql
+docker_render_migration*.sql
+
+# Temporary / reports
+Reports/
+*.backup
+
+# Playwright MCP screenshots
+.playwright-mcp/
+
+# AI Assistant temp files
+scratch/
+.gemini/
+.claude/
+
+# Render deployment files (ignored for GitHub CV/portfolio)
+sync_render_to_local.bat
+push_local_to_render.bat
+render.yaml
+setup_and_run1.bat
+
+# Excluded scripts and tests directories
+scripts/
+tests/
+
+

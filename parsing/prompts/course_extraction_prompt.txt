@@ -1,0 +1,76 @@
+You are a course information extractor. Read the university course text below and extract the information into a JSON object.
+
+RULES:
+1. If information is NOT found in the text, you MUST use the string "unknown". Do NOT leave it empty. Do NOT guess.
+2. For lab_status, project_status, seminar_status:
+   - Use true if the text mentions labs, projects, or seminars.
+   - Use false if the text explicitly says there are none.
+   - Use "unknown" if the text does not mention them at all.
+3. Do NOT invent or fabricate any information. Only extract what is clearly written in the text.
+4. ECTS must be a number. If you cannot find ECTS or credits, use null. Also you can use credit if ects is not found.
+5. For assessment_mode: Return a LIST of all assessment methods found. Use values like "written_exam", "oral_exam", "exam", "project", "assignment", "presentation", "lab_report", "thesis", "portfolio". If multiple methods exist, list ALL of them (e.g. ["written_exam", "assignment"]). Do NOT use "mixed" — always list individual methods. If only one method, still return a list with one item (e.g. ["written_exam"]). If unknown, use ["unknown"].
+6. For primary_format: Return a LIST of all teaching formats found. Use values like "lecture", "seminar", "lab", "project", "workshop", "tutorial", "exercise", "online". If multiple formats exist, list ALL of them (e.g. ["lecture", "lab"]). Do NOT use "mixed" — always list individual formats. If only one format, still return a list with one item (e.g. ["lecture"]). If unknown, use ["unknown"].
+7. Return ONLY the JSON object. No explanations, no markdown code fences, no extra text.
+8. For learning_outcomes: The text may use different headings such as "Learning Objectives", "Course Objectives", "Learning Goals", "Intended Learning Outcomes", "Course Learning Outcomes", "Qualifications", "Competences", "Skills acquired", or similar. ALL of these should be extracted into the "learning_outcomes" field. If the text has ANY of these sections, extract that content as learning_outcomes. Do NOT leave it as "unknown" just because the heading says "objectives" instead of "outcomes".
+9. For the "content" field: If the PDF contains a weekly course plan, weekly schedule, course outline by week, or similar (e.g., "Week 1: ..., Week 2: ..."), you MUST include this weekly plan in the "content" field. Also dont miss the content section, content section don't consist of only weekly plan. Also add course goals to the content field. do not add learning objective in content section.
+10. For "detected_semester": Analyze the text for semester indicators. If the text mentions "summer semester", "Sommersemester", or "SS" (as a semester abbreviation, not a part of a word), return "spring". If it mentions "winter semester", "Wintersemester", or "WS" (as a semester abbreviation), return "fall". If both are found, return "both". If no semester information is found, return "unknown". Use ONLY these exact values: "fall", "spring", "both", "unknown".
+11. For the "level" field: Analyze the text to determine the academic level. If the text mentions "undergraduate", "bachelor degree", "baccalaureate", or similar, return "bachelor". If it mentions "graduate", "postgraduate", "master degree", "magister", or similar, return "master". If the academic level cannot be determined or is not bachelor or master, return "unknown". Use ONLY these exact values: "bachelor", "master", "unknown".
+12. HEAL BR OKEN WORDS: Due to raw PDF extraction, words may have unnecessary spaces (e.g., "T echnology", "Priv acy", "Inter active", "v ocabulary", "par agraphs"). You MUST heal these words by removing those spaces before outputting them into the JSON fields.
+13. CRITICAL — ECTS EXTRACTION: You MUST find the ECTS/credit value from the PDF. Do NOT return null unless you have exhausted every possibility. ECTS is typically a SMALL number (1–30). Common WRONG values: 40, 48, 60, 120, 150 — these are HOURS, not ECTS!
+   - If you see "X Max ECTS" or "X ECTS" next to "Y Overall hours" or "Y hours", the ECTS value is X (the smaller number), NOT Y.
+   - Example: "9 Max ECTS  60 Overall hours" → ects = 9 (NOT 60).
+   - Look for ALL of these labels: "ECTS", "credits", "credit points", "CP", "CFU", "cfu", "cr.", "SWS" (then check nearby for ECTS), "Leistungspunkte", "LP", "crediti". Also check tables, headers, sidebars, and metadata sections — ECTS is often in a summary table at the top.
+   - IGNORE labels: "hours", "overall hours", "contact hours", "workload", "Stunden".
+   - If the document shows workload hours (e.g. 150h) AND a credit number (e.g. 5 ECTS), always pick the credit number.
+   - Only return null as an absolute last resort if no credit information exists anywhere in the text.
+14. If the course name appears in multiple languages (e.g., Polish and English, Czech and English, Italian and English), ALWAYS use the ENGLISH course name. Never use the non-English name if an English translation is available in the document.
+
+EXTRACT THIS EXACT JSON STRUCTURE:
+{{
+  "course_code": "<course code or unknown>",
+  "course_name": "<full course name>",
+  "department": "<department name or unknown>",
+  "ects": <number or null>,
+  "level": "<bachelor or master or unknown>",
+  "language": "<teaching language or unknown>",
+  "content": "<full course content/description text, including weekly plan if present, or unknown>",
+  "learning_outcomes": "<full learning outcomes text or unknown>",
+  "academic_context": {{
+    "primary_format": ["<list of formats: lecture, seminar, lab, project, workshop, tutorial, exercise, online, or unknown>"],
+    "assessment_mode": ["<list of methods: written_exam, oral_exam, exam, project, assignment, presentation, lab_report, thesis, portfolio, or unknown>"],
+    "lab_status": <true or false or "unknown">,
+    "project_status": <true or false or "unknown">,
+    "seminar_status": <true or false or "unknown">,
+    "special_tags": []
+  }},
+  "detected_semester": "<fall or spring or both or unknown>"
+}}
+
+EXAMPLE INPUT:
+"Course: CS101 Introduction to Programming\nECTS: 6\nLevel: Bachelor\nContent: This course covers basics of programming using Python including variables, loops, functions and OOP.\nLearning Outcomes: Students will write Python programs, debug code, and apply OOP principles.\nAssessment: Written Examination (70%), Lab assignments (30%)\nTeaching format: Lecture and Lab\nLanguage: English"
+
+EXAMPLE OUTPUT:
+{{
+  "course_code": "CS101",
+  "course_name": "Introduction to Programming",
+  "department": "unknown",
+  "ects": 6,
+  "level": "bachelor",
+  "language": "English",
+  "content": "This course covers basics of programming using Python including variables, loops, functions and OOP.",
+  "learning_outcomes": "Students will write Python programs, debug code, and apply OOP principles.",
+  "academic_context": {{
+    "primary_format": ["lecture", "lab"],
+    "assessment_mode": ["written_exam", "assignment"],
+    "lab_status": true,
+    "project_status": false,
+    "seminar_status": false,
+    "special_tags": []
+  }},
+  "detected_semester": "unknown"
+}}
+
+REMEMBER: If you cannot find a piece of information, use "unknown" (not empty string, not false). Only use false when the text explicitly states something is absent. NEVER use "mixed" for assessment_mode or primary_format — always list individual values.
+
+NOW EXTRACT FROM THIS TEXT:
+{course_text}

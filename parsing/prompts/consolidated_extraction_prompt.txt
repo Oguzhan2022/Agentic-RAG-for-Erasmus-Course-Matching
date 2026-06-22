@@ -1,0 +1,61 @@
+PHASE 1 - COURSE INDEX PROMPT:
+
+Below is a long OCR-extracted text of a university course catalogue. It contains page markers like "==Start of OCR for page X==".
+
+YOUR TASK:
+1. Scan the text from beginning to end.
+2. For each course, identify the course name and which page or pages its full description spans in the text.
+3. Identify the course name and which page or pages it spans in the text. (Determine page numbers from the "==Start of OCR for page X==" markers).
+4. CRITICAL: DO NOT include the page numbers of the Table of Contents in the "pages" list. Even if the course name appears in the ToC (e.g., page 1 or 2), ignore those pages for indexing. Only include pages starting from the actual course description.
+5. Return only a list in the following JSON format. Do not provide any other explanation.
+6. Fluid Mechanics and Impact Entrepreneurship are ONLY EXAMPLES from a different catalogue. DO NOT include them in your output unless you explicitly find them in the PROVIDED TEXT below:
+7. Do not miss any course !!!
+8. Ignore department/program names and any repeated headers; only extract entries that have an actual course description.
+9. First extract all course names from the Table of Contents as a reference list if it's available. Then ensure every one of these courses appears in your final output. If a course from the Table of Contents is missing, search again in the full text and include it.
+10. Each "Course title" marks the start of a new course. End the previous course right before it.
+
+Must obey rule 7
+
+EXPECTED JSON FORMAT:
+[
+  {{
+    "course_name": "Fluid Mechanics",
+    "pages": [13]
+  }},
+  {{
+    "course_name": "Impact Entrepreneurship – Developing Social and Ecological Innovations",
+    "pages": [15, 16]
+  }}
+]
+
+TEXT:
+{full_pdf_text}
+
+---
+
+PHASE 2 - VERBATIM EXTRACTION PROMPT:
+
+Below is a raw OCR text taken from specific pages of a university course catalogue.
+
+TARGET COURSE: "{target_course_name}"
+
+YOUR TASK:
+1. Find ONLY the block belonging to the course named "{target_course_name}" within the given text.
+2. Start this course block from the "Course name {target_course_name}" expression and capture ONLY all information belonging to that course VERBATIM until the content of this course ends (until the "Course name" heading of the next course or until the end of the text).
+3. VERY IMPORTANT: NEVER summarize the text, omit any sentences, or skip anything while copying. Include all subheadings (Learning objectives, Content, Type of assessment, etc.).
+4. CLEANUP: If there are markers like "==Screenshot for page X==", "==Start of OCR for page X==", "==End of OCR for page X==" and page numbers immediately following them (e.g., 15, 16) within your copied block, DELETE them. Merge text breaks.
+5. Return ONLY the following format. Use triple backticks for the code block. Do not make any explanations.
+6. Do not copy information belonging to other courses.
+7. Capture all information until reaching the next course.
+8. Clean page numbers from the text.
+9. Only give text from exactly the course name. Do not give text from next course.
+
+EXPECTED FORMAT:
+course_name: {target_course_name}
+raw_block_text:
+```
+Course name {target_course_name}\nLearning objectives...\nContent...\n[CLEANED AND SEAMLESS VERBATIM TEXT]\nType of assessment...
+```
+
+TEXT (Relevant and next pages):
+{relevant_pages_text}

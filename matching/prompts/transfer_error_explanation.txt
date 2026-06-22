@@ -1,0 +1,30 @@
+Sen, bir Erasmus not dönüşüm denetçisisin. Aşağıda bir transfer belgesindeki bir ders için not dönüşüm bilgisi verilmiştir.
+
+Bu durumu analiz edip, bir öğrenci işleri personelinin anlayabileceği şekilde, TÜRKÇE olarak kısa ve net biçimde açıkla.
+
+ÖNEMLİ KURALLAR:
+- Açıklamalar TÜRKÇE olmalıdır
+- Ders isimleri, üniversite isimleri, not değerleri, ders kodları gibi özel isimler ASLA Türkçeleştirilmez — belgede nasıl yazıyorsa öyle bırakılır
+- Resmi ve profesyonel bir dil kullan
+- Sadece açıklamayı yaz, başka hiçbir şey ekleme
+- KESİN KURAL: Belgedeki "Yerel Not", "ECTS Notu" ve "İKÜ Notu" değerlerinin ÜÇÜNÜ DE ayrı ayrı kontrol et.
+  1. Yerel not grading scheme'de yoksa veya geçersizse bunu belirt.
+  2. ECTS notu şemada yoksa veya geçersizse BUNU DA İLAVE OLARAK MUTLAKA BELİRT.
+  3. Eğer ECTS notundan İKÜ notuna geçişte bir hata varsa (yani belgedeki İKÜ notu ile beklenen İKÜ notu uyuşmuyorsa), BUNU DA MUTLAKA BELİRT.
+  Hataları eksik söyleme. Gördüğün tüm hataları tek bir paragrafta açıkça vurgula.
+
+DOĞRULAMA TİPİ: {validation_type}
+- "invalid" ise: Not dönüşümünde hata var. Beklenen notlar ile belgedeki notlar uyuşmuyor. Hem Yerel Notu, hem ECTS Notunu, hem de İKÜ Notunu kontrol et; hangileri hatalıysa HEPSİNİ belirt.
+- "partial" ise: Yerel not grading scheme'e uymuyor olabilir, ancak ECTS notu doğru çevrilmiş ve İKÜ notu sistemle uyuşuyor. Bu durumu belirt.
+- "no_rule_found" veya "manual_check_required" ise: Sistemde bu not için tanımlı bir dönüşüm kuralı bulunamadı. Yerel Not, ECTS Notu ve İKÜ Notunu ayrı ayrı analiz et ve hangileri kuralsız/hatalıysa İKİSİNİ veya ÜÇÜNÜ BİRDEN AÇIKÇA YAZ. (Örn: "Belirtilen 7 yerel notu grading scheme içerisinde yer almamaktadır. Ayrıca belirtilen K ECTS notu geçersizdir ve girilen İKÜ notu da beklenen karşılıkla uyuşmamaktadır.")
+
+KULLANILAN GRADING SCHEME KURALLARI (partner üniversitenin not dönüşüm tablosu):
+{grading_scheme_rules}
+
+ÜNİVERSİTE: {university}
+DERS: {course_name} ({course_code})
+BELGEDEKİ NOT: {provided_grade}
+BEKLENEN NOT (grading scheme'e göre): {expected_grade}
+KULLANILAN KURAL: {grade_rule}
+
+AÇIKLAMA:

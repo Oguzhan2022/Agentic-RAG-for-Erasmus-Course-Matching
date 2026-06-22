@@ -1,0 +1,1329 @@
+:root {
+  --red-primary: #c0392b;
+  --red-hover: #a93226;
+  --red-light: #f9e8e6;
+  --red-subtle: #fdf2f1;
+
+  --gray-900: #1a1a1a;
+  --gray-800: #2c2c2c;
+  --gray-700: #3d3d3d;
+  --gray-600: #555555;
+  --gray-500: #777777;
+  --gray-400: #999999;
+  --gray-300: #bfbfbf;
+  --gray-200: #d9d9d9;
+  --gray-100: #ededed;
+  --gray-50: #f5f5f5;
+
+  --white: #ffffff;
+  --bg: #f0f0f0;
+
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--gray-900);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-300);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-400);
+}
+
+/* Override Ant Design card styling */
+.ant-card {
+  border-radius: 10px !important;
+  border: 1px solid var(--gray-100) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid var(--gray-100) !important;
+  padding: 16px 24px !important;
+  min-height: auto !important;
+}
+
+.ant-card-head-title {
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Table refinements */
+.ant-table-thead>tr>th {
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  color: var(--gray-500) !important;
+  background: var(--gray-50) !important;
+  border-bottom: 1px solid var(--gray-200) !important;
+}
+
+.ant-table-tbody>tr>td {
+  font-size: 13px !important;
+  border-bottom: 1px solid var(--gray-100) !important;
+}
+
+.ant-table-tbody>tr:hover>td {
+  background: var(--red-subtle) !important;
+}
+
+/* Tag refinements */
+.ant-tag {
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  border-radius: 4px !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Button refinements */
+.ant-btn-primary {
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+  box-shadow: none !important;
+}
+
+.ant-btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Steps refinements */
+.ant-steps-item-finish .ant-steps-item-icon {
+  border-color: var(--red-primary) !important;
+}
+
+/* Modal refinements */
+.ant-modal-header {
+  border-bottom: 1px solid var(--gray-100) !important;
+}
+
+/* Descriptions */
+.ant-descriptions-item-label {
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  color: var(--gray-500) !important;
+  font-weight: 500 !important;
+}
+
+/* Upload area */
+.ant-upload-drag {
+  border: 2px dashed var(--gray-200) !important;
+  border-radius: 10px !important;
+  background: var(--gray-50) !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-upload-drag:hover {
+  border-color: var(--red-primary) !important;
+  background: var(--red-subtle) !important;
+}
+
+.ant-upload-drag .ant-upload-drag-icon .anticon {
+  color: var(--red-primary) !important;
+}
+
+/* Progress bar */
+.ant-progress-bg {
+  background: var(--red-primary) !important;
+}
+
+/* Admin action button (no Ant hover override) */
+.admin-action-btn:hover,
+.admin-action-btn:focus {
+  background: var(--red-hover) !important;
+  border-color: var(--red-hover) !important;
+  color: var(--white) !important;
+}
+
+/* Select refinements */
+.ant-select-selector {
+  border-radius: 6px !important;
+}
+
+/* Input refinements */
+.ant-input,
+.ant-input-search .ant-input {
+  border-radius: 6px !important;
+}
+
+/* Sidebar nav link style override */
+a {
+  color: var(--red-primary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--red-hover);
+}
+
+/* Page transition */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: fadeSlideIn 0.3s ease-out;
+}
+
+/* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Responsive ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+
+/* Mobile: show hamburger, hide desktop sider */
+@media (max-width: 991px) {
+
+  .desktop-sider,
+  .desktop-menu-btn {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex !important;
+  }
+
+  .main-content {
+    padding: 16px !important;
+  }
+}
+
+/* Desktop: hide hamburger */
+@media (min-width: 992px) {
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}
+
+/* Table horizontal scroll on small screens */
+@media (max-width: 767px) {
+  .ant-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .ant-table {
+    min-width: 600px;
+  }
+
+  .main-content {
+    padding: 12px !important;
+  }
+
+  .ant-card-head {
+    padding: 12px 16px !important;
+  }
+
+  .ant-card-body {
+    padding: 12px 16px !important;
+  }
+}
+
+/* Filter bar wrap on small screens */
+@media (max-width: 640px) {
+
+  .filter-bar .ant-input-search,
+  .filter-bar .ant-select {
+    width: 100% !important;
+  }
+}
+
+/* Stats row responsive */
+.stats-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+  .stats-row .stat-badge {
+    flex: 1 1 calc(33.333% - 12px);
+    min-width: 160px;
+  }
+}
+
+/* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
+   MOBILE RESPONSIVE (max-width: 768px)
+   Only affects mobile ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â desktop styles untouched.
+   ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+
+@media (max-width: 768px) {
+  .stats-row .stat-badge {
+    flex: 1 1 calc(50% - 6px);
+    min-width: 140px;
+  }
+
+  /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Layout Header ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+  .ant-layout-header {
+    padding: 0 10px !important;
+  }
+
+  .ant-layout-header h1 {
+    font-size: 14px !important;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .header-dept-selector .ant-typography {
+    display: none !important;
+  }
+
+  .header-dept-selector .ant-select {
+    width: 70px !important;
+  }
+
+  .header-user-name {
+    display: none !important;
+  }
+
+  /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Main Content ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+  .main-content {
+    padding: 12px !important;
+  }
+
+  /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Landing Page ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+  .lp-hero-title {
+    font-size: 36px !important;
+  }
+
+  .lp-hero-subtitle {
+    font-size: 15px !important;
+  }
+
+  .lp-features-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .lp-nav {
+    padding: 14px 16px !important;
+  }
+
+  .lp-hero-actions {
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  .lp-hero-actions .lp-hero-btn,
+  .lp-hero-actions .lp-hero-btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .lp-hero-btn {
+    padding: 14px 24px !important;
+  }
+
+  .lp-stat-item::after {
+    display: none !important;
+  }
+
+  .lp-stat-item {
+    padding: 0 !important;
+  }
+
+  .lp-stats-row {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .lp-feature-card {
+    padding: 24px 20px !important;
+  }
+
+  /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Student Dashboard ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+  .dashboard-welcome {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px;
+  }
+
+  .dashboard-welcome-btn {
+    width: 100%;
+  }
+
+  /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Course Selection Page ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+  .app-header-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px;
+  }
+
+  .app-header-row h3 {
+    font-size: 16px !important;
+  }
+
+  /* Card header: search full width */
+  .course-card-header .ant-card-extra {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-top: 8px;
+  }
+
+  .course-card-header .ant-card-extra .ant-input {
+    width: 100% !important;
+  }
+
+  .course-card-header .ant-card-head-wrapper {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .course-card-header .ant-card-head-title {
+    width: 100%;
+  }
+
+  /* Collapse panel headers */
+  .ant-collapse-header {
+    padding: 10px 12px !important;
+    overflow: hidden !important;
+  }
+
+  .ant-collapse-header .ant-collapse-header-text {
+    overflow: hidden !important;
+    max-width: 100% !important;
+  }
+
+  .collapse-header-content {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    overflow: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .collapse-header-content>div {
+    max-width: 100% !important;
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+
+  .collapse-header-content>div .ant-space {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    max-width: 100% !important;
+  }
+
+  .collapse-header-content>div .ant-space-item {
+    overflow: hidden !important;
+  }
+
+  .collapse-header-content>div .ant-space-item:nth-child(2) {
+    max-width: 160px !important;
+    flex-shrink: 1 !important;
+    overflow: hidden !important;
+  }
+
+  .collapse-header-content>div .ant-space-item:nth-child(2) .ant-typography {
+    display: block !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    font-size: 12px !important;
+    max-width: 100% !important;
+  }
+
+  .collapse-header-content>div .ant-space-item:first-child .ant-typography {
+    font-size: 12px !important;
+    white-space: nowrap !important;
+  }
+
+  .collapse-header-content>div .ant-space-item:first-child .ant-typography {
+    font-size: 12px !important;
+    white-space: nowrap !important;
+  }
+
+  .collapse-header-content>div .ant-tag {
+    font-size: 9px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .collapse-header-tags {
+    flex-wrap: wrap !important;
+    gap: 3px !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .collapse-header-tags .ant-tag {
+    font-size: 9px !important;
+    max-width: 200px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+  }
+
+  .collapse-header-tags .ant-btn {
+    font-size: 11px !important;
+    padding: 0 6px !important;
+    height: 22px !important;
+  }
+
+  /* Tags inside collapse panels (Your Selection, course tags) */
+  .ant-collapse-body {
+    overflow: hidden !important;
+  }
+
+  .ant-collapse-body>div {
+    overflow: hidden !important;
+    max-width: 100% !important;
+  }
+
+  .ant-collapse-body .ant-tag {
+    max-width: 100% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    overflow: hidden !important;
+  }
+
+  .ant-collapse-body .ant-tag>span:first-child {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .ant-collapse-body .ant-tag .ant-tag-close-icon {
+    flex-shrink: 0 !important;
+    margin-left: 4px !important;
+  }
+
+  .ant-collapse-body .ant-space-item {
+    overflow: hidden !important;
+    max-width: 100% !important;
+    flex-shrink: 1 !important;
+    min-width: 0 !important;
+  }
+
+  /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Candidates Grid (the big one) ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+  .candidates-grid-header {
+    display: none !important;
+  }
+
+  .candidates-grid-row {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    padding: 16px !important;
+  }
+
+  .cand-col-select {
+    order: 5;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    padding-left: 0 !important;
+  }
+
+  .cand-col-select>button {
+    width: 100% !important;
+    height: 32px !important;
+  }
+
+  .cand-col-select .select-label-text {
+    display: none !important;
+  }
+
+  .cand-col-home {
+    order: 2;
+    padding: 0 !important;
+  }
+
+  .cand-col-match {
+    order: 1;
+    text-align: center !important;
+  }
+
+  .cand-col-host {
+    order: 3;
+    padding: 0 !important;
+  }
+
+  .cand-col-status {
+    order: 4;
+    display: grid !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  .cand-col-status>div {
+    width: 100% !important;
+  }
+
+  .cand-col-status>div>.ant-tag {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* MATCH ANALYSIS and HOME DETAILS buttons full width in 2-col grid */
+  .cand-col-status>div>div[style*="cursor"] {
+    height: 28px !important;
+  }
+
+  /* Override CourseDetailsPanel inline width:125 */
+  .cand-col-status>div>div[style*="width: 125"],
+  .cand-col-status>div>div[style*="width:125"] {
+    width: 100% !important;
+  }
+
+  /* Candidate expanded details */
+  .cand-expanded-details {
+    padding: 16px !important;
+    padding-left: 16px !important;
+  }
+
+  .cand-expanded-details .ant-row {
+    flex-direction: column !important;
+  }
+
+  .cand-expanded-details .ant-col {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  /* Action buttons row */
+  .course-actions-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+
+  .course-actions-row .ant-space {
+    flex-direction: column !important;
+    display: flex !important;
+    width: 100% !important;
+  }
+
+  .course-actions-row .ant-space-item {
+    width: 100% !important;
+  }
+
+  .course-actions-row .ant-space-item .ant-btn {
+    font-size: 11px !important;
+    padding: 0 10px !important;
+    width: 100% !important;
+    height: 32px !important;
+  }
+
+  /* Partner Course Details button - same size */
+  .course-actions-row>div:last-child {
+    display: flex !important;
+    width: 100% !important;
+  }
+
+  .course-actions-row>div:last-child button,
+  .course-actions-row>div:last-child .ant-btn {
+    width: 100% !important;
+    height: 32px !important;
+    font-size: 11px !important;
+  }
+
+  /* MATCH ANALYSIS / HOME DETAILS buttons in candidate row */
+  .cand-col-status>div>div[style*="cursor: pointer"],
+  .cand-col-status>div>div {
+    font-size: 9px !important;
+  }
+
+  /* Footer actions */
+  .footer-actions-row {
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+  }
+
+  .footer-actions-row .ant-col {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .footer-actions-row .ant-space {
+    width: 100% !important;
+    display: flex !important;
+  }
+
+  .footer-actions-row .ant-space-item {
+    flex: 1 !important;
+  }
+
+  .footer-actions-row .ant-space-item .ant-btn {
+    width: 100% !important;
+  }
+
+  .footer-actions-row .ant-typography {
+    text-align: center !important;
+  }
+
+  /* Sticky footer card on mobile */
+  .main-content>.ant-card:last-child {
+    position: sticky !important;
+    bottom: 0 !important;
+    z-index: 10 !important;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ ECTS Progress Bar ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+  .ects-stats-row {
+    gap: 8px !important;
+    font-size: 10px !important;
+  }
+
+  /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Partner Universities Page ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+  .course-row-header {
+    grid-template-columns: 20px 1fr 36px !important;
+  }
+
+  .course-row-header>div:nth-child(2),
+  .course-row-header>div:nth-child(5) {
+    display: none !important;
+  }
+
+  .course-row-item {
+    grid-template-columns: 20px 1fr 36px !important;
+  }
+
+  .course-row-item>div:nth-child(2),
+  .course-row-item>div:nth-child(5) {
+    display: none !important;
+  }
+
+  /* University list table: hide Country + Courses columns */
+  .partner-uni-list .ant-table {
+    min-width: 0 !important;
+  }
+
+  .partner-uni-list .ant-table-thead>tr>th:nth-child(2),
+  .partner-uni-list .ant-table-thead>tr>th:nth-child(3),
+  .partner-uni-list .ant-table-tbody>tr>td:nth-child(2),
+  .partner-uni-list .ant-table-tbody>tr>td:nth-child(3) {
+    display: none !important;
+  }
+
+  .partner-uni-list .ant-table-thead>tr>th:last-child,
+  .partner-uni-list .ant-table-tbody>tr>td:last-child {
+    width: auto !important;
+    white-space: nowrap !important;
+  }
+
+  /* University header banner */
+  .uni-header-banner {
+    flex-wrap: wrap !important;
+  }
+
+  .uni-header-banner .uni-course-count {
+    display: none !important;
+  }
+
+  /* Search/filter bar */
+  .course-filter-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+
+  .course-filter-bar .ant-input {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .course-filter-bar .ant-divider-vertical {
+    display: none !important;
+  }
+
+  .course-filter-bar .semester-filter-group {
+    margin-left: 0 !important;
+  }
+
+  /* Table horizontal scroll */
+  .ant-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .ant-table {
+    min-width: 500px;
+  }
+
+  /* Modals */
+  .ant-modal {
+    max-width: calc(100vw - 24px) !important;
+    top: 8px !important;
+    margin: 0 auto !important;
+    padding-bottom: 0 !important;
+  }
+
+  .ant-modal .ant-modal-content {
+    max-height: 85vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .ant-modal .ant-modal-body {
+    flex: 1 !important;
+    overflow-y: auto !important;
+    max-height: 60vh !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Student Transcripts ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+  .transcript-welcome {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px;
+  }
+
+  .transcript-welcome-btn {
+    width: 100%;
+  }
+
+  /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ University Info Page ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+  .uni-info-header {
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+
+  .uni-info-header-tags {
+    margin-left: 66px;
+  }
+
+  /* Info page: section inner content full width */
+  .ant-col {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ General ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+  .ant-card-head {
+    padding: 12px 16px !important;
+  }
+
+  .ant-card-body {
+    padding: 12px 16px !important;
+  }
+
+  .ant-descriptions-item-label {
+    font-size: 10px !important;
+  }
+
+  /* Override grid for info page sections */
+  .ant-row {
+    flex-wrap: wrap;
+  }
+
+  /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Alternative Suggestion Cards ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+  .alt-suggest-card .ant-card-body div[style*="space-between"] {
+    flex-direction: column !important;
+  }
+
+  .alt-suggest-card .ant-card-body div[style*="space-between"]>.ant-btn {
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 8px !important;
+  }
+
+  /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Tags in Your Selection & Suggestions ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+  .your-selection-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    width: 100% !important;
+  }
+
+  .your-selection-tags .ant-tag {
+    max-width: 100% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 8px !important;
+    height: 24px !important;
+    line-height: 22px !important;
+    border-radius: 4px !important;
+  }
+
+  .your-selection-tags .ant-tag>span:first-child {
+    flex: 1 !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .your-selection-tags>.ant-tag .ant-tag-close-icon {
+    flex-shrink: 0 !important;
+    margin-left: 4px !important;
+    font-size: 11px !important;
+  }
+
+  /* Alt suggestion tags (inside the yellow box) */
+  .alt-suggest-card .ant-tag {
+    max-width: calc(100vw - 80px) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    padding: 3px 8px !important;
+    border-radius: 6px !important;
+    font-size: 11px !important;
+  }
+
+  .alt-suggest-card .ant-tag>span {
+    display: block !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Course Details Modals (HOME DETAILS / Partner Course Details) ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+  .ant-modal .ant-descriptions-view>table {
+    display: block !important;
+  }
+
+  .ant-modal .ant-descriptions-view>table>colgroup {
+    display: none !important;
+  }
+
+  .ant-modal .ant-descriptions-view>table>tbody {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .ant-modal .ant-descriptions-view>table>tbody>tr {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+  }
+
+  .ant-modal .ant-descriptions-view>table>tbody>tr>th,
+  .ant-modal .ant-descriptions-view>table>tbody>tr>td {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .ant-modal .ant-descriptions-view>table>tbody>tr>th {
+    border-bottom: none !important;
+    padding-bottom: 2px !important;
+  }
+
+  .ant-modal .ant-descriptions-view>table>tbody>tr>td {
+    border-bottom: 1px solid #f0f0f0 !important;
+    padding-top: 2px !important;
+  }
+
+  .ant-modal .ant-descriptions-item-label {
+    font-size: 10px !important;
+  }
+
+  .ant-modal .ant-descriptions-item-content {
+    font-size: 12px !important;
+  }
+
+  .ant-modal .ant-modal-body {
+    padding: 12px !important;
+  }
+
+  .ant-modal .ant-modal-title>div {
+    flex-wrap: wrap !important;
+  }
+
+  .ant-modal .ant-modal-title>div>div:last-child>div:last-child {
+    font-size: 13px !important;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .stats-row .stat-badge {
+    flex: 1 1 100%;
+  }
+
+  .lp-hero-title {
+    font-size: 28px !important;
+  }
+
+  .candidates-grid-row>.cand-col-status {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ÃƒÂ¢Ã¢â‚¬Â Ã¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬Â Ã¢â€šÂ¬ Partner Universities Mobile Fixes ÃƒÂ¢Ã¢â‚¬Â Ã¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬Â Ã¢â€šÂ¬ */
+@media (max-width: 768px) {
+
+  /* University List Table - No Scroll Fix */
+  .partner-uni-list .ant-table {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .partner-uni-list .ant-table-content {
+    overflow: hidden !important;
+  }
+
+  .partner-uni-list .ant-table-thead>tr>th:nth-child(2),
+  .partner-uni-list .ant-table-thead>tr>th:nth-child(3),
+  .partner-uni-list .ant-table-tbody>tr>td:nth-child(2),
+  .partner-uni-list .ant-table-tbody>tr>td:nth-child(3) {
+    display: none !important;
+  }
+
+  .partner-uni-list .ant-table-tbody>tr>td:first-child {
+    width: 100% !important;
+  }
+
+  .partner-uni-list .ant-table-tbody>tr>td:last-child {
+    width: auto !important;
+    white-space: nowrap !important;
+    text-align: right !important;
+    padding-right: 12px !important;
+  }
+
+  /* Back Button Improvement */
+  .mobile-back-btn {
+    width: 36px !important;
+    height: 36px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  /* Course Browser Grid */
+  .course-row-item,
+  .course-row-header {
+    grid-template-columns: 20px 1fr 36px !important;
+    gap: 8px !important;
+    padding: 10px 12px !important;
+  }
+
+  .course-code-col,
+  .course-sem-col {
+    display: none !important;
+  }
+
+  /* Course Header Card */
+  .uni-header-banner {
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+  }
+
+  .uni-header-banner .uni-course-count {
+    display: none !important;
+  }
+
+  .uni-header-banner .uni-info-header-main h4 {
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Expanded Course Panel */
+  .course-details-expanded {
+    padding: 12px !important;
+  }
+
+  .ant-descriptions-item-content {
+    word-break: break-word !important;
+  }
+
+  /* University Info Page Header */
+  .uni-info-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 16px !important;
+  }
+
+  .uni-info-header .uni-info-header-main {
+    width: 100% !important;
+  }
+
+  .uni-info-header h4 {
+    font-size: 17px !important;
+    line-height: 1.2 !important;
+  }
+
+  .uni-info-header-tags {
+    margin-left: 0 !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  /* Info Page Content */
+  .info-section-content {
+    padding-left: 0 !important;
+  }
+
+  .info-section-content .ant-col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* --- STUDENT COURSE SELECTION MOBILE FIXES --- */
+.selection-collapse-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .selection-collapse-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  .selection-header-tags-container {
+    width: 100% !important;
+  }
+
+  .collapse-header-tags {
+    width: 100% !important;
+    gap: 4px !important;
+  }
+
+  .mobile-course-tag {
+    max-width: 100% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    white-space: normal !important;
+    height: auto !important;
+    padding: 4px 8px !important;
+    line-height: 1.4 !important;
+    border-radius: 6px !important;
+  }
+
+  .mobile-course-tag>span {
+    display: inline-block !important;
+    max-width: 100% !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    vertical-align: middle !important;
+  }
+
+  .partner-course-name {
+    display: block !important;
+    margin-top: 2px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    max-width: 100% !important;
+  }
+}
+
+/* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Dashboard Application Cards ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+.app-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.app-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.app-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.app-card-tags .ant-tag {
+  margin: 0 !important;
+  border-radius: 20px !important;
+  padding: 2px 12px !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  background: #f8fafc !important;
+  color: #64748b !important;
+  transition: all 0.2s ease;
+}
+
+.app-card-tags .ant-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.app-card-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+@media (max-width: 576px) {
+  .app-card-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .app-card-status {
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 12px;
+    border-top: 1px dashed #f1f5f9;
+  }
+
+  .app-card-info .ant-typography {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  .app-card-tags {
+    gap: 6px;
+  }
+
+  .app-card-tags .ant-tag {
+    padding: 2px 10px !important;
+  }
+}
+
+/* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Learning Agreement Alert Mobile Fix ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+@media (max-width: 576px) {
+  .la-ready-alert {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 24px !important;
+  }
+
+  .la-ready-alert .ant-alert-content {
+    width: 100% !important;
+  }
+
+  .la-ready-alert .ant-alert-action {
+    margin-top: 24px !important;
+    margin-left: 0 !important;
+    margin-inline-start: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .la-ready-alert .ant-alert-action button {
+    width: 100% !important;
+    max-width: 280px !important;
+    padding: 0 !important;
+  }
+}
+
+/* Ã‚Â¦Ã‚Â¦ Learning Agreement Modal Mobile Fix Ã‚Â¦Ã‚Â¦ */
+@media (max-width: 768px) {
+  .la-overview-modal {
+    width: 95% !important;
+    max-width: 95vw !important;
+    top: 20px !important;
+  }
+
+  .la-overview-modal .ant-modal-footer {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .la-overview-modal .ant-modal-footer button {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Transform table to list */
+  .la-overview-modal .ant-table-thead {
+    display: none !important;
+  }
+
+  .la-overview-modal .ant-table-tbody>tr {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 4px 0 !important;
+    border-bottom: 1px solid #f5f5f5 !important;
+  }
+
+  .la-overview-modal .ant-table-tbody>tr>td,
+  .la-overview-modal .ant-table-tbody>tr>td * {
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+  }
+
+  .la-overview-modal .ant-table-tbody>tr>td:last-child,
+  .la-overview-modal .ant-table-tbody>tr>td:last-child * {
+    font-size: 9px !important;
+  }
+
+  .la-overview-modal .ant-tag {
+    font-size: 8px !important;
+    padding: 0 3px !important;
+    line-height: 14px !important;
+    margin-top: 1px !important;
+    height: 16px !important;
+  }
+
+  .la-overview-modal .ant-tag * {
+    font-size: 8px !important;
+  }
+
+  .la-overview-modal .ant-modal-body {
+    padding: 8px !important;
+  }
+
+  .la-overview-modal .ant-modal-title {
+    font-size: 13px !important;
+  }
+}

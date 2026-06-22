@@ -1,0 +1,2173 @@
+{
+  "gradeConversion": {
+    "title": "Grade Conversion Management",
+    "tabs": {
+      "schemes": "Grading Schemes",
+      "rules": "Rules",
+      "ectsIku": "ECTS to IKU (Fixed)",
+      "test": "Test Conversion",
+      "auditLog": "Audit Log"
+    },
+    "actions": {
+      "newScheme": "New Scheme",
+      "addRule": "Add Rule",
+      "addEctsIku": "Add ECTS-IKU Mapping",
+      "editScheme": "Edit Grading Scheme",
+      "editRule": "Edit Rule",
+      "convert": "Convert",
+      "deleteSchemeConfirm": "Delete this scheme?",
+      "deleteRuleConfirm": "Delete this rule?"
+    },
+    "columns": {
+      "university": "University",
+      "scheme": "Scheme",
+      "type": "Type",
+      "rules": "Rules",
+      "actions": "Actions",
+      "localGrade": "Local Grade",
+      "definition": "Definition",
+      "ects": "ECTS",
+      "description": "Description",
+      "ikuGrade": "IKU Grade"
+    },
+    "fields": {
+      "university": "University",
+      "schemeName": "Scheme Name",
+      "type": "Type",
+      "direction": "Direction",
+      "copyFrom": "Copy Rules From",
+      "notes": "Notes",
+      "minGrade": "Min Grade",
+      "maxGrade": "Max Grade",
+      "exactGrade": "Exact Grade",
+      "ectsGrade": "ECTS Grade",
+      "localDefinition": "Local Definition",
+      "description": "Description",
+      "ikuGrade": "IKU Grade"
+    },
+    "placeholders": {
+      "selectUniversity": "Select university",
+      "schemeName": "e.g. German Grading System",
+      "copyFrom": "Select existing scheme to copy rules",
+      "grade": "Grade (e.g. 1.3, B, 85)",
+      "localDefinition": "e.g. Sehr Gut (Excellent)",
+      "description": "e.g. Excellent"
+    },
+    "values": {
+      "higherBetter": "Higher = Better",
+      "lowerBetter": "Lower = Better",
+      "emptyRules": "Select a scheme from the Schemes tab to view its rules",
+      "inputGrade": "Input Grade",
+      "inputType": "Input Type",
+      "schemeUsed": "Scheme Used",
+      "path": "Path"
+    },
+    "types": {
+      "numeric_range": "Numeric Range",
+      "numeric_discrete": "Numeric Discrete",
+      "letter": "Letter",
+      "custom": "Custom"
+    },
+    "versions": {
+      "title": "Version History",
+      "noVersions": "No version history yet — this scheme has not been modified since versioning was enabled.",
+      "versionNumber": "Version {{num}}",
+      "viewRules": "View Rules",
+      "changedBy": "Changed by",
+      "date": "Date",
+      "close": "Close",
+      "rulesFor": "Rules in this version",
+      "linkVersion": "Link to version:",
+      "selectVersion": "Select version..."
+    },
+    "messages": {
+      "batchSaved": "Changes saved",
+      "saveFailed": "Failed to save",
+      "decisionLinked": "Version linked to decision"
+    },
+    "decision": {
+      "linked": "Linked",
+      "linkToScheme": "Link to this scheme",
+      "unlink": "Unlink",
+      "unlinked": "Link removed"
+    },
+    "selectSchemeFirst": "Select a scheme first"
+  },
+  "transcripts": {
+    "coordinatorPanel": "Transcript Panel",
+    "coordinatorPanelDesc": "Review uploaded partner university transcripts and perform grade conversions",
+    "importHistorical": "Import Historical Transcript",
+    "importModalTitle": "Import Historical Transcript (Manual Entry)",
+    "createRecord": "Create Record",
+    "filters": {
+      "byStatus": "Filter by status",
+      "byUniversity": "Filter by university",
+      "searchStudent": "Search student..."
+    },
+    "columns": {
+      "student": "STUDENT",
+      "partnerUniversity": "PARTNER UNIVERSITY",
+      "fileSource": "FILE / SOURCE",
+      "department": "DEPARTMENT",
+      "status": "STATUS",
+      "date": "DATE"
+    },
+    "actions": {
+      "review": "Review",
+      "edit": "Edit",
+      "editTranscript": "Edit Transcript",
+      "deleteTranscript": "Delete Transcript?",
+      "deleteTranscriptDesc": "This will permanently remove the transcript and its PDF file.",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "back": "Back",
+      "save": "Save",
+      "finalize": "Finalize",
+      "finalizeConfirm": "Finalize this transcript?",
+      "finalizeDesc": "This will lock all grades and cannot be undone.",
+      "finalizeFixGrades": "Please fix all grades before finalizing",
+      "revert": "Revert",
+      "revertConfirm": "Revert Transcript?",
+      "revertDesc": "This will allow you to edit grades again.",
+      "addCourse": "Add Course",
+      "close": "Close",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "detail": {
+      "transcript": "Transcript",
+      "unknownUniversity": "Unknown University",
+      "gradingScheme": "Grading Scheme",
+      "scheme": "Scheme",
+      "noGradingScheme": "No grading scheme",
+      "exportPdf": "Export PDF",
+      "exportExcel": "Export Excel",
+      "exportDocx": "Export DOCX",
+      "overview": "Overview",
+      "pdfPreview": "PDF Preview",
+      "gradeEntries": "Grade Entries",
+      "auditReport": "Audit Report",
+      "notes": "Notes",
+      "student": "Student",
+      "university": "University",
+      "file": "File",
+      "historicalRecord": "Historical Record",
+      "unknownStudent": "Unknown Student",
+      "transferFormTitle": "Ders Transfer Formu",
+      "dersKodu": "Ders Kodu",
+      "dersinAdi": "Dersin Adı",
+      "transkriptNotuYerel": "Transkript Notu (Yerel)",
+      "transkriptNotuAKTS": "Transkript Notu (AKTS)",
+      "aktsKredisi": "AKTS Kredisi",
+      "aktsNotu": "AKTS Notu",
+      "ikuNotu": "İKÜ Notu",
+      "total": "Toplam"
+    },
+    "gradeTable": {
+      "courseName": "COURSE NAME",
+      "code": "CODE",
+      "ects": "ECTS",
+      "localGrade": "LOCAL GRADE",
+      "ectsGrade": "ECTS GRADE",
+      "iku": "IKU",
+      "switchTooltip": "Switch between Local (L) and ECTS (E) input",
+      "preview": "Preview",
+      "mode": "Mode",
+      "modes": {
+        "localToIku": "Local → IKU",
+        "ectsToIku": "ECTS → IKU",
+        "manual": "Manual"
+      },
+      "conversionMethod": "Method",
+      "localToEcts": "Local → ECTS → IKU",
+      "scheme": "Scheme",
+      "manualOverride": "Manual override — system conversion was bypassed"
+    },
+    "overview": {
+      "title": "Transcript Overview",
+      "partnerCourse": "PARTNER UNIVERSITY COURSE",
+      "homeCourse": "HOME UNIVERSITY COURSE(S)",
+      "directTransfer": "Direct Transfer",
+      "ikuGrade": "IKU Grade",
+      "local": "Local",
+      "override": "OVERRIDE"
+    },
+    "matching": {
+      "title": "Home Course Matching",
+      "description": "Select the IKU equivalent course(s) for the selected partner course.",
+      "searchPlaceholder": "Search and select IKU courses..."
+    },
+    "import": {
+      "partnerUniversity": "Partner University",
+      "searchOrType": "Search or type university name",
+      "selectOrType": "You can select an existing partner or type a new university name.",
+      "studentName": "Student Name",
+      "studentNumber": "Student Number",
+      "studentNamePlaceholder": "e.g. John Doe",
+      "studentNumberPlaceholder": "e.g. 220...",
+      "historicalHint": "Enter info for historical records. Leave blank for an anonymous entry.",
+      "transcriptPdf": "Transcript PDF (Optional)",
+      "selectPdf": "Select PDF File",
+      "uploadHint": "Upload the official transcript document if available.",
+      "anonymousStudent": "Anonymous Student",
+      "historicalPrefix": "Manually created historical record: "
+    },
+    "scheme": {
+      "title": "Grading Scheme",
+      "description": "This scheme is used to automatically convert local grades from {{university}} to IKU grades.",
+      "localGrade": "Local Grade",
+      "definition": "Definition",
+      "ects": "ECTS",
+      "ikuGrade": "IKU Grade",
+      "mixed": "Mixed Scheme",
+      "mixedDesc": "This university uses both local and ECTS grades for conversion."
+    },
+    "messages": {
+      "nothingToSave": "Nothing to save",
+      "courseNameRequired": "Course name is required for all entries",
+      "enterGrades": "Please enter grades for all courses before saving",
+      "invalidConversions": "Some grades could not be converted. Please ensure all grades are valid and recognized by the system.",
+      "saved": "Saved",
+      "saveFailed": "Save failed",
+      "conversionFailed": "Conversion failed",
+      "entryDeleted": "Entry deleted",
+      "deleteFailed": "Delete failed",
+      "transcriptDeleted": "Transcript deleted",
+      "transcriptFinalized": "Transcript finalized",
+      "finalizeFailed": "Finalize failed",
+      "transcriptReverted": "Transcript reverted",
+      "revertFailed": "Revert failed",
+      "cannotFinalize": "Cannot finalize: Some grades are invalid or missing.",
+      "historicalCreated": "Historical record created",
+      "createFailed": "Failed to create record",
+      "selectUniversity": "Please select or type a university name"
+    },
+    "noTranscripts": "No transcripts found",
+    "historicalImport": "Historical Import",
+    "status": {
+      "uploaded": "Uploaded",
+      "studentGrading": "Student Grading",
+      "pendingReview": "Pending Review",
+      "grading": "Grading",
+      "graded": "Graded",
+      "finalized": "Finalized"
+    },
+    "conversionMethods": {
+      "auto_local": "Automatic (Local Grade)",
+      "auto_ects": "Automatic (ECTS Grade)",
+      "manual": "Manual"
+    },
+    "export": {
+      "partnerCode": "Partner Code",
+      "partnerCourse": "Partner Course",
+      "partnerEcts": "Partner ECTS",
+      "localGrade": "Local Grade",
+      "ectsGrade": "ECTS Grade",
+      "homeCourses": "Home Course(s)",
+      "homeEcts": "Home ECTS",
+      "ikuGrade": "IKU Grade"
+    }
+  },
+  "landing": {
+    "nav": {
+      "brand": "Erasmus Match",
+      "signIn": "Sign In"
+    },
+    "hero": {
+      "badge": "Istanbul Kultur University — Computer Engineering Department",
+      "title": "Erasmus Course",
+      "titleHighlight": "Matching",
+      "titleEnd": "System",
+      "subtitle": "AI-powered course equivalence matching for Erasmus student exchange. Hybrid scoring, verification, and explainable results.",
+      "cta": "Sign In to Get Started"
+    },
+    "features": {
+      "sectionTitle": "How It Works",
+      "sectionSubtitle": "From catalog ingestion to Learning Agreement — an end-to-end pipeline built for academic rigor and transparency.",
+      "items": {
+        "aiMatching": {
+          "title": "AI-Powered Matching",
+          "desc": "Hybrid scoring pipeline combining LLM semantic analysis with deterministic ECTS, metadata, and embedding-based retrieval for precise course equivalence."
+        },
+        "smartVerification": {
+          "title": "Smart Verification",
+          "desc": "Second-pass LLM audit evaluates every match for genuineness — approved, risk-flagged, or rejected with full confidence scoring."
+        },
+        "workflow": {
+          "title": "Student & Coordinator Workflow",
+          "desc": "Interactive course selection with ECTS tracking, coordinator review panels, override controls, and automated Learning Agreement readiness."
+        },
+        "uniProfiles": {
+          "title": "Smart University Profiles",
+          "desc": "AI-synthesized snapshots of partner institutions — including city safety, costs of living, transportation, and English friendliness guides."
+        },
+        "partnerUnis": {
+          "title": "Partner Universities",
+          "desc": "Multi-format catalog ingestion across Europe — consolidated PDFs, individual documents, and category-based parsing with OCR support."
+        },
+        "explainable": {
+          "title": "Explainable Results",
+          "desc": "Score breakdowns, matched & missing topic tags, evidence-based justification, and structural notes for every candidate match."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to match courses?",
+      "subtitle": "Sign in with your CATS account to get started.",
+      "button": "Sign In"
+    },
+    "footer": {
+      "dept": "Istanbul Kultur University — Computer Engineering Department",
+      "system": "Erasmus Course Matching System"
+    }
+  },
+  "login": {
+    "title": "Erasmus Match",
+    "subtitle": "Course Matching System",
+    "errors": {
+      "invalid": "Login failed. Invalid username or password.",
+      "tooMany": "Too many failed attempts. Please wait.",
+      "catsUnreachable": "CATS portal is unreachable. Try admin login."
+    },
+    "form": {
+      "usernameRequired": "Please enter your username",
+      "usernamePlaceholder": "Username (CATS)",
+      "passwordRequired": "Please enter your password",
+      "passwordPlaceholder": "Password",
+      "submit": "Sign In"
+    },
+    "footer": "Sign in with your CATS (cats.iku.edu.tr) account"
+  },
+  "deactivated": {
+    "title": "Account Deactivated",
+    "message": "Your account has been deactivated. Please contact your department coordinator or system administrator for assistance.",
+    "backToLogin": "Back to Login"
+  },
+  "common": {
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "unit": "Department:",
+    "selectUnit": "Select Department",
+    "optional": "Optional",
+    "save": "Save",
+    "edit": "Edit",
+    "upload": "Upload",
+    "cancel": "Cancel",
+    "close": "Close",
+    "confirm": "Confirm",
+    "selectDate": "Select Date"
+  },
+  "sidebar": {
+    "navLabel": "Navigation",
+    "menu": {
+      "universities": "Universities",
+      "courses": "Courses",
+      "upload": "Upload & Parse",
+      "matching": "Course Matching",
+      "reviewPanel": "Review Panel",
+      "uniInfo": "University Info",
+      "gradeConversion": "Grade Conversion",
+      "transcripts": "Transcripts",
+      "myApplications": "My Applications",
+      "partnerUnis": "Partner Universities",
+      "myTranscripts": "My Transcripts",
+      "adminPanel": "Admin Panel",
+      "senateDecisions": "Senate Decisions",
+      "uploadTransferForm": "Upload Transfer Form"
+    },
+    "footer": {
+      "ikuOffice": "IKU Erasmus Office"
+    }
+  },
+  "universities": {
+    "stats": {
+      "totalUnis": "Total Universities",
+      "totalCourses": "Total Courses",
+      "processed": "Processed"
+    },
+    "table": {
+      "university": "University",
+      "type": "Type",
+      "structure": "Structure",
+      "status": "Status",
+      "active": "Active",
+      "courses": "Courses",
+      "actions": {
+        "view": "View",
+        "remove": "Remove"
+      }
+    },
+    "types": {
+      "home": "Home",
+      "partner": "Partner"
+    },
+    "statuses": {
+      "pending": "Pending",
+      "parsing": "Parsing",
+      "parsed": "Parsed",
+      "embedding": "Embedding",
+      "ready": "Ready",
+      "failed": "Failed"
+    },
+    "activeStatus": {
+      "active": "ACTIVE",
+      "inactive": "INACTIVE"
+    },
+    "messages": {
+      "added": "University added",
+      "createFailed": "Failed to create university",
+      "removed": "University removed",
+      "scrapingComplete": "ECTS scraping completed! {{count}} courses scraped, {{jobs}} upload jobs created."
+    },
+    "modals": {
+      "addTitle": "Add University",
+      "removeTitle": "Remove university?",
+      "removeContent": "\"{{name}}\" and all its courses will be permanently deleted.",
+      "addBtn": "Add",
+      "close": "Close",
+      "runInBackground": "Run in Background",
+      "viewUploadJobs": "View Upload Jobs"
+    },
+    "form": {
+      "uniName": "University Name",
+      "namePlaceholder": "e.g. Technical University of Munich",
+      "required": "Required",
+      "deptLabel": "Department (Required for Global Admins)",
+      "deptPlaceholder": "e.g. COM",
+      "deptRequired": "Please select a department",
+      "country": "Country",
+      "countryPlaceholder": "e.g. Germany",
+      "city": "City",
+      "cityPlaceholder": "e.g. Munich",
+      "pdfStructure": "PDF Structure",
+      "structures": {
+        "individual": "Individual",
+        "consolidated": "Consolidated",
+        "categoryBased": "Category Based",
+        "category_based": "Category Based"
+      },
+      "categories": {
+        "core": "Core Courses",
+        "deptElective": "Departmental Elective Courses",
+        "elective": "Elective Courses"
+      },
+      "isHome": "Is Home University? (Your Institution)",
+      "homeExists": "A home university already exists for this department.",
+      "ectsUrl": "IKU ECTS URL",
+      "ectsHelp": "Paste the \"Program Curriculum\" URL from akademikpaket.iku.edu.tr to auto-import courses. Courses will be categorized as Core / Departmental Elective / Elective.",
+      "ectsInvalid": "Must be a valid IKU ECTS Program Curriculum URL"
+    },
+    "import": {
+      "running": "ECTS Import Running",
+      "downloaded": "{{scraped}}/{{total}} courses downloaded",
+      "modalTitle": "IKU ECTS Course Import",
+      "failed": "Scraping Failed",
+      "completed": "Scraping Completed!",
+      "initializing": "Initializing scraper...",
+      "downloading": "Downloading course pages... ({{scraped}}/{{total}})",
+      "categoriesFound": "Categories Found",
+      "categories": {
+        "core": "CORE",
+        "deptElective": "DEPT. ELECTIVE",
+        "elective": "ELECTIVE",
+        "coursesCount": "{{count}} courses"
+      },
+      "jobsEnqueued": "✓ {{count}} upload job(s) enqueued for parsing"
+    }
+  },
+  "universityDetail": {
+    "messages": {
+      "updated": "University updated",
+      "updateFailed": "Failed to update university",
+      "notFound": "University not found"
+    },
+    "backToAll": "All Universities",
+    "homeUni": "Home University",
+    "edit": "Edit",
+    "stats": {
+      "courses": "Courses",
+      "pdfStructure": "PDF Structure",
+      "batches": "Batches"
+    },
+    "ingestionBatches": "Ingestion Batches",
+    "editTitle": "Edit University",
+    "form": {
+      "name": "Name",
+      "country": "Country",
+      "city": "City",
+      "pdfStructure": "PDF Structure",
+      "activeStatus": "Active Status"
+    },
+    "batchTable": {
+      "batch": "Batch",
+      "semester": "Semester",
+      "status": "Status",
+      "progress": "Progress",
+      "failed": "Failed",
+      "started": "Started"
+    }
+  },
+  "courseTable": {
+    "columns": {
+      "status": "Status",
+      "course": "Course",
+      "courseCode": "Course Code",
+      "courseName": "Course Name",
+      "university": "University",
+      "ects": "ECTS",
+      "semester": "Semester",
+      "level": "Level",
+      "language": "Language",
+      "department": "Department",
+      "category": "Category",
+      "quality": "Quality"
+    },
+    "status": {
+      "active": "ACTIVE",
+      "inactive": "INACTIVE"
+    },
+    "categories": {
+      "core": "Core",
+      "departmental_elective": "Departmental Elective",
+      "elective": "Elective",
+      "technical": "Technical",
+      "social": "Social",
+      "studio": "Studio"
+    },
+    "messages": {
+      "updated": "Course updated",
+      "updateFailed": "Failed to update course",
+      "deleted": "Course deleted",
+      "deleteFailed": "Failed to delete course"
+    },
+    "expanded": {
+      "qualityScore": "Quality Score Calculation"
+    },
+    "actions": {
+      "edit": "Edit Course",
+      "delete": "Delete",
+      "deleteConfirm": "Delete this course?",
+      "deleteDesc": "This action cannot be undone."
+    },
+    "details": {
+      "basicInfo": "Basic Information",
+      "courseCode": "Course Code",
+      "courseName": "Course Name",
+      "department": "Department",
+      "ects": "ECTS",
+      "level": "Level",
+      "semester": "Semester",
+      "language": "Language",
+      "universityId": "University ID",
+      "batchId": "Batch ID",
+      "content": "Content / Course Description",
+      "outcomes": "Learning Outcomes",
+      "academicContext": "Academic Context",
+      "primaryFormat": "Primary Format",
+      "assessmentMode": "Assessment Mode",
+      "specialTags": "Special Tags",
+      "lab": "Lab",
+      "project": "Project",
+      "seminar": "Seminar",
+      "none": "None",
+      "noAcademicData": "No academic context data available",
+      "metadataQuality": "Metadata Quality",
+      "contentAvailable": "Content Available",
+      "outcomesAvailable": "Outcomes Available",
+      "formatConfidence": "Format Confidence",
+      "noQualityData": "No quality data available",
+      "sourceMetadata": "Source Metadata",
+      "warnings": "Warnings",
+      "parsedAt": "Parsed: {{date}}"
+    },
+    "editModal": {
+      "title": "Edit: {{name}}",
+      "tabs": {
+        "basic": "Basic Info",
+        "content": "Content",
+        "academic": "Academic Context"
+      },
+      "form": {
+        "courseName": "Course Name",
+        "courseCode": "Course Code",
+        "ects": "ECTS",
+        "department": "Department",
+        "level": "Level",
+        "semester": "Semester",
+        "language": "Language",
+        "activeStatus": "Active Status",
+        "description": "Course Description",
+        "outcomes": "Learning Outcomes",
+        "primaryFormat": "Primary Format",
+        "assessmentMode": "Assessment Mode",
+        "lab": "Lab",
+        "project": "Project",
+        "seminar": "Seminar",
+        "specialTags": "Special Tags"
+      }
+    },
+    "options": {
+      "yes": "Yes",
+      "no": "No",
+      "unknown": "Unknown",
+      "bachelor": "Bachelor",
+      "master": "Master",
+      "fall": "Fall",
+      "spring": "Spring",
+      "both": "Both",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "pagination": {
+      "total": "{{total}} course",
+      "total_plural": "{{total}} courses"
+    }
+  },
+  "courseList": {
+    "stats": {
+      "totalCourses": "Total Courses",
+      "universities": "Universities",
+      "highQuality": "High Quality",
+      "withWarnings": "With Warnings"
+    },
+    "filters": {
+      "searchPlaceholder": "Search courses...",
+      "university": "University",
+      "semester": "Semester",
+      "quality": "Quality",
+      "infoTooltip": "How does course parsing work?"
+    },
+    "infoModal": {
+      "title": "How Course Parsing Works",
+      "tabs": {
+        "pipeline": "Pipeline",
+        "modes": "PDF Modes",
+        "prompt": "Extraction Prompt",
+        "quality": "Quality & Warnings"
+      },
+      "alerts": {
+        "pipeline": "Course PDFs are uploaded via the Upload & Parse page. The system extracts structured data automatically using an LLM — no manual data entry needed.",
+        "modes": "Each university has a configured PDF structure mode. The mode determines how the parser splits and processes the uploaded files.",
+        "prompt": "Model: Gemma 4 31B-IT via Gemini API. Sends raw course text and returns structured JSON with 13 fields.",
+        "warnings": "Warnings never block the pipeline. Every course is saved regardless. Warnings are shown as tags in the course table and affect matching quality scores."
+      },
+      "steps": {
+        "step1": {
+          "title": "PDF Upload & Queue",
+          "desc": "PDFs are uploaded to the server and a job is added to a FIFO queue."
+        },
+        "step2": {
+          "title": "Text Extraction",
+          "desc": "Raw text is extracted using PyMuPDF. OCR is applied for scanned/image-only PDFs."
+        },
+        "step3": {
+          "title": "LLM Extraction",
+          "desc": "Raw text is sent to Gemma 4 via Gemini API to extract 13 structured fields."
+        },
+        "step4": {
+          "title": "Validation",
+          "desc": "Parsed JSON is validated by a rule-based validator. Missing fields generate warnings."
+        },
+        "step5": {
+          "title": "Embedding",
+          "desc": "Each course gets a text embedding for semantic similarity search."
+        }
+      },
+      "modes": {
+        "desc": {
+          "individual": "One PDF per course. Entire text is sent to LLM.",
+          "consolidated": "Multiple courses per PDF. Parser indexes boundaries, then extracts blocks.",
+          "category": "PDFs uploaded per category (Core, Elective). Category label is stored."
+        },
+        "unis": "Universities"
+      },
+      "promptTable": {
+        "field": "Field",
+        "type": "Type",
+        "desc": "Description"
+      },
+      "qualityTable": {
+        "level": "Level",
+        "condition": "Condition",
+        "effect": "Effect on Matching",
+        "conditions": {
+          "high": "Content + learning outcomes both extracted",
+          "medium": "Only one of content or outcomes extracted",
+          "low": "Neither content nor outcomes extracted"
+        },
+        "effects": {
+          "high": "Full matching quality — LLM uses both fields",
+          "medium": "Reduced matching — missing field scored at 50",
+          "low": "Poor matching — both fields scored at 50"
+        }
+      },
+      "warningTable": {
+        "title": "Warning Triggers",
+        "trigger": "Trigger",
+        "field": "Field",
+        "triggers": {
+          "contentMissing": "Content missing or unknown",
+          "contentShort": "Content < 50 characters",
+          "outcomesMissing": "Learning outcomes missing",
+          "ectsIssue": "ECTS null, non-positive, or > 30",
+          "codeMissing": "Course code not found",
+          "languageMissing": "Language missing",
+          "deptMissing": "Department missing",
+          "academicMissing": "Academic context fields unknown"
+        }
+      }
+    }
+  },
+  "departments": {
+    "Computer Engineering": "Computer Engineering"
+  },
+  "upload": {
+    "title": "Upload & Parse",
+    "newUpload": "New Upload",
+    "selectUni": "Select University",
+    "selectStructure": "PDF Structure",
+    "selectCategory": "Select or type a category name",
+    "uploadButton": "Upload & Queue",
+    "activeJobs": "Active Jobs",
+    "recentJobs": "Recent Jobs",
+    "noJobs": "No upload jobs yet. Upload PDFs above to get started.",
+    "semesters": {
+      "placeholder": "Select Semester",
+      "fall": "Fall Semester",
+      "spring": "Spring Semester",
+      "both": "Both Semesters",
+      "unknown": "Unknown (auto-detect)",
+      "none": "No Semester"
+    },
+    "status": {
+      "queued": "Queued",
+      "uploading": "Uploading",
+      "parsing": "Parsing",
+      "embedding": "Embedding",
+      "paused": "Paused",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "failed": "Failed",
+      "files": "files",
+      "failedCount": "failed"
+    },
+    "actions": {
+      "resume": "Resume",
+      "recover": "Recover",
+      "pause": "Pause",
+      "stop": "Stop",
+      "pauseAll": "Pause All"
+    },
+    "menu": {
+      "stopLeave": "Stop & leave as is",
+      "cancelKeep": "Cancel (keep university)",
+      "cancelDelete": "Cancel & delete university"
+    },
+    "modals": {
+      "cancelJob": {
+        "title": "Cancel upload?",
+        "content": "The upload job will be cancelled. Courses already parsed will remain."
+      },
+      "cancelDelete": {
+        "title": "Cancel & delete university?",
+        "content": {
+          "thisWill": "This will:",
+          "item1": "Cancel the upload job",
+          "item2": "Delete university",
+          "item3": "Remove all its parsed courses",
+          "warning": "This action cannot be undone."
+        }
+      }
+    },
+    "messages": {
+      "paused": "Job paused",
+      "failedPause": "Failed to pause",
+      "pausedAll": "All jobs paused",
+      "failedPauseAll": "Failed to pause all",
+      "resumed": "Job resumed",
+      "failedResume": "Failed to resume",
+      "cancelled": "Upload cancelled",
+      "cancelledDeleted": "Upload cancelled and university deleted",
+      "failedCancel": "Failed to cancel",
+      "queuedSuccess": "Upload queued successfully",
+      "failedQueue": "Failed to queue upload",
+      "selectWarning": "Select a university and add PDF/TXT files"
+    }
+  },
+  "fileUploader": {
+    "title": "Drop files here or click to browse",
+    "subtitle": "Accepts .pdf and .txt files. Multiple files supported.",
+    "errorType": "{{name}} is not a PDF or TXT file",
+    "errorSize": "File must be smaller than 50MB!"
+  },
+  "status": {
+    "queued": "Queued",
+    "uploading": "Uploading",
+    "parsing": "Parsing",
+    "embedding": "Embedding",
+    "matching": "Matching",
+    "verifying": "Verifying",
+    "paused": "Paused",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "failed": "Failed",
+    "draft": "Draft",
+    "submitted": "Submitted",
+    "rejected": "Rejected",
+    "laReady": "LA Ready",
+    "revisionRequested": "Revision Requested",
+    "pending": "Pending",
+    "approved": "Approved",
+    "manualReview": "Manual Review",
+    "notSelected": "Not Selected",
+    "uploaded": "Uploaded",
+    "studentGrading": "Student Grading",
+    "pendingReview": "Pending Review",
+    "grading": "Grading",
+    "graded": "Graded",
+    "finalized": "Finalized"
+  },
+  "matching": {
+    "title": "Batch Course Matching",
+    "subtitle": "All candidates scored in a single batch prompt per course",
+    "infoTooltip": "How does matching work?",
+    "partnerUni": "Partner University",
+    "homeUni": "Home University",
+    "selectPartner": "Select partner university",
+    "selectHome": "Select home university",
+    "startMatching": "Start Matching",
+    "onlyUnmatched": "Only courses not yet matched will be processed.",
+    "noJobs": "No Match Jobs Yet",
+    "noJobsDesc": "Select a partner university and home university, then click \"Start Matching\" to begin.",
+    "resumeAll": "Resume All",
+    "pauseAll": "Pause All",
+    "matchingWith": "Matching:",
+    "llmVerification": "Running LLM Verification...",
+    "failedCount": "{{count}} failed",
+    "created": "Created:",
+    "actions": {
+      "pause": "Pause",
+      "resume": "Resume",
+      "cancel": "Cancel",
+      "viewResults": "View Results",
+      "delete": "Delete Job & Results"
+    },
+    "modals": {
+      "cancel": {
+        "title": "Cancel Batch Match Job?",
+        "content": "Cancel matching for {{name}}? Already matched courses will be kept."
+      },
+      "delete": {
+        "title": "Delete Match Job and Results?",
+        "content": "This will permanently remove calculated matches for {{name}}. Student-saved equivalents based on these matches will lose their connection to the matching evidence."
+      },
+      "info": {
+        "title": "How Course Matching Works",
+        "tabs": {
+          "pipeline": "Pipeline",
+          "engine": "Matching Engine",
+          "verification": "Verification"
+        },
+        "pipeline": {
+          "step1": {
+            "title": "Embedding Retrieval",
+            "desc": "Partner course embedding compared against all home university courses via pgvector cosine similarity. Top 10 most similar are retrieved."
+          },
+          "step2": {
+            "title": "Deterministic Scoring",
+            "desc": "Each of the 10 candidates scored on 5 fast signals: ECTS credits, course title similarity, academic metadata alignment, academic level, and semester."
+          },
+          "step3": {
+            "title": "Pre-filter to Top 3",
+            "desc": "Candidates ranked by (embedding similarity × 0.6 + deterministic average × 0.4). Only the top 3 proceed to LLM scoring."
+          },
+          "step4": {
+            "title": "Batch LLM Scoring",
+            "desc": "All 3 candidates sent to Gemma model in a single batch call. The LLM scores content overlap, learning outcome alignment, and domain match for all 3 simultaneously and detects the academic category."
+          },
+          "step5": {
+            "title": "Hybrid Fusion",
+            "desc": "6 score components (3 LLM + 3 deterministic) combined with category-specific weights. Final score is a weighted sum in [0, 1]."
+          },
+          "step6": {
+            "title": "LLM Verification",
+            "desc": "After matching, a second LLM audits each match with approved/risk_flagged/rejected decisions and confidence scores."
+          }
+        },
+        "engine": {
+          "intro": "The course matching engine uses a hybrid scoring approach combining vector similarity, deterministic signals, and LLM semantic analysis.",
+          "howItWorks": "How Matching Works",
+          "item1": "Academic Category Detection — The LLM classifies the partner course as technical, social, or studio_based based on dominant academic content",
+          "item2": "Content Score (LLM) — Topic and subject overlap between partner and home course syllabi (0-100)",
+          "item3": "Learning Outcomes Score (LLM) — Alignment of learning objectives (0-100)",
+          "item4": "Domain Score (LLM) — Broader academic field compatibility (0-100)",
+          "item5": "Category-Sensitive Evaluation — Structural expectations adapt to category (lab/project for technical, reading/essays for social, etc.).",
+          "weights": "Category Weights",
+          "weightsDesc": "Different academic categories use different weight profiles for the final fusion score:",
+          "table": {
+            "component": "Score Component",
+            "technical": "Technical",
+            "social": "Social",
+            "studio": "Studio",
+            "total": "Total",
+            "outcomes": "Learning Outcomes (LLM)",
+            "domain": "Domain (LLM)",
+            "ects": "ECTS (Deterministic)",
+            "metadata": "Metadata (Deterministic)",
+            "title": "Title (Deterministic)"
+          },
+          "note": "Note: The academic category is detected once per partner course and applied consistently across all 3 candidates in a batch."
+        },
+        "verification": {
+          "intro": "After matching, a second LLM (Gemma 4 31B-IT) performs a post-hoc audit on the top 3 candidates as a final quality check.",
+          "checks": "What Verification Checks",
+          "item1": "Mutually Exclusive Approval — At most one candidate can be approved; none may be approved if no match is strong enough",
+          "item2": "Core Topic Coverage — Verifies whether the partner course covers the home course's essential topics (not just title similarity)",
+          "item3": "Content Overlap Assessment — Classifies overlap as genuine, partial, or superficial",
+          "item4": "Risk Flags — Identifies missing core topics, ECTS gaps, or structural mismatches",
+          "item5": "Confidence Scoring — Provides a confidence score (0.0-1.0) reflecting academic certainty",
+          "outcomes": "Decision Outcomes",
+          "outcome1": "approved — Strong enough to recommend",
+          "outcome2": "risk_flagged — Partially acceptable, notable gaps remain",
+          "outcome3": "rejected — Not academically reliable (wrong domain or superficial match)",
+          "principles": "Key Principles",
+          "p1": "Extra topics in the partner course are enrichment, not rejection reasons",
+          "p2": "At least 2 major missing core topics triggers rejection",
+          "p3": "Category-sensitive structural policy is applied.",
+          "p4": "ECTS differences alone are not rejection criteria",
+          "p5": "Prioritizes content and learning outcomes over course naming similarity"
+        }
+      }
+    },
+    "messages": {
+      "jobCreated": "Batch match job created: {{count}} courses to match",
+      "failedCreate": "Failed to create match job",
+      "failedPause": "Failed to pause job",
+      "failedResume": "Failed to resume job",
+      "failedCancel": "Failed to cancel job",
+      "jobDeleted": "Job and results deleted",
+      "failedDelete": "Failed to delete job",
+      "allPaused": "All active batch match jobs paused",
+      "failedPauseAll": "Failed to pause all jobs",
+      "resumedCount": "Resumed {{count}} paused jobs",
+      "failedResumeAll": "Failed to resume all jobs"
+    },
+    "results": {
+      "pageTitle": "Course Matching — Results",
+      "back": "Back",
+      "loading": "Loading results...",
+      "failedLoad": "Failed to load results. Please try again.",
+      "noResults": "No match results yet — job may still be running.",
+      "matchesFound": "{{count}} matches found",
+      "partnerDetails": "Partner Course Details",
+      "homeDetails": "Home Course Details",
+      "scoreBreakdown": "Score Breakdown",
+      "officialRecommendation": "⭐ OFFICIAL RECOMMENDATION",
+      "coreHomeTopics": "CORE HOME TOPICS",
+      "syllabusMatches": "SYLLABUS MATCHES",
+      "missingFromPartner": "MISSING FROM PARTNER",
+      "extraPartnerTopics": "EXTRA PARTNER TOPICS (ENRICHMENT)",
+      "stats": {
+        "courses": "{{count}} courses",
+        "processed": "{{processed}}/{{total}} processed"
+      },
+      "categories": {
+        "technical": "Technical",
+        "social": "Social",
+        "studio": "Studio"
+      },
+      "breakdown": {
+        "content": "Content",
+        "outcomes": "Outcomes",
+        "domain": "Domain",
+        "ects": "ECTS",
+        "metadata": "Metadata",
+        "title": "Title"
+      },
+      "coverage": "COVERAGE",
+      "assessments": {
+        "genuine": "Genuine",
+        "partial": "Partial",
+        "superficial": "Superficial",
+        "weak": "Weak",
+        "moderate": "Moderate",
+        "strong": "Strong"
+      }
+    }
+  },
+  "courseDetails": {
+    "modalTitle": "COURSE SYLLABUS",
+    "code": "CODE",
+    "ects": "ECTS",
+    "department": "DEPARTMENT",
+    "level": "LEVEL",
+    "semester": "SEMESTER",
+    "language": "LANGUAGE",
+    "academicContext": "Academic Context",
+    "format": "FORMAT",
+    "assessment": "ASSESSMENT",
+    "lab": "LAB",
+    "project": "PROJECT",
+    "seminar": "SEMINAR",
+    "tags": "Tags",
+    "content": "Course Content",
+    "outcomes": "Learning Outcomes",
+    "options": {
+      "yes": "Yes",
+      "no": "No",
+      "unknown": "Unknown"
+    },
+    "close": "Close",
+    "fetching": "Fetching syllabus...",
+    "notFound": "Course data not found",
+    "unknownWarning": "Some academic context fields are unknown: {{fields}}",
+    "values": {
+      "unknown": "Unknown"
+    }
+  },
+  "coordinatorDashboard": {
+    "title": "Coordinator Review Panel",
+    "subtitle": "Review student course selections and approve or reject matches",
+    "filters": {
+      "status": "Filter by status",
+      "university": "Filter by university",
+      "department": "Filter by department",
+      "clear": "Clear Filters"
+    },
+    "columns": {
+      "student": "Student",
+      "partnerUniversity": "Partner University",
+      "courses": "Courses",
+      "ects": "ECTS",
+      "status": "Status",
+      "submitted": "Submitted"
+    },
+    "table": {
+      "total": "total",
+      "approved": "APPROVED",
+      "review": "Review"
+    },
+    "statusOptions": {
+      "draft": "Draft",
+      "submitted": "Submitted",
+      "revision": "Revision Required",
+      "rejected": "Rejected",
+      "laReady": "LA Ready",
+      "approved": "Approved"
+    }
+  },
+  "applicationStatus": {
+    "draft": {
+      "label": "DRAFT",
+      "desc": "Editing selections"
+    },
+    "submitted": {
+      "label": "SUBMITTED",
+      "desc": "Awaiting coordinator review"
+    },
+    "rejected": {
+      "label": "REJECTED",
+      "desc": "Application rejected"
+    },
+    "laReady": {
+      "label": "LA READY",
+      "desc": "All courses approved, Learning Agreement ready"
+    },
+    "revision": {
+      "label": "REVISION REQUIRED",
+      "desc": "Coordinator requested changes"
+    },
+    "approved": {
+      "desc": "Course approved",
+      "label": "APPROVED"
+    },
+    "learning_agreement_ready": {
+      "desc": "Learning Agreement ready",
+      "label": "LA READY"
+    },
+    "manual_review_required": {
+      "desc": "Manual review required",
+      "label": "MANUAL"
+    },
+    "revision_requested": {
+      "desc": "Revision requested",
+      "label": "REVISION"
+    },
+    "submitted_for_review": {
+      "desc": "Pending Review",
+      "label": "SUBMITTED"
+    }
+  },
+  "coordinatorReview": {
+    "backToDashboard": "Back to Dashboard",
+    "history": "History",
+    "revert": "Revert",
+    "ectsProgress": "ECTS PROGRESS",
+    "ectsReady": "{{count}} ECTS ready",
+    "enoughEcts": "ENOUGH ECTS TO SUBMIT",
+    "selected": "Selected",
+    "approved": "Approved",
+    "learningAgreementReady": "Learning Agreement Ready",
+    "ready": "ready",
+    "planned": "planned",
+    "ectsApprovedDesc": "({{approved}} of {{total}} ects approved)",
+    "ectsRemaining": "{{count}} ECTS REMAINING",
+    "needMore": "Need {{count}} more",
+    "suggestedMeetsOverride": "After student approves override ({{count}} ECTS): {{total}} ECTS approved — threshold met",
+    "suggestedMeetsGeneric": "With suggested courses ({{count}} ECTS): {{total}} ECTS total — enough to submit",
+    "approvedSummary": "{{name}} has been approved for {{ects}} ECTS.",
+    "pendingDecisions": "However, {{count}} course(s) still require a decision. Please finalize all pending courses.",
+    "allRequirementsMet": "All requirements are met.",
+    "revertReadyTitle": "Revert Finalization?",
+    "revertReadyContent": "This will move the application back to \"Submitted\" state. You can then make further adjustments.",
+    "revertFinalization": "Revert Finalization",
+    "sendBackTitle": "Send Back for Revision",
+    "sendBackContent": "This will return the application to the student for revision. They will be able to edit their selections and add new courses.",
+    "sendBackNoteLabel": "Note to student:",
+    "sendBackPlaceholder": "Explain what needs to be changed...",
+    "sendBackDefaultNote": "Sent back for revision",
+    "viewLearningAgreement": "View Learning Agreement",
+    "revisionBanner": "Sent back to student for revision — review is read-only until resubmitted",
+    "studentNotes": "Student's Note",
+    "partnerCourseDetails": "Partner Course Details",
+    "studentsSelection": "Student's Selection",
+    "matchCandidates": "{{count}} candidates found",
+    "matchCandidatesHeader": "Match Candidates",
+    "noMatchFound": "NO MATCH FOUND",
+    "studentReviewRequest": "STUDENT REVIEW REQUEST",
+    "noSelection": "No Selection",
+    "noSelectionDesc": "The student hasn't selected a home course for this partner course.",
+    "partnerNotApproved": "PARTNER COURSE NOT APPROVED",
+    "partnerNotApprovedDesc": "The coordinator has determined that this partner course is not suitable for your academic curriculum or the proposed mapping is invalid.",
+    "noReasonProvided": "No specific reason provided.",
+    "rejectedAttempt": "Rejected attempt",
+    "studentAlternativeSuggestion": "STUDENT'S ALTERNATIVE SUGGESTION",
+    "studentReason": "Student's Reason",
+    "additionalReviewNote": "ADDITIONAL REVIEW NOTE",
+    "markReadyTitle": "Finalize and Mark as LA Ready?",
+    "markReadyContent": "This will finalize the student's selections ({{ects}} ECTS) and generate the Learning Agreement. Do you want to proceed?",
+    "deleteAppContent": "This will permanently remove the student's application and all selections. This action cannot be undone.",
+    "coordinatorsApprove": "Coordinator's Approve",
+    "coordinatorsOverride": "Coordinator's Override",
+    "aiRecommendation": "AI RECOMMENDATION",
+    "genuine": "GENUINE",
+    "strongCoverage": "STRONG COVERAGE",
+    "matchDetails": "Match Details",
+    "homeCourseDetails": "Home Course Details",
+    "coreTopics": "CORE HOME TOPICS",
+    "syllabusMatches": "SYLLABUS MATCHES",
+    "missingFromPartner": "MISSING FROM PARTNER",
+    "enrichment": "ENRICHMENT",
+    "categories": {
+      "technical": "Technical",
+      "social": "Social",
+      "studio": "Studio"
+    },
+    "actions": {
+      "approve": "Approve",
+      "reject": "Reject",
+      "override": "Override",
+      "reOverride": "Re-Override",
+      "manualReview": "Manual Review",
+      "sendBack": "SEND BACK FOR REVISION",
+      "addNote": "Add Note to Student",
+      "addNoteToStudent": "Enter note for student here...",
+      "deleteApp": "Delete Application",
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "remove": "Remove",
+      "note": "Note"
+    },
+    "historyModal": {
+      "title": "Application History",
+      "byStudent": "by student"
+    },
+    "laModal": {
+      "title": "Learning Agreement Overview",
+      "partnerCol": "PARTNER UNIVERSITY COURSE",
+      "homeCol": "HOME UNIVERSITY COURSE(S)",
+      "exportPdf": "Export PDF",
+      "exportExcel": "Export Excel",
+      "exportDocx": "Export DOCX",
+      "close": "Close"
+    },
+    "decideAllMessage": "Decide on all courses for LA readiness",
+    "reviewReq": "REVIEW REQ",
+    "bulkApprove": "Approve {{count}} Submitted",
+    "bulkApproveTitle": "Bulk Approve",
+    "bulkApproveContent": "Approve {{count}} submitted selection(s)? Only plain submitted courses (no alternatives, no review requests) will be approved.",
+    "bulkApproveSuccess": "{{count}} selection(s) approved",
+    "selectHomeCourse": "Select home university course",
+    "suggestion": "Suggestion"
+  },
+  "manualReview": {
+    "title": "Manual Review Workspace",
+    "student": "Student",
+    "status": "Status",
+    "loadingFailed": "Could not load manual review data",
+    "studentSuggestionNote": "Student's Suggestion Note",
+    "partnerCourseAbroad": "PARTNER COURSE (ABROAD)",
+    "selectedHomeCourse": "SELECTED HOME COURSE",
+    "studentSuggestion": "STUDENT SUGGESTION",
+    "noPartnerData": "No partner course data found",
+    "noStudentSuggestion": "No student suggestion found",
+    "selectHomeToAnalyze": "Select Home Course to Analyze",
+    "searchPlaceholder": "Search home university courses...",
+    "runAnalysis": "Run AI Analysis",
+    "aiAnalysisResult": "AI Analysis Result",
+    "allAnalyzedCourses": "ALL ANALYZED COURSES — sorted by score",
+    "decision": "Decision",
+    "previousDecision": "PREVIOUS DECISION",
+    "notesOptional": "Notes (optional)",
+    "notesPlaceholder": "Add a note about your decision...",
+    "overrideWithSuggestion": "Override with Suggestion",
+    "override": "Override",
+    "overrideConfirmTitle": "Override with this course?",
+    "overrideSuggestionConfirmTitle": "Override with student suggestion?",
+    "selectedCourseLabel": "Selected",
+    "overrideDesc": "This will set the selected IKU course as the coordinator override and mark the selection as approved.",
+    "selectToEnable": "Select a home course above to enable approval",
+    "rank": "RANK",
+    "coverage": "COVERAGE",
+    "aiRecommendation": "AI RECOMMENDATION",
+    "coreHomeTopics": "CORE HOME TOPICS",
+    "syllabusMatches": "SYLLABUS MATCHES",
+    "missingFromPartner": "MISSING FROM PARTNER",
+    "enrichment": "ENRICHMENT",
+    "scoreBreakdown": "SCORE BREAKDOWN",
+    "matchDetails": "Match Details",
+    "analysisComplete": "AI analysis complete",
+    "analysisFailed": "Analysis failed — please try again",
+    "approvedSuccess": "Course approved successfully",
+    "rejectedSuccess": "Suggestion rejected",
+    "approvalFailed": "Approval failed",
+    "rejectionFailed": "Rejection failed",
+    "close": "Close",
+    "loading": "Loading...",
+    "noResults": "No results found",
+    "verification": {
+      "approved": "APPROVED",
+      "rejected": "REJECTED",
+      "risk_flagged": "RISK FLAGGED",
+      "riskFlagged": "RISK FLAGGED"
+    },
+    "categories": {
+      "technical": "Technical",
+      "social": "Social",
+      "studio": "Studio"
+    },
+    "assessments": {
+      "superficial": "SUPERFICIAL",
+      "moderate": "MODERATE",
+      "substantial": "SUBSTANTIAL",
+      "weak": "WEAK",
+      "strong": "STRONG"
+    },
+    "sources": {
+      "batch": "Batch Pipeline",
+      "manual": "Manual"
+    }
+  },
+  "adminPanel": {
+    "title": "System Administration",
+    "subtitle": "Management Suite",
+    "addStaff": "Add Staff",
+    "faculty": "Faculty",
+    "newDept": "New Department",
+    "newFaculty": "New Faculty",
+    "searchPlaceholder": "Search by identity or name...",
+    "filterRole": "Filter by role",
+    "filterDept": "Filter by department",
+    "tabs": {
+      "personnel": "Personnel Directory",
+      "units": "Academic Units",
+      "faculties": "Faculties",
+      "departments": "Departments",
+      "logs": "Audit Log"
+    },
+    "stats": {
+      "personnel": "Personnel",
+      "units": "Academic Units",
+      "superAdmins": "Super Admins",
+      "deptAdmins": "Dept Admins",
+      "coordinators": "Coordinators",
+      "students": "Students"
+    },
+    "userTable": {
+      "identity": "User Identity",
+      "email": "Email",
+      "privileges": "Privileges & Scope",
+      "status": "Status",
+      "actions": "Actions",
+      "pendingCats": "Pending CATS link",
+      "active": "ACTIVE",
+      "inactive": "INACTIVE"
+    },
+    "facultyTable": {
+      "code": "Code",
+      "name": "Faculty Name"
+    },
+    "deptTable": {
+      "code": "Code",
+      "name": "Department Name",
+      "faculty": "Faculty",
+      "health": "Health",
+      "actions": "Action",
+      "operational": "OPERATIONAL",
+      "offline": "OFFLINE"
+    },
+    "auditTable": {
+      "time": "Time",
+      "actor": "Actor",
+      "action": "Action",
+      "target": "Target",
+      "details": "Details"
+    },
+    "modals": {
+      "addStaff": {
+        "title": "Add Staff",
+        "desc": "User must link their CATS account on first login",
+        "displayName": "Display Name (Optional)",
+        "roles": "Roles",
+        "dept": "Department",
+        "create": "Create Account"
+      },
+      "credentials": {
+        "title": "Credentials Generated",
+        "desc": "Share these with the user. They will be shown only once.",
+        "username": "Username",
+        "password": "Password",
+        "warning": "These credentials will only be shown once. The user must verify with their CATS account on first login.",
+        "done": "Done"
+      },
+      "manageRoles": {
+        "title": "Manage Roles — {{name}}",
+        "current": "Current role assignments:",
+        "noRoles": "No roles assigned",
+        "addNew": "Add New Role",
+        "role": "Role",
+        "dept": "Department",
+        "assign": "Assign",
+        "remove": "Remove",
+        "deactivate": "Deactivate",
+        "activate": "Activate"
+      },
+      "newDept": {
+        "title": "Register New Academic Unit",
+        "unitName": "Unit Name",
+        "unitCode": "Unit Code",
+        "faculty": "Faculty",
+        "selectFaculty": "Select faculty"
+      },
+      "newFaculty": {
+        "title": "Register New Faculty",
+        "name": "Faculty Name",
+        "code": "Faculty Code"
+      }
+    },
+    "confirm": {
+      "removeUser": "Remove Personnel",
+      "removeUserDesc": "Are you sure you want to remove {{name}}? This action cannot be undone.",
+      "removeDept": "Remove Academic Unit?",
+      "removeDeptDesc": "Are you sure you want to remove \"{{name}}\"?",
+      "removeFaculty": "Remove Faculty?",
+      "removeFacultyDesc": "Are you sure you want to remove \"{{name}}\"?",
+      "yesRemove": "Yes, Remove"
+    },
+    "messages": {
+      "deptCreated": "Department created successfully",
+      "deptCreateFailed": "Failed to create department",
+      "personnelRemoved": "Personnel removed",
+      "userDeleteFailed": "Failed to delete user",
+      "unitRemoved": "Academic unit removed",
+      "unitDeleteFailed": "Failed to delete department",
+      "facultyCreated": "Faculty created successfully",
+      "facultyCreateFailed": "Failed to create faculty",
+      "facultyRemoved": "Faculty removed",
+      "facultyDeleteFailed": "Failed to delete faculty",
+      "deptStatusUpdated": "Department status updated",
+      "deptUpdateFailed": "Failed to update department",
+      "credsGenerated": "Credentials generated",
+      "credsFailed": "Failed to generate credentials",
+      "roleAssigned": "Role assigned",
+      "roleAssignFailed": "Failed to assign role",
+      "roleRemoved": "Role removed",
+      "roleRemoveFailed": "Failed to remove role",
+      "roleStatusUpdated": "Role status updated",
+      "roleToggleFailed": "Failed to toggle role",
+      "copied": "Copied!"
+    }
+  },
+  "studentDashboard": {
+    "welcome": "Welcome back",
+    "subtitle": "Manage your Erasmus course applications below",
+    "newApplication": "New Application",
+    "activeAppWarning": "You already have an active application. Delete it first to create a new one.",
+    "myApplications": "My Applications",
+    "myApplicationsDesc": "Select partner university courses and submit for coordinator review",
+    "noApplications": "No applications yet. Create your first application to start selecting courses.",
+    "createApplication": "Create Application",
+    "reviseSubmit": "Revise & Submit",
+    "viewDetails": "View Details",
+    "delete": "Delete",
+    "deleteTitle": "Delete Application?",
+    "deleteContent": "This will remove all your course selections for this application.",
+    "fallSemester": "Fall Semester",
+    "springSemester": "Spring Semester",
+    "noCourses": "No courses selected",
+    "coursesCount": "{{count}} courses",
+    "coursesCount_plural": "{{count}} courses",
+    "counts": {
+      "draft": "{{count}} draft",
+      "draft_plural": "{{count}} drafts",
+      "review": "{{count}} awaiting review",
+      "review_plural": "{{count}} awaiting review"
+    },
+    "createModal": {
+      "title": "Create New Application",
+      "desc": "Select the partner university and mobility semester to create an application. All available courses and their matches will be loaded automatically.",
+      "semester": "Semester *",
+      "semesterPlaceholder": "Select semester...",
+      "partnerUni": "Partner University *",
+      "uniPlaceholder": "Choose partner university...",
+      "create": "Create"
+    },
+    "messages": {
+      "createFailed": "Failed to create application",
+      "deleteFailed": "Failed to delete application",
+      "loading": "Loading applications..."
+    }
+  },
+  "applicationDetail": {
+    "revisionTitle": "Revision Required!",
+    "revisionDesc": "The coordinator has requested changes. You can modify your course selections and re-submit your application.",
+    "back": "Back to Dashboard",
+    "reset": "Reset All Selections",
+    "resetConfirm": "Clear everything?",
+    "resetDesc": "This will remove all your course selections and reset the application to draft state.",
+    "withdraw": "Withdraw & Edit",
+    "finalize": "Finalize Application",
+    "finalizeDesc": "Once finalized, you cannot change your selections but you can generate your official Learning Agreement.",
+    "submit": "Submit for Review",
+    "notReady": "Selection in progress",
+    "readyToFinalize": "Ready to Finalize",
+    "readyToSubmit": "Ready to Submit",
+    "ectsSummary": "ECTS Progress",
+    "partnerCredits": "Partner Credits",
+    "homeCredits": "Home (İKÜ) Equivalence",
+    "matchedCourses": "Matched Courses",
+    "searchPlaceholder": "Search by host course name or code...",
+    "noCoursesFound": "No courses found matching your search",
+    "emptyState": "No courses available for this university.",
+    "coordinatorNotes": "Coordinator Notes",
+    "yourNotes": "Your Notes / Remarks",
+    "notesPlaceholder": "Add any notes for the coordinator here (e.g. why you selected certain courses)...",
+    "learningAgreement": "Learning Agreement",
+    "downloadPdf": "Download PDF",
+    "downloadExcel": "Download Excel",
+    "viewDetails": "View Learning Agreement",
+    "sections": {
+      "selection": "Select",
+      "homeCourse": "Home Course (İKÜ)",
+      "match": "Match",
+      "hostCourse": "Host Course (Partner)",
+      "status": "Status & Coverage"
+    },
+    "actions": {
+      "select": "SELECT",
+      "remove": "REMOVE",
+      "hideAnalysis": "HIDE ANALYSIS",
+      "matchAnalysis": "MATCH ANALYSIS",
+      "homeDetails": "HOME DETAILS",
+      "askReview": "Ask Review",
+      "suggestAlt": "Suggest Alt",
+      "clearReview": "Clear Review",
+      "clearAlt": "Clear Alt",
+      "suggestAltAction": "Suggest Alternative",
+      "partnerDetails": "Partner Course Details"
+    },
+    "tooltips": {
+      "rejected": "This match has been rejected or flagged as unsuitable for mapping.",
+      "risk": "This match has potential risks (e.g. ECTS mismatch) and should be reviewed carefully.",
+      "approved": "This match is academically verified and recommended for selection.",
+      "deselectFirst": "Deselect the current course first",
+      "removeAltFirst": "Remove your suggestion to request a standard manual review",
+      "removeReviewFirst": "Remove your review request to suggest an alternative"
+    },
+    "labels": {
+      "aiRejected": "AI REJECTED",
+      "aiRisk": "AI RISK FLAG",
+      "aiApproved": "AI APPROVED",
+      "analysisNote": "AI Analysis Note",
+      "topicsAnalysis": "TOPICS ANALYSIS",
+      "coreHomeTopics": "CORE HOME TOPICS",
+      "syllabusMatches": "SYLLABUS MATCHES",
+      "missingFromHost": "MISSING FROM HOST",
+      "enrichment": "ENRICHMENT (EXTRA FROM HOST)",
+      "scoreBreakdown": "Score Breakdown",
+      "structuralChecks": "Structural Checks",
+      "noMatchCandidates": "No match candidates found",
+      "noSelection": "Nothing selected",
+      "pendingReview": "Review Requested",
+      "saving": "Saving...",
+      "saved": "Saved",
+      "allApproved": "All selections are approved! You can now finalize your application.",
+      "adjustSelections": "Adjust your selections or handle rejections/overrides below.",
+      "yourSelections": "Your Selections ({{count}}):",
+      "creditUnit": "ECTS",
+      "notApproved": "Partner Course Not Approved",
+      "notApprovedDesc": "The coordinator has determined that this partner course is not suitable for your academic curriculum or the proposed mapping is invalid.",
+      "notApprovedShort": "This course has been evaluated and determined as not suitable for the selected mapping.",
+      "decisionFinal": "Coordinator Decision (Final Override)",
+      "decisionApproved": "This mapping has been evaluated and approved based on academic compliance.",
+      "coordinatorNote": "Coordinator's Note",
+      "reasonNote": "Reason / Note",
+      "underReview": "Application Under Review",
+      "underReviewDesc": "Your application has been submitted and is currently locked for editing. You will be notified once the coordinator completes the review.",
+      "cancel": "Cancel",
+      "add": "ADD",
+      "reviewRequested": "Coordinator Review Requested",
+      "rank": "RANK",
+      "aiAnalysisNote": "AI ANALYSIS NOTE",
+      "coverage": {
+        "genuine": "GENUINE",
+        "partial": "PARTIAL",
+        "superficial": "SUPERFICIAL",
+        "strong": "STRONG",
+        "moderate": "MODERATE",
+        "weak": "WEAK"
+      },
+      "status": {
+        "removed": "REMOVED",
+        "overridden": "OVERRIDDEN",
+        "approved": "APPROVED",
+        "rejected": "REJECTED",
+        "submitted": "SUBMITTED",
+        "draft": "DRAFT",
+        "reviewReq": "REVIEW REQ",
+        "suggested": "SUGGESTED",
+        "aiRec": "AI REC",
+        "notSelected": "NOT SELECTED",
+        "notRec": "NOT RECOMMENDED",
+        "notRecSuffix": "NOT REC.",
+        "risk_flagged": "RISK FLAGGED"
+      },
+      "analysis": {
+        "content": "Content",
+        "outcomes": "Outcomes",
+        "domain": "Domain",
+        "ects": "Ects",
+        "metadata": "Metadata",
+        "title": "Title",
+        "coverage": "COVERAGE"
+      },
+      "courseCategories": {
+        "core": "Core",
+        "departmental_elective": "Departmental Elective",
+        "elective": "Elective",
+        "technical": "Technical",
+        "social": "Social",
+        "studio_based": "Studio Based"
+      }
+    },
+    "modals": {
+      "askReview": {
+        "title": "Ask Coordinator to Review",
+        "desc": "Let your coordinator know you couldn't find a suitable match. Add a note explaining the situation.",
+        "noteLabel": "Note",
+        "notePlaceholder": "e.g. None of the suggested courses cover the same topics as this partner course...",
+        "send": "Send Request"
+      },
+      "suggestAlt": {
+        "title": "Suggest Alternative Match",
+        "desc": "Select a single home course you think could match this partner course. Candidates already suggested by the system are excluded.",
+        "search": "Search by course name or code...",
+        "noCourses": "No courses found",
+        "selected": "{{count}} course selected",
+        "reasonLabel": "Reason / Explanation",
+        "reasonPlaceholder": "Explain why you think this course(s) could be a match...",
+        "save": "Save Suggestion"
+      },
+      "submit": {
+        "title": "Submit Application for Review?",
+        "content": "{{partnerEcts}} ECTS partner / {{homeEcts}} ECTS home selected. Your application will be sent to the coordinator.",
+        "warning": "IMPORTANT: You will NOT be able to change your selections while the coordinator is reviewing your application.",
+        "ok": "Submit Now"
+      }
+    },
+    "messages": {
+      "loading": "Loading application details...",
+      "submitted": "Application submitted for review!",
+      "submitFailed": "Failed to submit",
+      "finalized": "Application finalized! You can now generate your Learning Agreement.",
+      "finalizeFailed": "Failed to finalize",
+      "withdrawn": "Application withdrawn — you can now edit your selections",
+      "withdrawFailed": "Failed to withdraw",
+      "resetSuccess": "All selections cleared",
+      "resetFailed": "Failed to reset selections",
+      "matchSelected": "Match selected!",
+      "matchDeselected": "Match deselected",
+      "updateFailed": "Failed to update selection",
+      "requestSent": "Request sent to coordinator",
+      "requestFailed": "Failed to send request",
+      "altSaved": "Alternative suggestion saved",
+      "altFailed": "Failed to save suggestion",
+      "minPartnerEcts": "You need at least 28 ECTS to submit. Currently: {{current}} ECTS selected (excluding rejected).",
+      "minHomeEcts": "You need at least 30 home ECTS to submit. Currently: {{current}} home ECTS mapped."
+    }
+  },
+  "partnerUniversities": {
+    "title": "Partner Universities",
+    "totalCourses": "Total Courses Available",
+    "noUniversities": "No partner universities available.",
+    "university": "University",
+    "country": "Country",
+    "courses": "Courses",
+    "actions": {
+      "info": "Info",
+      "browse": "Browse",
+      "back": "Back"
+    },
+    "browser": {
+      "searchPlaceholder": "Search by course name or code...",
+      "coursesCount": "{{count}} course",
+      "coursesCount_plural": "{{count}} courses",
+      "loading": "Loading...",
+      "noMatches": "No courses matching \"{{search}}\"",
+      "noFilters": "No courses for the selected filters",
+      "semester": "Semester",
+      "fall": "Fall",
+      "spring": "Spring",
+      "both": "Both"
+    },
+    "details": {
+      "title": "Course Details",
+      "code": "Code",
+      "ects": "ECTS",
+      "level": "Level",
+      "semester": "Semester",
+      "language": "Language",
+      "department": "Department",
+      "academicContext": "Academic Context",
+      "format": "Format",
+      "assessment": "Assessment",
+      "components": {
+        "title": "Components",
+        "lab": "Lab",
+        "project": "Project",
+        "seminar": "Seminar",
+        "yes": "Yes",
+        "no": "No",
+        "unknown": "Unknown"
+      },
+      "tags": "Tags",
+      "dataQuality": {
+        "title": "Data Quality",
+        "content": "Content",
+        "outcomes": "Outcomes",
+        "confidence": "Confidence",
+        "available": "Available",
+        "missing": "Missing"
+      },
+      "description": "Course Description",
+      "learningOutcomes": "Learning Outcomes",
+      "warnings": "Warnings",
+      "warningMessages": {
+        "Language information is missing": "Language information is missing",
+        "All academic context status fields are unknown": "All academic context status fields are unknown",
+        "Department information is missing": "Department information is missing",
+        "Course code could not be extracted": "Course code could not be extracted",
+        "ECTS value is non-positive: 0": "ECTS value is non-positive: 0",
+        "Primary format is unknown": "Primary format is unknown",
+        "Assessment mode is unknown": "Assessment mode is unknown",
+        "Content field is missing or unknown": "Content field is missing or unknown",
+        "Learning outcomes are missing or unknown": "Learning outcomes are missing or unknown",
+        "ECTS value could not be parsed": "ECTS value could not be parsed"
+      },
+      "aiMatches": "AI Home Match Candidates",
+      "aiDisclaimer": "AI match status (Approved / Risk Flagged / Rejected) is a recommendation only. Whether a course is accepted or credited is determined by your coordinator.",
+      "noAiMatches": "No match candidates calculated for this course yet."
+    },
+    "status": {
+      "approved": "Approved",
+      "risk_flagged": "Risk Flagged",
+      "rejected": "Rejected"
+    }
+  },
+  "universityProfile": {
+    "notFound": "University not found.",
+    "rankings": "World Rankings",
+    "aiProfileTitle": "AI-Generated Profile",
+    "aiProfileDesc": "This information has been synthesized by AI to provide a quick overview. While we strive for accuracy, details like costs, housing availability, and academic programs can change. Always verify critical information from official university websites or student guides.",
+    "noData": "No profile data available for this university yet.",
+    "cityProfile": {
+      "title": "City Profile",
+      "safety": "Safety",
+      "english": "English Friendliness",
+      "climate": "Climate",
+      "population": "Population"
+    },
+    "transportation": {
+      "title": "Transportation",
+      "airport": "Nearest Airport",
+      "center": "City Center",
+      "fromAirport": "From Airport",
+      "publicTransport": "Public Transport",
+      "nearbyCities": "Nearby Cities"
+    },
+    "accommodation": {
+      "title": "Accommodation",
+      "dorm": "University Dorm",
+      "available": "Available",
+      "notAvailable": "Not Available",
+      "dormCost": "Dorm Cost (per term)",
+      "privateRoom": "Private Room (monthly)",
+      "difficulty": "Housing Difficulty",
+      "notes": "Notes"
+    },
+    "costOfLiving": {
+      "title": "Cost of Living",
+      "grantSufficient": "Erasmus Grant Sufficient",
+      "yesBasics": "Yes — covers basics",
+      "noExtra": "No — additional budget needed"
+    },
+    "socialLife": {
+      "title": "Social Life",
+      "nightlife": "Nightlife",
+      "community": "Erasmus Community",
+      "organizations": "Student Organizations",
+      "keySpots": "Key Spots"
+    },
+    "academicInfo": {
+      "title": "Academic Info",
+      "language": "Language",
+      "englishCourses": "English Courses",
+      "limited": "Limited",
+      "notablePrograms": "Notable Programs",
+      "specialNotes": "Special Notes"
+    },
+    "studentSummary": {
+      "title": "Student Summary",
+      "rating": "Overall Rating",
+      "bestFor": "Best For",
+      "watchOutFor": "Watch Out For"
+    },
+    "sources": "Sources"
+  },
+  "universityInfo": {
+    "managementTitle": "University Info Management",
+    "managementDesc": "Manage rankings, cost of living, and profile data for partner universities",
+    "coordinatorPanel": "Coordinator Panel",
+    "partnerUniversities": "Partner Universities",
+    "total": "total",
+    "searchPlaceholder": "Search...",
+    "columns": {
+      "university": "University",
+      "country": "Country",
+      "status": "Status"
+    },
+    "actions": {
+      "manage": "Manage",
+      "close": "Close"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "generator": {
+      "title": "Generator",
+      "mainTitle": "Generate University Profile",
+      "for": "for",
+      "step1Title": "Generate Prompt",
+      "step1Desc": "Creates a structured research prompt for this university",
+      "generate": "Generate",
+      "copy": "Copy",
+      "copied": "Copied to clipboard",
+      "nextPaste": "Next: Paste Response",
+      "step2Title": "Paste JSON from ChatGPT / Gemini / Perplexity",
+      "step2Desc": "Use web-search enabled mode, then paste the full JSON response",
+      "importSave": "Import & Save",
+      "lastImport": "Last import",
+      "success": "Profile imported successfully",
+      "error": "Import failed — check JSON format",
+      "formatError": "JSON format error — fix it with your LLM",
+      "fixDesc": "Copy the prompt below and paste it back into ChatGPT / Perplexity. It will fix the JSON for you.",
+      "copyFix": "Copy Fix Prompt",
+      "fixCopied": "Fix prompt copied",
+      "dismiss": "Dismiss",
+      "quickGuide": {
+        "title": "Quick guide",
+        "step1": "Click Generate to create the prompt",
+        "step2": "Copy and paste it into Perplexity (best), Gemini, or ChatGPT",
+        "step3": "Make sure web search is enabled so the LLM can look up real data",
+        "step4": "Copy the JSON response and paste it above, then Import & Save"
+      }
+    },
+    "profile": {
+      "title": "Profile Data",
+      "noData": "No data",
+      "noProfileDataYet": "No profile data yet. Use the LLM Generator to create one.",
+      "aiGeneratedBanner": "AI-Generated Profile View",
+      "aiGeneratedDesc": "This is how the AI-synthesized information appears to students. It serves as a quick overview, prompting them to verify details like costs and academic programs from official sources.",
+      "worldRankings": "World Rankings",
+      "noLLMData": "No LLM profile data yet.",
+      "sections": {
+        "city": "City Profile",
+        "transport": "Transportation",
+        "accommodation": "Accommodation",
+        "cost": "Cost of Living",
+        "social": "Social Life",
+        "academic": "Academic Info",
+        "summary": "Student Summary",
+        "sources": "Sources"
+      },
+      "fields": {
+        "safety": "Safety",
+        "english": "English Friendliness",
+        "climate": "Climate",
+        "population": "Population",
+        "airport": "Nearest Airport",
+        "cityCenter": "City Center",
+        "fromAirport": "From Airport",
+        "publicTransport": "Public Transport",
+        "nearbyCities": "Nearby Cities",
+        "dorm": "University Dorm",
+        "dormCost": "Dorm Cost (per term)",
+        "privateRoom": "Private Room (monthly)",
+        "housingDifficulty": "Housing Difficulty",
+        "notes": "Notes",
+        "grantSufficient": "Erasmus Grant Sufficient",
+        "nightlife": "Nightlife",
+        "community": "Erasmus Community",
+        "organizations": "Student Organizations",
+        "keySpots": "Key Spots",
+        "language": "Language",
+        "englishCourses": "English Courses",
+        "programs": "Notable Programs",
+        "specialNotes": "Special Notes",
+        "rating": "Overall Rating",
+        "bestFor": "Best For",
+        "watchOut": "Watch Out For"
+      },
+      "values": {
+        "available": "Available",
+        "notAvailable": "Not Available",
+        "limited": "Limited",
+        "grantYes": "Yes — covers basics",
+        "grantNo": "No — additional budget needed"
+      },
+      "levels": {
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low",
+        "easy": "Easy",
+        "moderate": "Moderate",
+        "hard": "Hard",
+        "budget_heaven": "Budget Heaven",
+        "good_value": "Good Value",
+        "expensive": "Expensive"
+      }
+    }
+  },
+  "deptSelection": {
+    "confirm": "Confirm and Continue",
+    "error": "Could not save department",
+    "placeholder": "Select your department",
+    "prompt": "Please select your department to continue.",
+    "success": "Department selected successfully",
+    "welcome": "Welcome!"
+  },
+  "studentTranscripts": {
+    "close": "Close",
+    "columns": {
+      "code": "Code",
+      "ects": "ECTS",
+      "ectsGrade": "ECTS Grade",
+      "file": "File",
+      "ikuGrade": "IKU Grade",
+      "localGrade": "Local Grade",
+      "matchedHome": "Matched IKU Courses",
+      "partnerCourse": "Partner Course",
+      "partnerUni": "Partner University",
+      "status": "Status",
+      "uploaded": "Upload Date"
+    },
+    "delete": "Delete",
+    "deleteConfirm": "Delete",
+    "deleteContent": "Are you sure you want to delete this transcript? This action cannot be undone.",
+    "deleteFailed": "Delete failed",
+    "deleteSuccess": "Transcript deleted",
+    "deleteTitle": "Delete Transcript?",
+    "detail": {
+      "addCourse": "Add Course",
+      "addGradeFirst": "Add at least one grade before submitting",
+      "back": "Back",
+      "code": "CODE",
+      "conversionFailed": "Conversion failed",
+      "courseName": "COURSE NAME",
+      "courseNameRequired": "Course name is required for all entries",
+      "directTransfer": "Direct Transfer",
+      "ectsGrade": "ECTS GRADE",
+      "emptySubmitError": "Cannot submit: You must add at least one grade entry.",
+      "entryDeleteFailed": "Delete failed",
+      "entryDeleted": "Entry deleted",
+      "exportExcel": "Export Excel",
+      "exportDocx": "Export DOCX",
+      "exportPdf": "Export PDF",
+      "file": "File",
+      "fixGradesFirst": "Fix all grades before submitting",
+      "gradeEntries": "Grade Entries",
+      "homeMatching": "IKU Course Matching",
+      "homeMatchingDesc": "Select the IKU equivalent course(s) for the chosen partner course.",
+      "homeUniCourse": "IKU COURSES",
+      "invalidConversions": "Some grades could not be converted. Please ensure all grades are valid.",
+      "invalidSubmitError": "Cannot submit: Some grades are invalid or missing.",
+      "localGrade": "LOCAL GRADE",
+      "mixedScheme": "Mixed Grading System",
+      "mixedSchemeDesc": "This university uses both local and ECTS grades for grade conversion.",
+      "notes": "Notes",
+      "nothingToSave": "Nothing to save",
+      "officialDoc": "Official Transcript Document",
+      "override": "OVERRIDDEN",
+      "overview": "Overview",
+      "overviewTitle": "Transcript Summary",
+      "partnerUniCourse": "PARTNER UNIVERSITY COURSE",
+      "pdfPreview": "PDF Preview",
+      "save": "Save",
+      "saveFailed": "Save failed",
+      "saved": "Saved",
+      "scheme": "Grading Scheme",
+      "schemeDefinition": "Definition",
+      "schemeDesc": "This grading scheme is used to automatically convert your local grades from {{university}} to IKU grades.",
+      "schemeLocalGrade": "Local Grade",
+      "schemeTitle": "Grading Scheme",
+      "searchHomeCourses": "Search and select IKU courses...",
+      "student": "Student",
+      "submitConfirm": "Submit this transcript for review?",
+      "submitDesc": "This locks all grades and cannot be undone.",
+      "submitFailed": "Submit failed",
+      "fixGradesFirst": "Fix grades first — invalid conversions exist",
+      "submitForReview": "Submit for Review",
+      "submitSuccess": "Transcript submitted for review",
+      "switchTooltip": "Switch between local (L) and ECTS (E) input",
+      "transcriptTitle": "Transcript — {{university}}",
+      "university": "University"
+    },
+    "emptyState": "No transcripts yet. Upload one to get started!",
+    "enterGrades": "Enter Grades",
+    "exportExcel": "Export Excel",
+    "exportDocx": "Export DOCX",
+    "exportPdf": "Export PDF",
+    "headerLabel": "Transcripts & Grades",
+    "originalPdf": "Original PDF",
+    "overviewDesc": "Below are the grades entered by your coordinator and their IKU equivalents.",
+    "overviewTitle": "Grade Conversion Overview",
+    "status": {
+      "finalized": "Finalized",
+      "graded": "Graded",
+      "grading_in_progress": "In Progress",
+      "uploaded": "Uploaded"
+    },
+    "subtitle": "Upload and track your international course results",
+    "title": "My Transcripts",
+    "uploadBtn": "Upload Transcript",
+    "uploadFailed": "Upload failed",
+    "uploadModal": {
+      "dragText": "Drag a PDF file or click to browse",
+      "fileTooLarge": "File must be smaller than 50MB!",
+      "notes": "Notes (optional)",
+      "notesPlaceholder": "Notes for the coordinator...",
+      "partnerUni": "Partner University",
+      "selectPartnerUni": "Select partner university",
+      "title": "Upload Transcript PDF",
+      "transcriptPdf": "Transcript PDF",
+      "upload": "Upload"
+    },
+    "uploadPdf": "Upload PDF",
+    "uploadSuccess": "Transcript uploaded successfully",
+    "view": "View",
+    "viewGrades": "View Grades"
+  },
+  "senateDecisions": {
+    "title": "Senate Decisions",
+    "noDecisions": "No senate decisions or equivalence rules found for this unit. You can upload new decisions using the 'Senate Decisions' page from the navigation menu.",
+    "upload": "Upload Decision",
+    "uploadTitle": "Upload Senate Decision",
+    "filterType": "Filter by type",
+    "filterDept": "Filter by department",
+    "table": {
+      "reference": "Reference",
+      "title": "Title",
+      "date": "Date",
+      "type": "Type",
+      "department": "Department",
+      "file": "File",
+      "actions": "Actions",
+      "allDepts": "All Departments",
+      "allUnis": "All Universities",
+      "university": "University"
+    },
+    "form": {
+      "title": "Decision Title",
+      "referenceNo": "Reference No",
+      "date": "Decision Date",
+      "type": "Decision Type",
+      "department": "Department",
+      "summary": "Summary",
+      "file": "Document",
+      "selectFile": "Select File",
+      "addDepartment": "Add Department",
+      "decisionType": "Partner Grade Conversion"
+    },
+    "selectDeptFirst": "Select department first",
+    "confirm": {
+      "delete": "Delete Decision?",
+      "deleteDesc": "Are you sure you want to remove \"{{title}}\"?"
+    },
+    "messages": {
+      "uploaded": "Decision uploaded",
+      "uploadFailed": "Failed to upload decision",
+      "deleted": "Decision removed",
+      "deleteFailed": "Failed to delete decision"
+    }
+  },
+  "uploadTransferForm": {
+    "title": "Upload Transfer Form",
+    "back": "Back to Transcripts",
+    "parseButton": "Upload & Parse",
+    "dragText": "Drag a PDF or DOCX file here",
+    "dragHint": "Transfer form generated by the system",
+    "parseSuccess": "Document uploaded successfully",
+    "warnings": "Warnings",
+    "studentName": "Student Name",
+    "studentNumber": "Student Number",
+    "partnerUni": "Partner University",
+    "homeUni": "Host University",
+    "total": "Total",
+    "demoStudent": "Sample Student",
+    "demoPartnerUni": "Partner University",
+    "demoHomeUni": "Istanbul Kultur University",
+    "demoWarning": "Demo: Backend parse endpoint not ready yet — sample data shown",
+    "demoInfo": "Demo mode — sample data added",
+    "backToList": "Back to List",
+    "downloadFile": "Download File",
+    "detail": "Details",
+    "parsedData": "Transfer Course Data",
+    "courses": "courses",
+    "totalPartnerEcts": "Total Partner ECTS",
+    "totalHomeEcts": "Total IKU ECTS",
+    "uploadedDocs": "Uploaded Documents",
+    "totalDocs": "documents",
+    "noDocs": "No documents uploaded yet",
+    "status": {
+      "ready": "Ready",
+      "imported": "Imported",
+      "error": "Error"
+    },
+    "table": {
+      "partnerCode": "Partner Code",
+      "partnerName": "Partner Course",
+      "localGrade": "Grade (Local)",
+      "ectsGrade": "ECTS Grade",
+      "partnerEcts": "ECTS",
+      "homeCode": "IKU Code",
+      "homeName": "IKU Course",
+      "ikuGrade": "IKU Grade",
+      "homeEcts": "ECTS",
+      "expectedIku": "Expected IKU",
+      "verification": "Verification",
+      "verificationLabel": "Verification",
+      "filename": "File",
+      "uploadDate": "Uploaded",
+      "student": "Student",
+      "partnerUni": "Partner Uni.",
+      "courseCount": "Courses",
+      "totalEcts": "Total ECTS",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "departmentLabel": "Department",
+    "partnerUniLabel": "Partner University",
+    "selectFirst": "Select first",
+    "uploadError": "Upload failed",
+    "verifying": "Verifying",
+    "verificationResult": "Verification Result",
+    "valid": "Valid",
+    "partial": "Partial",
+    "invalid": "Invalid",
+    "manualCheck": "Manual Check",
+    "manualCheckRequired": "Manual Check Required",
+    "verified": "Verified",
+    "hasIssues": "Has Issues",
+    "processing": "Processing",
+    "noRuleFound": "No Rule",
+    "expectedGrade": "Expected Grade",
+    "explanation": "Explanation",
+    "copy": "Copy",
+    "copyExplanation": "Copy Explanation",
+    "copied": "Copied",
+    "parsingMethod": "Parse Method",
+    "approveBtn": "Approve",
+    "flagBtn": "Flag",
+    "reviewNotes": "Review Note",
+    "reviewNotesPlaceholder": "Review note (optional)",
+    "reviewTitle": "Review",
+    "reviewApproved": "Document approved",
+    "reviewFlagged": "Document flagged",
+    "reviewFailed": "Operation failed",
+    "reverifyTitle": "Re-evaluation",
+    "reverifyHint": "Upload a new PDF/DOCX to re-evaluate the document",
+    "reverifyBtn": "Re-evaluate",
+    "reverifySuccess": "New version uploaded, processing...",
+    "reverifyFailed": "Upload failed",
+    "selectNewFile": "Select New File",
+    "regenerateExplanations": "Regenerate Explanations",
+    "explanationsRegenerated": "Explanations regenerated",
+    "regenerateFailed": "Regeneration failed",
+    "downloadBtn": "Download Original Document",
+    "pending": "Pending",
+    "approved": "Approved",
+    "flagged": "Flagged",
+    "reviewStatus": "Review",
+    "reviewSectionTitle": "Document Review and Management Panel",
+    "statusLabel": "Review Status",
+    "approvedStatus": "Transfer Form Approved",
+    "reviewedAt": "Evaluated At:",
+    "approvedSubtext": "Course transfer eligibility for this document has been verified and approved.",
+    "flaggedStatus": "Transfer Form Flagged with Issues",
+    "flaggedSubtext": "Document flagged due to detected discrepancies or missing information.",
+    "pendingStatus": "Pending Review",
+    "pendingSubtext": "Please verify course equivalencies and specify your decision using the buttons below.",
+    "actionsLabel": "Evaluation Decision",
+    "notesLabel": "Review Note / Justification",
+    "optional": "Optional",
+    "selectStatusFirst": "Please make an Approve or Flag decision first",
+    "noteSaved": "Review note saved",
+    "saveFailed": "Save failed",
+    "saveNoteBtn": "Save Note",
+    "docManagementTitle": "Document Operations & Updates",
+    "originalDoc": "Original Document",
+    "aiExplanations": "AI Explanations",
+    "aiExplanationsDesc": "Regenerate equivalence explanations using LLM",
+    "reviewSectionDesc": "Verify course transfer eligibility, add review notes, or re-evaluate with an updated file.",
+    "versionHistoryTitle": "Version History",
+    "versionHistoryHint": "View previous verification results and revert to older versions",
+    "versionHistoryBtn": "Version History",
+    "versionHistoryDrawerTitle": "Verification Version History",
+    "versionHistoryDrawerSub": "Past evaluations and equivalence analyses performed on this document",
+    "activeVersion": "Active Version",
+    "activateThisVersion": "Activate This Version",
+    "activateSuccess": "version successfully activated",
+    "activateFailed": "Activation failed",
+    "summaryAnalysis": "Summary Analysis:",
+    "summaryValid": "Valid:",
+    "summaryPartial": "Partial:",
+    "summaryInvalid": "Invalid:",
+    "colCourseName": "Course Name",
+    "colValidationStatus": "Validation Status",
+    "colExpectedGrade": "Expected Grade",
+    "colProvidedGrade": "Provided Grade",
+    "noVersionHistory": "No past version history recorded yet."
+  }
+}
