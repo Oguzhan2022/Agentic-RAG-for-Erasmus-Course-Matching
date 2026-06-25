@@ -120,3 +120,7 @@ VITE_API_URL=/api
 | **Backend API Docs (Swagger)** | http://localhost:8000/docs |
 | **PostgreSQL Database** | `localhost:5600` (User: `erasmus`, DB: `erasmus_match`) |
 | **Redis Broker** | `localhost:6379` |
+
+Oğuzhan Yasin Ceyhan
+Bartu Başar
+Emincan Ünerden
