@@ -77,7 +77,6 @@ def seed_rbac():
             admin_user = User(
                 eid=admin_eid,
                 name="System Administrator",
-                is_active=True
             )
             db.add(admin_user)
             db.commit()

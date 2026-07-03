@@ -129,6 +129,8 @@ if not "%LATEST_BACKUP%"=="" (
     set /p USE_BACKUP="Bu yedekten geri yuklemek icin E, bos veritabani ile devam etmek icin H yazin (E/H): "
     if /i "!USE_BACKUP!"=="E" (
         echo Yerel yedek yukleniyor...
+        echo Eski tablolar ve sema temizleniyor...
+        docker exec -i %DB_CONTAINER% psql -U erasmus -d erasmus_match -c "DROP SCHEMA public CASCADE; CREATE SCHEMA public;"
         docker cp "%~dp0%LATEST_BACKUP%" %DB_CONTAINER%:/tmp/restore.sql
         docker exec -i %DB_CONTAINER% psql -U erasmus -d erasmus_match -f /tmp/restore.sql
         docker exec %DB_CONTAINER% rm /tmp/restore.sql >nul 2>nul
